@@ -12,8 +12,10 @@ export default function Watch() {
     setIsLoaded(true);
   }, []);
   return (
-    <div className="w-full">
-      <Title subTitle="Watch" />
+    <div className="w-full ">
+      <div className="mb-4 lg:mb-8">
+        <Title subTitle="Watch" right={true} />
+      </div>
       {isLoaded ? (
         <>
           <div className="overflow-hidden rounded-lg fancy-border">

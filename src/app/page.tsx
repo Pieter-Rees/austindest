@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Section>
+      <Section fullVw={true}>
         <Landing />
       </Section>
       <Section>

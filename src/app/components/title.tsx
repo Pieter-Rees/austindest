@@ -18,15 +18,17 @@ export const Title = ({
   return (
     <div className="w-full">
       <div className={myFont.className}>
-        <h1 className="text-5xl lg:text-9xl text-white text-neon mb-4 lg:mb-8">
-          {title}
-        </h1>
-        <h2
-          className={`text-lg lg:text-5xl text-white text-neon mb-4 lg:mb-8
-        ${right ? "text-right" : ""}`}
-        >
-          {subTitle}
-        </h2>
+        {title && (
+          <h1 className="text-5xl lg:text-9xl text-white text-neon">{title}</h1>
+        )}
+        {subTitle && (
+          <h2
+            className={`text-lg lg:text-5xl text-white text-neon
+          ${right ? "text-right" : ""}`}
+          >
+            {subTitle}
+          </h2>
+        )}
       </div>
     </div>
   );

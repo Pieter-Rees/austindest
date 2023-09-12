@@ -69,24 +69,28 @@ const columns = [
 
 export default function Gigs() {
   return (
-    <div className="w-full">
-      <Title subTitle="Gigs" />
+    <div className="w-full h-full grid grid-cols-2 gap-4">
+      <div className="flex items-center">
+        <Title subTitle="Gigs" />
+      </div>
 
-      <table className="w-full table-auto">
-        <tbody>
-          {rows.map((row, i) => {
-            // Return the element. Also pass key
-            return (
-              <tr key={row.key}>
-                <td>{row.date}</td>
-                <td>{row.name}</td>
-                <td>{row.info}</td>
-                <td>{row.link}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+      <div>
+        <table className="w-full table-auto">
+          <tbody>
+            {rows.map((row, i) => {
+              // Return the element. Also pass key
+              return (
+                <tr key={row.key}>
+                  <td>{row.date}</td>
+                  <td>{row.name}</td>
+                  <td>{row.info}</td>
+                  <td>{row.link}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
