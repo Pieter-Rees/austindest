@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <LandingBg />
 
-      <Section fullVw={true}>
+      <Section fullVh={true}>
         <Landing />
       </Section>
       <Section>
@@ -32,7 +32,7 @@ export default function Home() {
         <Watch />
       </Section>
 
-      <Section>
+      <Section fullVh={true}>
         <Contact />
       </Section>
       <Header />

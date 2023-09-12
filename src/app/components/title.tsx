@@ -10,10 +10,14 @@ export const Title = ({
   title,
   subTitle,
   right,
+  smallTitle,
+  center,
 }: {
   title?: string;
   subTitle?: string;
   right?: boolean;
+  smallTitle?: string;
+  center?: boolean;
 }) => {
   return (
     <div className="w-full">
@@ -24,10 +28,14 @@ export const Title = ({
         {subTitle && (
           <h2
             className={`text-lg lg:text-5xl text-white text-neon
+            ${center ? "text-center" : ""}
           ${right ? "text-right" : ""}`}
           >
             {subTitle}
           </h2>
+        )}
+        {smallTitle && (
+          <h3 className="text-lg lg:text-3xl text-white">{smallTitle}</h3>
         )}
       </div>
     </div>
