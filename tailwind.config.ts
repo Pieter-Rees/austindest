@@ -7,6 +7,10 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    brightness: {
+      0.1: ".1",
+      175: "1.75",
+    },
     colors: {
       transparent: "transparent",
       current: "currentColor",

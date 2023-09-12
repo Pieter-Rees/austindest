@@ -1,6 +1,7 @@
 import Header from "./components/header";
 import { Section } from "./components/section";
 import Landing from "./components/landing";
+import LandingBg from "./components/landingBg";
 import Watch from "./components/watch";
 import Gigs from "./components/gigs";
 import Bio from "./components/bio";
@@ -10,7 +11,8 @@ import Contact from "./components/contact";
 export default function Home() {
   return (
     <>
-      <Header />
+      <LandingBg />
+
       <Section fullVw={true}>
         <Landing />
       </Section>
@@ -33,6 +35,7 @@ export default function Home() {
       <Section>
         <Contact />
       </Section>
+      <Header />
     </>
   );
 }

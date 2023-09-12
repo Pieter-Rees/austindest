@@ -7,7 +7,7 @@ const myFont = localFont({
 
 export default function Header() {
   return (
-    <nav className="fixed top-0 w-full flex items-center justify-between flex-wrap bg-black/80 backdrop-blur-md">
+    <nav className="fixed z-2 top-0 w-full flex items-center justify-between flex-wrap bg-black/80 backdrop-blur-md">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
         <Image
           src="/logo.png"
