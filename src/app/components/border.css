@@ -1,0 +1,9 @@
+.fancy-border {
+  height: 100%;
+  border: double 2px transparent;
+  border-radius: 1.5rem;
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top left, #f00, #3020ff);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
