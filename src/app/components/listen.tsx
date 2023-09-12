@@ -1,7 +1,8 @@
+import { Title } from "./title";
 export default function Listen() {
   return (
     <div>
-      <h1>Listen</h1>
+      <Title subTitle="Listen" />
     </div>
   );
 }

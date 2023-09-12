@@ -1,6 +1,7 @@
 import Header from "./components/header";
 import { Section } from "./components/section";
 import Landing from "./components/landing";
+import Watch from "./components/watch";
 import Gigs from "./components/gigs";
 import Bio from "./components/bio";
 import Listen from "./components/listen";
@@ -23,6 +24,10 @@ export default function Home() {
 
       <Section>
         <Listen />
+      </Section>
+
+      <Section>
+        <Watch />
       </Section>
 
       <Section>

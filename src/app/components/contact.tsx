@@ -1,7 +1,11 @@
+import { Title } from "../components/title";
+
 export default function Contact() {
   return (
     <div>
-      <h1>Contact</h1>
+      <Title subTitle="Contact & Bookings" />
+
+      <div>email contact@austindest.com instagram @austindestmusic</div>
     </div>
   );
 }
