@@ -12,7 +12,7 @@ export default function Watch() {
     setIsLoaded(true);
   }, []);
   return (
-    <div className="w-full ">
+    <div id="watch" className="w-full ">
       <div className="mb-4 lg:mb-8">
         <Title subTitle="Watch" right={true} />
       </div>

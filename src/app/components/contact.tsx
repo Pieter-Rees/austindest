@@ -2,7 +2,7 @@ import { Title } from "../components/title";
 
 export default function Contact() {
   return (
-    <div>
+    <div id="contact">
       <div className="mb-4 lg:mb-8">
         <Title subTitle="Contact & Bookings" center={true} />
       </div>

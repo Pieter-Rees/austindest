@@ -9,12 +9,14 @@ const myFont = localFont({
 export const Title = ({
   title,
   subTitle,
+  left,
   right,
   smallTitle,
   center,
 }: {
   title?: string;
   subTitle?: string;
+  left?: boolean;
   right?: boolean;
   smallTitle?: string;
   center?: boolean;
@@ -27,9 +29,10 @@ export const Title = ({
         )}
         {subTitle && (
           <h2
-            className={`text-lg lg:text-5xl text-white text-neon
+            className={`text-2xl lg:text-5xl text-white text-neon
             ${center ? "text-center" : ""}
-          ${right ? "text-right" : ""}`}
+            ${left ? "text-center lg:text-left" : ""}
+          ${right ? "text-center lg:text-right" : ""}`}
           >
             {subTitle}
           </h2>

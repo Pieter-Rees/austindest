@@ -1,11 +1,25 @@
+"use client";
 import Image from "next/image";
 import localFont from "next/font/local";
 import "./neon.css";
 const myFont = localFont({
   src: "../../../public/fonts/Monoton-Regular.woff2",
 });
+import {
+  Link,
+  Button,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll";
 
-export default function Header() {
+interface HeaderProps {
+  scrollTo: Function;
+}
+
+export default function Header(props: HeaderProps) {
   return (
     <nav className="fixed z-2 top-0 w-full flex items-center justify-between flex-wrap bg-black/80 backdrop-blur-md">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
@@ -32,42 +46,72 @@ export default function Header() {
         </button>
       </div>
       <div className="w-full flex justify-end flex-grow lg:flex lg:items-center lg:w-auto text-sm lg:flex-grow">
-        <a
-          href="#responsive-header"
-          className="block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4"
+        <Link
+          activeClass="active"
+          to="landing"
+          spy={true}
+          smooth={true}
+          offset={-300}
+          className="cursor-pointer block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4"
+          duration={500}
         >
           Home
-        </a>
-        <a
-          href="#responsive-header"
-          className="block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4"
+        </Link>
+        <Link
+          activeClass="active"
+          to="gigs"
+          spy={true}
+          smooth={true}
+          offset={-300}
+          className="cursor-pointer block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4"
+          duration={500}
         >
           Gigs
-        </a>
-        <a
-          href="#responsive-header"
-          className="block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4"
+        </Link>
+        <Link
+          activeClass="active"
+          to="bio"
+          spy={true}
+          smooth={true}
+          offset={-300}
+          className="cursor-pointer block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4"
+          duration={500}
         >
           Bio
-        </a>
-        <a
-          href="#responsive-header"
-          className="block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4"
+        </Link>
+        <Link
+          activeClass="active"
+          to="listen"
+          spy={true}
+          offset={-300}
+          smooth={true}
+          className="cursor-pointer block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4"
+          duration={500}
         >
           Listen
-        </a>
-        <a
-          href="#responsive-header"
-          className="block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4"
+        </Link>
+        <Link
+          activeClass="active"
+          to="watch"
+          spy={true}
+          smooth={true}
+          offset={-300}
+          className="cursor-pointer block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4"
+          duration={500}
         >
           Watch
-        </a>
-        <a
-          href="#responsive-header"
-          className="block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4"
+        </Link>
+        <Link
+          activeClass="active"
+          to="contact"
+          spy={true}
+          offset={-300}
+          smooth={true}
+          className="cursor-pointer block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4"
+          duration={500}
         >
           Contact
-        </a>
+        </Link>
       </div>
     </nav>
   );
