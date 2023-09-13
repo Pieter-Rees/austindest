@@ -5,15 +5,7 @@ import "./neon.css";
 const myFont = localFont({
   src: "../../../public/fonts/Monoton-Regular.woff2",
 });
-import {
-  Link,
-  Button,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 export default function Header() {
   return (
@@ -24,7 +16,7 @@ export default function Header() {
           spy={true}
           smooth={true}
           offset={-300}
-          className="cursor-pointer block lg:inline-block md:mt-0 hover:text-bubble-gum mr-4"
+          className="cursor-pointer block lg:inline-block md:mt-0 hover:text-bubblegum mr-4"
           duration={500}
         >
           <Image
@@ -49,67 +41,67 @@ export default function Header() {
       </div>
       <div className="hidden md:flex w-full justify-end flex-grow md:items-center md:w-auto text-sm md:flex-grow">
         <Link
-          activeClass="text-bubble-gum"
+          activeClass="text-bubblegum hover:cursor-default"
           to="landing"
           spy={true}
           smooth={true}
           offset={-300}
-          className="cursor-pointer block mt-4 lg:inline-block md:mt-0 hover:text-bubble-gum mr-4"
+          className="text-lg cursor-pointer block mt-4 lg:inline-block md:mt-0 hover:text-bubblegum mr-4"
           duration={500}
         >
           Home
         </Link>
         <Link
-          activeClass="text-bubble-gum"
+          activeClass="text-bubblegum hover:cursor-default"
           to="gigs"
           spy={true}
           smooth={true}
           offset={-150}
-          className="cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubble-gum mr-4"
+          className="text-lg cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
           duration={500}
         >
           Gigs
         </Link>
         <Link
-          activeClass="text-bubble-gum"
+          activeClass="text-bubblegum hover:cursor-default"
           to="bio"
           spy={true}
           smooth={true}
           offset={-150}
-          className="cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubble-gum mr-4"
+          className="text-lg cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
           duration={500}
         >
           Bio
         </Link>
         <Link
-          activeClass="text-bubble-gum"
+          activeClass="text-bubblegum hover:cursor-default"
           to="listen"
           spy={true}
           offset={-150}
           smooth={true}
-          className="cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubble-gum mr-4"
+          className="text-lg cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
           duration={500}
         >
           Listen
         </Link>
         <Link
-          activeClass="text-bubble-gum"
+          activeClass="text-bubblegum hover:cursor-default"
           to="watch"
           spy={true}
           smooth={true}
           offset={-150}
-          className="cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubble-gum mr-4"
+          className="text-lg cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
           duration={500}
         >
           Watch
         </Link>
         <Link
-          activeClass="text-bubble-gum"
+          activeClass="text-bubblegum hover:cursor-default"
           to="contact"
           spy={true}
           offset={-300}
           smooth={true}
-          className="cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubble-gum mr-4"
+          className="text-lg cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
           duration={500}
         >
           Contact

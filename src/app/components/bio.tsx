@@ -44,7 +44,7 @@ export default function Bio() {
           </div>
         </div>
         <div className="flex flex-col justify-center">
-          <p className="mt-8 lg:mt-0 mb-4 text-gray-500 dark:text-gray-400 first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 dark:first-letter:text-gray-100 first-letter:mr-3 first-letter:mt-2 first-letter:float-left">
+          <p className="mt-8 lg:mt-0 mb-4 first-letter:text-7xl first-letter:font-bold first-letter:mr-3 first-letter:mt-2 first-letter:float-left">
             For DJ and producer Austin Dest, her love for music has been a huge
             drive and source of inspiration throughout her life. She got
             introducted to House and Deep House around 2012, and from there her

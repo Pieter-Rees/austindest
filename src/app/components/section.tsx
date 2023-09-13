@@ -17,7 +17,7 @@ export const Section = ({
         }
        ${fullVh ? "h-screen" : ""}`}
       >
-        <div className="rounded-3xl bg-midnight/30 w-full lg:mx-24 xl:mx-48 p-8 lg:p-16 m-8">
+        <div className="rounded-3xl bg-blue/20 w-full lg:mx-24 xl:mx-48 p-8 lg:p-16 m-8">
           {children}
         </div>
       </section>

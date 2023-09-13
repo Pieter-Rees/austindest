@@ -20,8 +20,10 @@ const config: Config = {
       metal: "#565584",
       tahiti: "#3ab7bf",
       silver: "#ecebff",
-      "bubble-gum": "#ff77e9",
+      bubblegum: "#ff77e9",
       bermuda: "#78dcca",
+      red: "rgba(255, 0, 0, 1)",
+      blue: "rgba(0, 100, 200, 1)",
     },
     extend: {
       backgroundImage: {

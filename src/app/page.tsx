@@ -7,6 +7,7 @@ import Gigs from "./components/gigs";
 import Bio from "./components/bio";
 import Listen from "./components/listen";
 import Contact from "./components/contact";
+import Copyright from "./components/copyright";
 
 export default function Home() {
   return (
@@ -35,6 +36,8 @@ export default function Home() {
       <Section fullVh={true}>
         <Contact />
       </Section>
+      <Copyright />
+
       <Header />
     </>
   );
