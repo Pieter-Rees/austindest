@@ -13,6 +13,7 @@ export const Title = ({
   right,
   smallTitle,
   center,
+  margin,
 }: {
   title?: string;
   subTitle?: string;
@@ -20,6 +21,7 @@ export const Title = ({
   right?: boolean;
   smallTitle?: string;
   center?: boolean;
+  margin?: boolean;
 }) => {
   return (
     <div className="w-full">
@@ -30,6 +32,8 @@ export const Title = ({
         {subTitle && (
           <h2
             className={`text-2xl lg:text-5xl text-white text-neon
+            ${margin ? "mt-8" : ""}
+
             ${center ? "text-center" : ""}
             ${left ? "text-center lg:text-left" : ""}
           ${right ? "text-center lg:text-right" : ""}`}

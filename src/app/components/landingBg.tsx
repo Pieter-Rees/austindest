@@ -9,7 +9,7 @@ export default function Landing() {
     setIsLoaded(true);
   }, []);
   return (
-    <div className="absolute left-0 right-0 top-0 h-full z-0 brightness-0.1">
+    <div className="absolute left-0 right-0 top-0 h-full z-0 brightness-0.3">
       {isLoaded ? (
         <ReactPlayer
           playing={true}
@@ -17,7 +17,7 @@ export default function Landing() {
           muted={true}
           width="100%"
           height="1000px"
-          url="https://youtu.be/3DWK8802N00?t=2546"
+          url="https://youtu.be/oB325uTDKIw?si=FbP7X-cNp9hmUk2M"
         />
       ) : null}
     </div>
