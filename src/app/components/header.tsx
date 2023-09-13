@@ -9,7 +9,6 @@ const myFont = localFont({
 });
 import { Link, animateScroll as scroll } from "react-scroll";
 import Sidenav from "./sidenav";
-
 export default function Header() {
   const [showSideNav, setShowSideNav] = useState(false);
 
@@ -36,6 +35,7 @@ export default function Header() {
         </div>
         <div className="md:hidden">
           <button
+            title="Menu"
             onClick={handleToggle}
             className="flex items-center px-3 py-2 border rounded border-teal-400 hover:text-white hover:border-white"
           >

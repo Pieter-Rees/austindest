@@ -23,9 +23,8 @@ export default function Sidenav(props: sideNavProps) {
             offset={-300}
             className="text-3xl text-center cursor-pointer block mt-4 lg:inline-block md:mt-0 hover:text-bubblegum mr-4"
             duration={500}
-            onClick={props.handleToggle(false)}
           >
-            Home
+            <span onClick={() => props.handleToggle()}>Home</span>
           </Link>
           <Link
             activeClass="text-bubblegum hover:cursor-default"
@@ -35,9 +34,8 @@ export default function Sidenav(props: sideNavProps) {
             offset={-150}
             className="text-3xl text-center cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
             duration={500}
-            onClick={props.handleToggle(false)}
           >
-            Gigs
+            <span onClick={() => props.handleToggle()}>Gigs</span>
           </Link>
           <Link
             activeClass="text-bubblegum hover:cursor-default"
@@ -47,9 +45,8 @@ export default function Sidenav(props: sideNavProps) {
             offset={-150}
             className="text-3xl text-center cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
             duration={500}
-            onClick={props.handleToggle(false)}
           >
-            Bio
+            <span onClick={() => props.handleToggle()}>Bio</span>
           </Link>
           <Link
             activeClass="text-bubblegum hover:cursor-default"
@@ -59,9 +56,8 @@ export default function Sidenav(props: sideNavProps) {
             smooth={true}
             className="text-3xl text-center cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
             duration={500}
-            onClick={props.handleToggle(false)}
           >
-            Listen
+            <span onClick={() => props.handleToggle()}>Listen</span>
           </Link>
           <Link
             activeClass="text-bubblegum hover:cursor-default"
@@ -71,9 +67,8 @@ export default function Sidenav(props: sideNavProps) {
             offset={-150}
             className="text-3xl text-center cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
             duration={500}
-            onClick={props.handleToggle(false)}
           >
-            Watch
+            <span onClick={() => props.handleToggle()}>Watch</span>
           </Link>
           <Link
             activeClass="text-bubblegum hover:cursor-default"
@@ -83,9 +78,8 @@ export default function Sidenav(props: sideNavProps) {
             smooth={true}
             className="text-3xl text-center cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
             duration={500}
-            onClick={props.handleToggle(false)}
           >
-            Contact
+            <span onClick={() => props.handleToggle()}>Contact</span>
           </Link>
         </div>
         <div className="mt-24">
