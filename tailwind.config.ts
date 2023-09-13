@@ -15,7 +15,7 @@ const config: Config = {
       transparent: "transparent",
       current: "currentColor",
       white: "#ffffff",
-      black: "#171717",
+      black: "rgba(10, 10, 10, 1)",
       midnight: "#121063",
       metal: "#565584",
       tahiti: "#3ab7bf",

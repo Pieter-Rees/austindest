@@ -20,7 +20,8 @@ export default function Contact() {
               contact@austindest.com
             </a>
           </div>
-          <div className="mt-8">
+          <hr />
+          <div>
             <Title smallTitle="instagram" />
           </div>
           <div>

@@ -9,7 +9,7 @@ export default function Landing() {
     setIsLoaded(true);
   }, []);
   return (
-    <div className="absolute left-0 right-0 top-0 h-full z-0 brightness-0.3">
+    <div className="fixed left-0 right-0 -top-36 h-full z-0 brightness-0.3">
       {isLoaded ? (
         <ReactPlayer
           playing={true}

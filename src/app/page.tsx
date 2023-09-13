@@ -17,23 +17,23 @@ export default function Home() {
       <Section fullVh={true}>
         <Landing />
       </Section>
-      <Section>
+      <Section bg={true}>
         <Gigs />
       </Section>
 
-      <Section>
+      <Section bg={true}>
         <Bio />
       </Section>
 
-      <Section>
+      <Section bg={true}>
         <Listen />
       </Section>
 
-      <Section>
+      <Section bg={true}>
         <Watch />
       </Section>
 
-      <Section fullVh={true}>
+      <Section bg={true} fullVh={true}>
         <Contact />
       </Section>
       <Copyright />

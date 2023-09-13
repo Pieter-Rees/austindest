@@ -42,3 +42,11 @@ a {
 a:hover {
   background-size: 0 3px, 100% 1px;
 }
+
+hr {
+  background: linear-gradient(to right, #ff77e9, rgba(0, 100, 200, 1));
+  height: 1px;
+  width: 120px;
+  border: 0;
+  margin: 16px auto;
+}

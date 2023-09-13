@@ -7,7 +7,7 @@ export default function Copyright() {
     scroll.scrollToTop();
   };
   return (
-    <div className="p-8 flex flex-col items-center">
+    <div className="relative z-3 bg-black backdrop-blur-md p-8 flex flex-col items-center">
       <Image
         className="cursor-pointer"
         onClick={() => scrollToTop()}
@@ -16,6 +16,7 @@ export default function Copyright() {
         width={60}
         height={60}
       />
+      <hr />
       <div className="text-center text-lg">Copyright © 2023 Austin dest</div>
     </div>
   );
