@@ -11,7 +11,7 @@ export default function Contact() {
           <div>
             <Title smallTitle="email" />
           </div>
-          <div>
+          <div className="uppercase">
             <a
               className="text-lg"
               rel="noreferrer noopener"
@@ -24,7 +24,7 @@ export default function Contact() {
           <div>
             <Title smallTitle="instagram" />
           </div>
-          <div>
+          <div className="uppercase">
             <a
               className="text-lg"
               target="_blank"

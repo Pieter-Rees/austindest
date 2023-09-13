@@ -8,7 +8,7 @@ const config: Config = {
   ],
   theme: {
     brightness: {
-      0.3: ".3",
+      0.4: ".4",
       175: "1.75",
     },
     colors: {

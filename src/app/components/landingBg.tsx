@@ -9,9 +9,10 @@ export default function Landing() {
     setIsLoaded(true);
   }, []);
   return (
-    <div className="fixed left-0 right-0 -top-36 h-full z-0 brightness-0.3">
+    <div className="fixed left-0 right-0 -top-36 h-full z-0 brightness-0.4">
       {isLoaded ? (
         <ReactPlayer
+          playbackRate={0.8}
           playing={true}
           loop={true}
           muted={true}

@@ -8,24 +8,21 @@ const myFont = localFont({
 import { Link, animateScroll as scroll } from "react-scroll";
 
 export default function Header() {
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <nav className="px-4 fixed z-2 top-0 w-full flex items-center justify-between flex-wrap bg-black/90 backdrop-blur-md">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
-        <Link
-          to="landing"
-          spy={true}
-          smooth={true}
-          offset={-300}
-          className="cursor-pointer block lg:inline-block md:mt-0 hover:text-bubblegum mr-4"
-          duration={500}
-        >
-          <Image
-            src="/logo.png"
-            alt="Picture of the author"
-            width={60}
-            height={60}
-          />
-        </Link>
+        <Image
+          onClick={() => scrollToTop()}
+          className="cursor-pointer"
+          src="/logo.png"
+          alt="Picture of the author"
+          width={60}
+          height={60}
+        />
       </div>
       <div className="md:hidden">
         <button className="flex items-center px-3 py-2 border rounded border-teal-400 hover:text-white hover:border-white">
@@ -39,7 +36,7 @@ export default function Header() {
           </svg>
         </button>
       </div>
-      <div className="hidden md:flex w-full justify-end flex-grow md:items-center md:w-auto text-sm md:flex-grow">
+      <div className="hidden md:flex w-full justify-end flex-grow md:items-center md:w-auto text-sm md:flex-grow uppercase">
         <Link
           activeClass="text-bubblegum hover:cursor-default"
           to="landing"
