@@ -23,12 +23,21 @@ export default function Header(props: HeaderProps) {
   return (
     <nav className="px-4 fixed z-2 top-0 w-full flex items-center justify-between flex-wrap bg-black/80 backdrop-blur-md">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
-        <Image
-          src="/logo.png"
-          alt="Picture of the author"
-          width={60}
-          height={60}
-        />
+        <Link
+          to="landing"
+          spy={true}
+          smooth={true}
+          offset={-300}
+          className="cursor-pointer block lg:inline-block md:mt-0 hover:text-bubble-gum mr-4"
+          duration={500}
+        >
+          <Image
+            src="/logo.png"
+            alt="Picture of the author"
+            width={60}
+            height={60}
+          />
+        </Link>
       </div>
       <div className="md:hidden">
         <button className="flex items-center px-3 py-2 border rounded border-teal-400 hover:text-white hover:border-white">
