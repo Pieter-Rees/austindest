@@ -39,8 +39,10 @@ a {
   transition: background-size 400ms;
 }
 
-a:hover {
-  background-size: 0 3px, 100% 1px;
+@media only screen and (min-width: 1024px) {
+  a:hover {
+    background-size: 0 3px, 100% 1px;
+  }
 }
 
 hr {
