@@ -47,67 +47,67 @@ export default function Header(props: HeaderProps) {
       </div>
       <div className="w-full flex justify-end flex-grow lg:flex lg:items-center lg:w-auto text-sm lg:flex-grow">
         <Link
-          activeClass="active"
+          activeClass="text-bubble-gum"
           to="landing"
           spy={true}
           smooth={true}
           offset={-300}
-          className="cursor-pointer block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4"
+          className="cursor-pointer block mt-4 lg:inline-block lg:mt-0 hover:text-bubble-gum mr-4"
           duration={500}
         >
           Home
         </Link>
         <Link
-          activeClass="active"
+          activeClass="text-bubble-gum"
           to="gigs"
           spy={true}
           smooth={true}
           offset={-300}
-          className="cursor-pointer block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4"
+          className="cursor-pointer block mt-4 lg:inline-block lg:mt-0 hover:text-bubble-gum mr-4"
           duration={500}
         >
           Gigs
         </Link>
         <Link
-          activeClass="active"
+          activeClass="text-bubble-gum"
           to="bio"
           spy={true}
           smooth={true}
           offset={-300}
-          className="cursor-pointer block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4"
+          className="cursor-pointer block mt-4 lg:inline-block lg:mt-0 hover:text-bubble-gum mr-4"
           duration={500}
         >
           Bio
         </Link>
         <Link
-          activeClass="active"
+          activeClass="text-bubble-gum"
           to="listen"
           spy={true}
           offset={-300}
           smooth={true}
-          className="cursor-pointer block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4"
+          className="cursor-pointer block mt-4 lg:inline-block lg:mt-0 hover:text-bubble-gum mr-4"
           duration={500}
         >
           Listen
         </Link>
         <Link
-          activeClass="active"
+          activeClass="text-bubble-gum"
           to="watch"
           spy={true}
           smooth={true}
           offset={-300}
-          className="cursor-pointer block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4"
+          className="cursor-pointer block mt-4 lg:inline-block lg:mt-0 hover:text-bubble-gum mr-4"
           duration={500}
         >
           Watch
         </Link>
         <Link
-          activeClass="active"
+          activeClass="text-bubble-gum"
           to="contact"
           spy={true}
           offset={-300}
           smooth={true}
-          className="cursor-pointer block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4"
+          className="cursor-pointer block mt-4 lg:inline-block lg:mt-0 hover:text-bubble-gum mr-4"
           duration={500}
         >
           Contact
