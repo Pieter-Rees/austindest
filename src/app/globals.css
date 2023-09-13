@@ -52,3 +52,10 @@ hr {
   border: 0;
   margin: 16px auto;
 }
+
+.test {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+}

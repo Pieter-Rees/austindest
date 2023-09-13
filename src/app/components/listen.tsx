@@ -8,7 +8,7 @@ export default function Listen() {
         <Title left={true} subTitle="Listen" />
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="rounded-lg fancy-border overflow-hidden">
+        <div className="rounded-lg fancy-border overflow-hidden test">
           <iframe
             className="h-full "
             title="soundcloud sets"
