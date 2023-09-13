@@ -1,10 +1,10 @@
-"use client";
+"use cdivent";
 
 export default function Socials() {
   return (
-    <div>
-      <ul className="flex gap-4">
-        <li>
+    <div className="flex flex-col lg:flex-row gap-4 ">
+      <div className="flex justify-center lg:justify-start  gap-4">
+        <div>
           <a
             target="_blank"
             rel="noreferrer noopener"
@@ -105,9 +105,9 @@ export default function Socials() {
               />
             </svg>
           </a>
-        </li>
+        </div>
 
-        <li>
+        <div>
           <a
             target="_blank"
             rel="noreferrer noopener"
@@ -165,9 +165,9 @@ export default function Socials() {
               </g>
             </svg>
           </a>
-        </li>
+        </div>
 
-        <li>
+        <div>
           <a
             target="_blank"
             rel="noreferrer noopener"
@@ -218,9 +218,9 @@ export default function Socials() {
               />
             </svg>
           </a>
-        </li>
+        </div>
 
-        <li>
+        <div>
           <a
             target="_blank"
             rel="noreferrer noopener"
@@ -276,17 +276,17 @@ export default function Socials() {
               </g>
             </svg>
           </a>
-        </li>
-        <li className="flex items-center uppercase">
-          <a
-            className="text-lg"
-            rel="noreferrer noopener"
-            href="mailto:contact@austindest.com"
-          >
-            contact@austindest.com
-          </a>
-        </li>
-      </ul>
+        </div>
+      </div>
+      <div className="flex items-center justify-center uppercase mt-4 lg:mt-0">
+        <a
+          className="text-lg"
+          rel="noreferrer noopener"
+          href="mailto:contact@austindest.com"
+        >
+          contact@austindest.com
+        </a>
+      </div>
     </div>
   );
 }

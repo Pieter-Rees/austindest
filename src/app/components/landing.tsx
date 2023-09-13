@@ -5,9 +5,14 @@ export default function Landing() {
   return (
     <div id="landing" className="w-full h-full mb-4 lg:mb-8 relative z-2">
       <div>
-        <Title margin={true} title="Austin" subTitle="All About The Groove" />
+        <Title
+          margin={true}
+          center={true}
+          title="Austin"
+          subTitle="All About The Groove"
+        />
       </div>
-      <div className="flex justify-end mt-8">
+      <div className="flex justify-center lg:justify-end mt-16">
         <Socials />
       </div>
     </div>
