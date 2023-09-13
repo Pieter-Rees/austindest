@@ -64,7 +64,7 @@ export default function Header() {
           to="gigs"
           spy={true}
           smooth={true}
-          offset={-300}
+          offset={-150}
           className="cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubble-gum mr-4"
           duration={500}
         >
@@ -75,7 +75,7 @@ export default function Header() {
           to="bio"
           spy={true}
           smooth={true}
-          offset={-300}
+          offset={-150}
           className="cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubble-gum mr-4"
           duration={500}
         >
@@ -85,7 +85,7 @@ export default function Header() {
           activeClass="text-bubble-gum"
           to="listen"
           spy={true}
-          offset={-300}
+          offset={-150}
           smooth={true}
           className="cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubble-gum mr-4"
           duration={500}
@@ -97,7 +97,7 @@ export default function Header() {
           to="watch"
           spy={true}
           smooth={true}
-          offset={-300}
+          offset={-150}
           className="cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubble-gum mr-4"
           duration={500}
         >
