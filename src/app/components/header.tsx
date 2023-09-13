@@ -21,7 +21,7 @@ interface HeaderProps {
 
 export default function Header(props: HeaderProps) {
   return (
-    <nav className="fixed z-2 top-0 w-full flex items-center justify-between flex-wrap bg-black/80 backdrop-blur-md">
+    <nav className="px-4 fixed z-2 top-0 w-full flex items-center justify-between flex-wrap bg-black/80 backdrop-blur-md">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
         <Image
           src="/logo.png"
@@ -29,11 +29,8 @@ export default function Header(props: HeaderProps) {
           width={60}
           height={60}
         />
-        <span className={myFont.className}>
-          {/* <span className="font-semibold text-xl tracking-tight">Austin</span> */}
-        </span>
       </div>
-      <div className="block lg:hidden">
+      <div className="md:hidden">
         <button className="flex items-center px-3 py-2 border rounded border-teal-400 hover:text-white hover:border-white">
           <svg
             className="fill-current h-3 w-3"
@@ -45,14 +42,14 @@ export default function Header(props: HeaderProps) {
           </svg>
         </button>
       </div>
-      <div className="w-full flex justify-end flex-grow lg:flex lg:items-center lg:w-auto text-sm lg:flex-grow">
+      <div className="hidden md:flex w-full justify-end flex-grow md:items-center md:w-auto text-sm md:flex-grow">
         <Link
           activeClass="text-bubble-gum"
           to="landing"
           spy={true}
           smooth={true}
           offset={-300}
-          className="cursor-pointer block mt-4 lg:inline-block lg:mt-0 hover:text-bubble-gum mr-4"
+          className="cursor-pointer block mt-4 lg:inline-block md:mt-0 hover:text-bubble-gum mr-4"
           duration={500}
         >
           Home
@@ -63,7 +60,7 @@ export default function Header(props: HeaderProps) {
           spy={true}
           smooth={true}
           offset={-300}
-          className="cursor-pointer block mt-4 lg:inline-block lg:mt-0 hover:text-bubble-gum mr-4"
+          className="cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubble-gum mr-4"
           duration={500}
         >
           Gigs
@@ -74,7 +71,7 @@ export default function Header(props: HeaderProps) {
           spy={true}
           smooth={true}
           offset={-300}
-          className="cursor-pointer block mt-4 lg:inline-block lg:mt-0 hover:text-bubble-gum mr-4"
+          className="cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubble-gum mr-4"
           duration={500}
         >
           Bio
@@ -85,7 +82,7 @@ export default function Header(props: HeaderProps) {
           spy={true}
           offset={-300}
           smooth={true}
-          className="cursor-pointer block mt-4 lg:inline-block lg:mt-0 hover:text-bubble-gum mr-4"
+          className="cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubble-gum mr-4"
           duration={500}
         >
           Listen
@@ -96,7 +93,7 @@ export default function Header(props: HeaderProps) {
           spy={true}
           smooth={true}
           offset={-300}
-          className="cursor-pointer block mt-4 lg:inline-block lg:mt-0 hover:text-bubble-gum mr-4"
+          className="cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubble-gum mr-4"
           duration={500}
         >
           Watch
@@ -107,7 +104,7 @@ export default function Header(props: HeaderProps) {
           spy={true}
           offset={-300}
           smooth={true}
-          className="cursor-pointer block mt-4 lg:inline-block lg:mt-0 hover:text-bubble-gum mr-4"
+          className="cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubble-gum mr-4"
           duration={500}
         >
           Contact
