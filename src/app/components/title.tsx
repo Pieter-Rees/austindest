@@ -37,7 +37,7 @@ export const Title = ({
         )}
         {subTitle && (
           <h2
-            className={`text-2xl lg:text-5xl text-white text-neon
+            className={`text-4xl lg:text-5xl text-white text-neon
             ${margin ? "mt-8" : ""}
 
             ${center ? "text-center lg:text-left" : ""}
