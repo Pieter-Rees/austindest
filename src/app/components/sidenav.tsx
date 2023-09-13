@@ -23,7 +23,7 @@ export default function Sidenav(props: sideNavProps) {
             offset={-300}
             className="text-3xl text-center cursor-pointer block mt-4 lg:inline-block md:mt-0 hover:text-bubblegum mr-4"
             duration={500}
-            onClick={props.handleToggle}
+            onClick={props.handleToggle(false)}
           >
             Home
           </Link>
@@ -35,7 +35,7 @@ export default function Sidenav(props: sideNavProps) {
             offset={-150}
             className="text-3xl text-center cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
             duration={500}
-            onClick={props.handleToggle}
+            onClick={props.handleToggle(false)}
           >
             Gigs
           </Link>
@@ -47,7 +47,7 @@ export default function Sidenav(props: sideNavProps) {
             offset={-150}
             className="text-3xl text-center cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
             duration={500}
-            onClick={props.handleToggle}
+            onClick={props.handleToggle(false)}
           >
             Bio
           </Link>
@@ -59,7 +59,7 @@ export default function Sidenav(props: sideNavProps) {
             smooth={true}
             className="text-3xl text-center cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
             duration={500}
-            onClick={props.handleToggle}
+            onClick={props.handleToggle(false)}
           >
             Listen
           </Link>
@@ -71,7 +71,7 @@ export default function Sidenav(props: sideNavProps) {
             offset={-150}
             className="text-3xl text-center cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
             duration={500}
-            onClick={props.handleToggle}
+            onClick={props.handleToggle(false)}
           >
             Watch
           </Link>
@@ -83,7 +83,7 @@ export default function Sidenav(props: sideNavProps) {
             smooth={true}
             className="text-3xl text-center cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
             duration={500}
-            onClick={props.handleToggle}
+            onClick={props.handleToggle(false)}
           >
             Contact
           </Link>
