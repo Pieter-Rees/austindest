@@ -3,7 +3,7 @@ import Socials from "./socials";
 
 export default function Landing() {
   return (
-    <div id="landing" className="w-full h-full mb-4 lg:mb-8 relative z-2 py-8">
+    <div id="landing" className="w-full h-full my-6 lg:my-0 relative z-2">
       <Title
         margin={true}
         center={true}
