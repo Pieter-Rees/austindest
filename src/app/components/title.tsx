@@ -29,14 +29,14 @@ export const Title = ({
         {title && (
           <div className="relative">
             <h1
-              className={`text-5xl lg:text-9xl text-shine text-neon-title ${
+              className={`text-5xl sm:text-7xl lg:text-9xl text-shine text-neon-title ${
                 center ? "text-center lg:text-left" : ""
               }`}
             >
               {title}
             </h1>
             <span
-              className={`absolute top-0 text-5xl lg:text-9xl text-shine ${
+              className={`absolute top-0 sm:text-7xl text-5xl lg:text-9xl text-shine ${
                 center ? "text-center lg:text-left left-0 right-0" : ""
               }`}
             >
@@ -46,7 +46,7 @@ export const Title = ({
         )}
         {subTitle && (
           <h2
-            className={`text-4xl lg:text-5xl text-white text-neon
+            className={`text-4xl sm:text-5xl lg:text-6xl text-white text-neon
             ${margin ? "mt-8" : ""}
 
             ${center ? "text-center lg:text-left" : ""}
