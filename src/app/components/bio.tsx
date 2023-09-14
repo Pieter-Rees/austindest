@@ -9,7 +9,7 @@ export default function Bio() {
         <Title subTitle="Bio" right={true} />
       </div>
       <div className="lg:grid grid-cols-2 gap-8">
-        <div className="flex flex-wrap align-center ">
+        <div className="flex flex-wrap flex-col justify-center">
           <div className="grid grid-cols-3 gap-8 mb-4">
             <Image
               src="/images/a1.jpg"
@@ -43,7 +43,7 @@ export default function Bio() {
             />
           </div>
         </div>
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center text-lg lg:text-lg 2xl:text-xl">
           <p className="mt-8 lg:mt-0 first-letter:text-7xl first-letter:font-bold first-letter:mr-3 first-letter:mt-2 first-letter:float-left">
             For DJ and producer Austin Dest, her love for music has been a huge
             drive and source of inspiration throughout her life. She got
@@ -58,7 +58,7 @@ export default function Bio() {
             choices.
           </p>
           <hr />
-          <p className="text-gray-500 dark:text-gray-400">
+          <p>
             With the producer/DJ duo Austin Martin, founded in 2016, Austin
             released records on Cinematique Records and Particles/Proton. She
             released her first solo record in 2022 on Jaydee's label First
