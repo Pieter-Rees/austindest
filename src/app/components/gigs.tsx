@@ -73,7 +73,7 @@ export default function Gigs() {
   return (
     <div id="gigs" className="w-full h-full lg:grid grid-cols-4 gap-4 lg:gap-8">
       <div className="flex lg:hidden items-center my-6 lg:my-0">
-        <Title left={true} subTitle="Gigs" />
+        <Title left={true} center={true} subTitle="Gigs" />
       </div>
       <div className="col-span-3 lg:col-span-auto">
         <table className="w-full border-separate lg:border-spacing-4 table-auto">
@@ -99,7 +99,9 @@ export default function Gigs() {
                       <>{row.name}</>
                     )}
                   </td>
-                  <td className="text-xs sm:text-sm">{row.location}</td>
+                  <td className="text-xs sm:text-sm 2xl:text-xl">
+                    {row.location}
+                  </td>
                   <td>
                     {row.link ? (
                       <>
@@ -158,7 +160,7 @@ export default function Gigs() {
         </table>
       </div>
       <div className="hidden lg:flex items-center my-6 lg:my-0">
-        <Title left={true} subTitle="Gigs" />
+        <Title left={false} center={true} subTitle="Gigs" />
       </div>
     </div>
   );
