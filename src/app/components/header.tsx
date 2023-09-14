@@ -35,15 +35,66 @@ export default function Header() {
           <button
             title="Menu"
             onClick={handleToggle}
-            className="flex items-center px-3 py-2 border rounded border-teal-400 hover:text-white hover:border-white"
+            className={
+              "flex items-center px-3 py-2 transition-all " +
+              (showSideNav ? "rotate-90" : "")
+            }
           >
             <svg
-              className="fill-current h-3 w-3"
-              viewBox="0 0 20 20"
+              version="1.1"
+              id="icon"
               xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="30px"
+              height="30px"
+              viewBox="0 0 50 50"
             >
-              <title>Menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+              <polygon
+                style={{ fill: "#fff", stroke: "none" }}
+                points="40,25 10,45 10,5 40,25 "
+                id="shape1"
+              >
+                <animate
+                  id="animPauseOne"
+                  begin="indefinite"
+                  attributeName="points"
+                  dur="500ms"
+                  to="5,45 15,45 15,5 5,5 "
+                  fill="freeze"
+                />
+                <animate
+                  id="animPlayOne"
+                  begin="indefinite"
+                  attributeName="points"
+                  dur="500ms"
+                  to="40,25 10,45 10,5 40,25 "
+                  fill="freeze"
+                />
+              </polygon>
+
+              <polygon
+                style={{ fill: "#fff", stroke: "none" }}
+                points="40,25 10,45 10,5 40,25 "
+                id="shape2"
+              >
+                <animate
+                  id="animPauseTwo"
+                  begin="indefinite"
+                  attributeName="points"
+                  dur="500ms"
+                  to="35,45 45,45 45,5 35,5 "
+                  fill="freeze"
+                />
+                <animate
+                  id="animPlayTwo"
+                  begin="indefinite"
+                  attributeName="points"
+                  dur="500ms"
+                  to="40,25 10,45 10,5 40,25 "
+                  fill="freeze"
+                />
+              </polygon>
             </svg>
           </button>
         </div>
