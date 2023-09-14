@@ -77,7 +77,7 @@ export default function Gigs() {
       </div>
 
       <div className="col-span-2 lg:col-span-auto">
-        <table className="w-full border-separate border-spacing-4 table-auto">
+        <table className="w-full border-separate lg:border-spacing-4 table-auto">
           <tbody>
             {rows.map((row, i) => {
               // Return the element. Also pass key
@@ -86,8 +86,10 @@ export default function Gigs() {
                   className="pt-8 text-lg lg:text-lg 2xl:text-xl"
                   key={row.key}
                 >
-                  <td className="text-lg 2xl:text-2xl">{row.date}</td>
-                  <td className="text-lg 2xl:text-2xl">
+                  <td className="text-xs sm:text-lg 2xl:text-2xl">
+                    {row.date}
+                  </td>
+                  <td className="text-sm sm:text-lg 2xl:text-2xl">
                     {row.info ? (
                       <>
                         <a target="_blank" href={row.info}>
@@ -98,15 +100,14 @@ export default function Gigs() {
                       <>{row.name}</>
                     )}
                   </td>
-                  <td>{row.location}</td>
+                  <td className="text-xs sm:text-sm">{row.location}</td>
                   <td>
                     {row.link ? (
                       <>
                         <a target="_blank" href={row.link}>
                           <svg
-                            height="30px"
-                            width="30px"
                             version="1.1"
+                            className="h-6 w-6 lg:w-8 lg:h-8"
                             id="Layer_1"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 512.002 512.002"
