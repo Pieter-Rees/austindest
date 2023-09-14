@@ -6,42 +6,48 @@ const rows = [
   {
     key: "1",
     date: "10|08|2023",
-    name: "Bodhi beach | zandvoort",
+    name: "Bodhi beach",
+    location: "Zandvoort",
     info: "i",
     link: "F",
   },
   {
     key: "2",
     date: "08-09|09|2023",
-    name: "Hartstocht festival | ELP",
+    name: "Hartstocht festival",
+    location: "Elp",
     info: "i",
     link: "F",
   },
   {
     key: "3",
     date: "16|09|2023",
-    name: "Jaydee invites | Bergen",
+    name: "Jaydee invites",
+    location: "Bergen",
     info: "i",
     link: "F",
   },
   {
     key: "4",
     date: "20|10|2023",
-    name: "DIJKBREUK (ADE) | Amsterdam",
+    name: "Dijkbreuk (ADE)",
+    location: "Amsterdam",
     info: "i",
     link: "F",
   },
   {
     key: "5",
     date: "21|10|2023",
-    name: "Cinematique (ADE)| A'DAM",
+    name: "Cinematique (ADE)",
+    location: "Amsterdam",
     info: "i",
     link: "F",
   },
   {
     key: "6",
     date: "18|11|2023",
-    name: "Charlatan | Gent, BE",
+    name: "Charlatan",
+    location: "Gent, BE",
     info: "i",
     link: "F",
   },
@@ -53,7 +59,11 @@ const columns = [
     label: "",
   },
   {
-    key: "name",
+    key: "venue",
+    label: "",
+  },
+  {
+    key: "location",
     label: "",
   },
 
@@ -80,7 +90,10 @@ export default function Gigs() {
             {rows.map((row, i) => {
               // Return the element. Also pass key
               return (
-                <tr className="pt-8" key={row.key}>
+                <tr
+                  className="pt-8 text-lg lg:text-lg 2xl:text-xl"
+                  key={row.key}
+                >
                   <td>{row.date}</td>
                   <td>
                     {row.info ? (
@@ -93,13 +106,14 @@ export default function Gigs() {
                       <>{row.name}</>
                     )}
                   </td>
+                  <td>{row.location}</td>
                   <td>
                     {row.link ? (
                       <>
                         <a target="_blank" href={row.link}>
                           <svg
-                            height="40px"
-                            width="40px"
+                            height="30px"
+                            width="30px"
                             version="1.1"
                             id="Layer_1"
                             xmlns="http://www.w3.org/2000/svg"
