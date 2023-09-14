@@ -2,8 +2,8 @@
 
 export default function Socials() {
   return (
-    <div className="flex flex-col lg:flex-row gap-4 ">
-      <div className="flex justify-center lg:justify-start  gap-4">
+    <div className="flex flex-col gap-4 ">
+      <div className="flex justify-center gap-4">
         <div>
           <a
             target="_blank"
@@ -278,7 +278,7 @@ export default function Socials() {
           </a>
         </div>
       </div>
-      <div className="flex items-center justify-center uppercase mt-4 lg:mt-0">
+      <div className="flex items-center justify-center uppercase">
         <a
           className="text-lg"
           rel="noreferrer noopener"
