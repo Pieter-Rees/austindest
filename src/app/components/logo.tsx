@@ -1,7 +1,7 @@
 export default function Logo() {
   return (
     <svg
-      className="hover:animate-spin"
+      className="hover:animate-spin-slow "
       version="1.1"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"

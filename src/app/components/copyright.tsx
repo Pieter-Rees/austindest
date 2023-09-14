@@ -8,7 +8,7 @@ export default function Copyright() {
   return (
     <div className="relative z-3 bg-black backdrop-blur-md p-8 flex flex-col items-center">
       <div
-        className="cursor-pointer  transition-all fill-white hover:fill-bubblegum"
+        className="cursor-pointer  transition-all fill-white hover:fill-bubblegum ease-in-out cursor-grab"
         onClick={() => scrollToTop()}
       >
         <Logo />
