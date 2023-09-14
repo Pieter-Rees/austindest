@@ -3,7 +3,7 @@ export default function Contact() {
   return (
     <>
       <div id="contact">
-        <div className="mb-4 lg:mb-8">
+        <div className="my-6 lg:mb-8 lg:mt-0">
           <Title subTitle="Contact & Bookings" center={true} />
         </div>
 

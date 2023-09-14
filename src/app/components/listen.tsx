@@ -4,7 +4,7 @@ import "./border.css";
 export default function Listen() {
   return (
     <div id="listen">
-      <div className="mb-4 lg:mb-8">
+      <div className="my-6 lg:mb-8 lg:mt-0">
         <Title left={true} subTitle="Listen" />
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

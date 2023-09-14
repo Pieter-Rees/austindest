@@ -5,7 +5,7 @@ import "./border.css";
 export default function Bio() {
   return (
     <div id="bio">
-      <div className="mb-4 lg:mb-8">
+      <div className="my-6 lg:mb-8 lg:mt-0">
         <Title subTitle="Bio" right={true} />
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
