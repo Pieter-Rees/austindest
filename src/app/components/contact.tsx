@@ -8,25 +8,18 @@ export default function Contact() {
         </div>
 
         <div className="text-center">
-          <div>
-            <Title smallTitle="email" />
-          </div>
           <div className="uppercase">
             <a
-              className="text-lg lg:text-lg 2xl:text-2xl"
+              className="text-lg lg:text-lg 2xl:text-2xl md:hover:text-bubblegum"
               rel="noreferrer noopener"
               href="mailto:contact@austindest.com"
             >
               contact@austindest.com
             </a>
           </div>
-          <hr />
-          <div>
-            <Title smallTitle="instagram" />
-          </div>
           <div className="uppercase">
             <a
-              className="text-lg lg:text-lg 2xl:text-2xl"
+              className="text-lg lg:text-lg 2xl:text-2xl md:hover:text-bubblegum"
               target="_blank"
               rel="noreferrer noopener"
               href="https://www.instagram.com/austindestmusic/"

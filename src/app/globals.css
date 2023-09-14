@@ -39,7 +39,7 @@ a {
   transition: background-size 400ms;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   a:hover {
     background-size: 0 3px, 100% 1px;
   }
