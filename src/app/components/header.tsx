@@ -24,7 +24,10 @@ export default function Header() {
     <>
       <nav className="px-4 fixed z-2 top-0 w-full flex items-center justify-between flex-wrap bg-black/90 backdrop-blur-md">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
-          <div onClick={() => scrollToTop()} className="cursor-pointer p-4">
+          <div
+            onClick={() => scrollToTop()}
+            className="cursor-pointer p-4 transition-all fill-white hover:fill-bubblegum"
+          >
             <Logo />
           </div>
         </div>

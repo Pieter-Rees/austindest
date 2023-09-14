@@ -10,7 +10,7 @@ export default function Logo() {
       viewBox="0 0 600 600"
       width="40px"
       height="40px"
-      fill="white"
+      fill="fill-current"
     >
       <g>
         <path
