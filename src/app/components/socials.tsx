@@ -11,6 +11,7 @@ export default function Socials() {
             href="https://soundcloud.com/austin_dest"
           >
             <svg
+              className="hover:animate-spin-slow "
               height="40px"
               width="40px"
               version="1.1"
@@ -118,6 +119,7 @@ export default function Socials() {
               width="40px"
               version="1.1"
               id="Layer_1"
+              className="hover:animate-spin-slow "
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
             >
@@ -174,6 +176,7 @@ export default function Socials() {
             href="https://www.facebook.com/austindest_music"
           >
             <svg
+              className="hover:animate-spin-slow "
               height="40px"
               width="40px"
               version="1.1"
@@ -227,6 +230,7 @@ export default function Socials() {
             href="https://open.spotify.com/artist/6929wCqfP5hZJAwC3KWE8s?go=1&sp_cid=b30d4cf76015532c872be09c115a6615&nd=1"
           >
             <svg
+              className="hover:animate-spin-slow "
               height="40px"
               width="40px"
               version="1.1"
