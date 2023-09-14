@@ -27,13 +27,22 @@ export const Title = ({
     <div className="w-full">
       <div className={myFont.className}>
         {title && (
-          <h1
-            className={`text-5xl lg:text-9xl text-white text-neon ${
-              center ? "text-center lg:text-left" : ""
-            }`}
-          >
-            {title}
-          </h1>
+          <div className="relative">
+            <h1
+              className={`text-5xl lg:text-9xl text-shine text-neon-title ${
+                center ? "text-center lg:text-left" : ""
+              }`}
+            >
+              {title}
+            </h1>
+            <h1
+              className={`absolute top-0 text-5xl lg:text-9xl text-shine ${
+                center ? "text-center lg:text-left" : ""
+              }`}
+            >
+              {title}
+            </h1>
+          </div>
         )}
         {subTitle && (
           <h2
