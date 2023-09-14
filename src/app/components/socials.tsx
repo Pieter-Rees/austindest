@@ -278,13 +278,21 @@ export default function Socials() {
           </a>
         </div>
       </div>
-      <div className="flex items-center justify-center uppercase">
+      <div className="flex items-center flex-col justify-center uppercase">
         <a
           className="text-lg 2xl:text-2xl"
           rel="noreferrer noopener"
           href="mailto:contact@austindest.com"
         >
           contact@austindest.com
+        </a>
+        <a
+          className="text-lg lg:text-lg 2xl:text-2xl"
+          target="_blank"
+          rel="noreferrer noopener"
+          href="https://www.instagram.com/austindestmusic/"
+        >
+          @austindestmusic
         </a>
       </div>
     </div>

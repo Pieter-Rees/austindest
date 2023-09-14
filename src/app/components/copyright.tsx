@@ -23,7 +23,7 @@ export default function Copyright() {
           <Logo />
         </div>
 
-        <div className="text-center 2xl:text-2xl ">Copyright © {year}</div>
+        <div className="text-center 2xl:text-2xl mt-4">Copyright © {year}</div>
         <div className="text-center 2xl:text-2xl">Austin Dest</div>
       </div>
     </div>
