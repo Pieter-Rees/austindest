@@ -71,7 +71,7 @@ const columns = [
 
 export default function Gigs() {
   return (
-    <div id="gigs" className="w-full h-full lg:grid grid-cols-3 gap-8">
+    <div id="gigs" className="w-full h-full lg:grid grid-cols-3 gap-4 lg:gap-8">
       <div className="flex items-center mb-4 lg:mb-0">
         <Title left={true} subTitle="Gigs" />
       </div>

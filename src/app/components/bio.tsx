@@ -8,9 +8,9 @@ export default function Bio() {
       <div className="mb-4 lg:mb-8">
         <Title subTitle="Bio" right={true} />
       </div>
-      <div className="lg:grid grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
         <div className="flex flex-wrap flex-col justify-center">
-          <div className="grid grid-cols-3 gap-8 mb-4">
+          <div className="grid grid-cols-3 gap-4 lg:gap-8 mb-4">
             <Image
               src="/images/a1.jpg"
               width={200}

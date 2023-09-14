@@ -14,7 +14,7 @@ export default function Sidenav(props: sideNavProps) {
       }`}
     >
       <div>
-        <div className="flex flex-col justify-center w-full justify-end uppercase gap-8 mt-8">
+        <div className="flex flex-col justify-center w-full justify-end uppercase gap-4 lg:gap-8 mt-8">
           <Link
             activeClass="text-bubblegum hover:cursor-default"
             to="landing"
