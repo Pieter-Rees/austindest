@@ -35,13 +35,13 @@ export const Title = ({
             >
               {title}
             </h1>
-            <h1
+            <span
               className={`absolute top-0 text-5xl lg:text-9xl text-shine ${
                 center ? "text-center lg:text-left" : ""
               }`}
             >
               {title}
-            </h1>
+            </span>
           </div>
         )}
         {subTitle && (

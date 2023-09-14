@@ -1,27 +1,20 @@
+import localFont from "next/font/local";
 import "./neon.css";
+
+// Font files can be colocated inside of `pages`
+const myFont = localFont({
+  src: "../../../public/fonts/Monoton-Regular.woff2",
+});
+
 export default function Logo() {
   return (
-    <svg
-      className="hover:animate-spin-slow cursor-grab svg-neon"
-      version="1.1"
-      id="Layer_1"
-      xmlns="http://www.w3.org/2000/svg"
-      x="0px"
-      y="0px"
-      viewBox="0 0 600 600"
-      width="40px"
-      height="40px"
-      fill="fill-current"
-    >
-      <g>
-        <path
-          d="M31.46,549.19H6.71L214.59,23.6h24.76l207.57,525.59h-24.44L226.97,54.39L31.46,549.19z M229.83,108.66l13.01,29.2
-		L80.34,549.19H55.9L229.83,108.66z M255.22,168.96l12.06,31.42l-137.43,348.8H105.1L255.22,168.96z M279.34,231.8l12.06,32.06
-		L178.73,549.19h-24.44L279.34,231.8z M217.13,486.35l8.89-22.85h149.8l9.52,22.85H217.13z M234.91,440.64l8.89-22.85h113.94
-		l9.84,22.85H234.91z M252.68,394.94l9.2-22.85h78.08l9.2,22.85H252.68z M288.23,23.6l207.89,525.59h-24.76L263.79,23.6H288.23z
-		 M337.42,23.6l207.88,525.59h-24.44L312.98,23.6H337.42z M594.5,549.19h-24.76L362.18,23.6h24.44L594.5,549.19z"
-        />
-      </g>
-    </svg>
+    <div className={myFont.className}>
+      <div className="relative hover:animate-spin-slow cursor-grab">
+        <span className="absolute z-2 left-0 text-5xl lg:text-5xl text-neon-title">
+          A
+        </span>
+        <span className="relative z-0 text-5xl lg:text-5xl text-shine">A</span>
+      </div>
+    </div>
   );
 }
