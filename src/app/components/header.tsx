@@ -47,14 +47,14 @@ export default function Header() {
             </svg>
           </button>
         </div>
-        <div className="hidden md:flex w-full justify-end flex-grow md:items-center md:w-auto text-sm md:flex-grow uppercase">
+        <div className="hidden md:flex w-full justify-end flex-grow md:items-center md:w-auto md:flex-grow uppercase">
           <Link
             activeClass="text-bubblegum hover:cursor-default"
             to="landing"
             spy={true}
             smooth={true}
             offset={-300}
-            className="text-lg cursor-pointer block mt-4 lg:inline-block md:mt-0 hover:text-bubblegum mr-4"
+            className="text-lg 2xl:text-2xl cursor-pointer block mt-4 lg:inline-block md:mt-0 hover:text-bubblegum mr-4"
             duration={500}
           >
             Home
@@ -65,7 +65,7 @@ export default function Header() {
             spy={true}
             smooth={true}
             offset={-150}
-            className="text-lg cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
+            className="text-lg 2xl:text-2xl cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
             duration={500}
           >
             Gigs
@@ -76,7 +76,7 @@ export default function Header() {
             spy={true}
             smooth={true}
             offset={-150}
-            className="text-lg cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
+            className="text-lg 2xl:text-2xl cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
             duration={500}
           >
             Bio
@@ -87,7 +87,7 @@ export default function Header() {
             spy={true}
             offset={-150}
             smooth={true}
-            className="text-lg cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
+            className="text-lg 2xl:text-2xl cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
             duration={500}
           >
             Listen
@@ -98,7 +98,7 @@ export default function Header() {
             spy={true}
             smooth={true}
             offset={-150}
-            className="text-lg cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
+            className="text-lg 2xl:text-2xl cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
             duration={500}
           >
             Watch
@@ -109,7 +109,7 @@ export default function Header() {
             spy={true}
             offset={-300}
             smooth={true}
-            className="text-lg cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
+            className="text-lg 2xl:text-2xl cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
             duration={500}
           >
             Contact

@@ -5,47 +5,39 @@ import React from "react";
 const rows = [
   {
     key: "1",
-    date: "10|08|2023",
-    name: "Bodhi beach",
-    location: "Zandvoort",
-    info: "i",
-    link: "F",
-  },
-  {
-    key: "2",
-    date: "08-09|09|2023",
+    date: "08-09 Sept 2023",
     name: "Hartstocht festival",
     location: "Elp",
     info: "i",
     link: "F",
   },
   {
-    key: "3",
-    date: "16|09|2023",
+    key: "2",
+    date: "16 SEPT 2023",
     name: "Jaydee invites",
     location: "Bergen",
     info: "i",
     link: "F",
   },
   {
-    key: "4",
-    date: "20|10|2023",
+    key: "3",
+    date: "20 OKT2023",
     name: "Dijkbreuk (ADE)",
     location: "Amsterdam",
     info: "i",
     link: "F",
   },
   {
-    key: "5",
-    date: "21|10|2023",
+    key: "4",
+    date: "21 OKT 2023",
     name: "Cinematique (ADE)",
     location: "Amsterdam",
     info: "i",
     link: "F",
   },
   {
-    key: "6",
-    date: "18|11|2023",
+    key: "5",
+    date: "18 NOV 2023",
     name: "Charlatan",
     location: "Gent, BE",
     info: "i",
@@ -85,7 +77,7 @@ export default function Gigs() {
       </div>
 
       <div className="col-span-2 lg:col-span-auto">
-        <table className="w-full border-separate border-spacing-4 table-auto text-lg">
+        <table className="w-full border-separate border-spacing-4 table-auto">
           <tbody>
             {rows.map((row, i) => {
               // Return the element. Also pass key
@@ -94,8 +86,8 @@ export default function Gigs() {
                   className="pt-8 text-lg lg:text-lg 2xl:text-xl"
                   key={row.key}
                 >
-                  <td>{row.date}</td>
-                  <td>
+                  <td className="text-lg 2xl:text-2xl">{row.date}</td>
+                  <td className="text-lg 2xl:text-2xl">
                     {row.info ? (
                       <>
                         <a target="_blank" href={row.info}>

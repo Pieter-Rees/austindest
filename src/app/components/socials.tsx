@@ -280,7 +280,7 @@ export default function Socials() {
       </div>
       <div className="flex items-center justify-center uppercase">
         <a
-          className="text-lg"
+          className="text-lg 2xl:text-2xl"
           rel="noreferrer noopener"
           href="mailto:contact@austindest.com"
         >

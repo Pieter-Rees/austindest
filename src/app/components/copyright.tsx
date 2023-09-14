@@ -10,20 +10,23 @@ export default function Copyright() {
   const year = new Date().getFullYear();
 
   return (
-    <div className="relative z-3 bg-black backdrop-blur-md p-8 flex flex-col items-center">
-      <div
-        className="cursor-pointer  transition-all fill-white hover:fill-bubblegum ease-in-out"
-        onClick={() => scrollToTop()}
-      >
-        <Logo />
-      </div>
+    <div className="relative z-3 grid lg:grid-cols-2 gap-4 bg-black backdrop-blur-md p-8">
+      <div className=" flex flex-col items-center">
+        <div
+          className="cursor-pointer mt-4 transition-all fill-white hover:fill-bubblegum ease-in-out"
+          onClick={() => scrollToTop()}
+        >
+          <Logo />
+        </div>
 
-      <hr />
-      <div className="text-center text-lg">Copyright © {year} Austin dest</div>
-
-      <div className="mt-4">
-        <Socials />
+        <div className="text-center text-lg">
+          Copyright © {year} Austin dest
+        </div>
       </div>
+      <div className="block lg:hidden">
+        <hr />
+      </div>
+      <Socials />
     </div>
   );
 }

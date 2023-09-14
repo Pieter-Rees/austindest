@@ -37,7 +37,7 @@ export const Title = ({
             </h1>
             <span
               className={`absolute top-0 text-5xl lg:text-9xl text-shine ${
-                center ? "text-center lg:text-left" : ""
+                center ? "text-center lg:text-left left-0 right-0" : ""
               }`}
             >
               {title}
