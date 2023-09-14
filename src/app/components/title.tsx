@@ -49,7 +49,7 @@ export const Title = ({
             className={`text-4xl sm:text-5xl lg:text-6xl text-white text-neon
             ${margin ? "mt-8" : ""}
 
-            ${center ? "text-center lg:text-left" : ""}
+            ${center ? "text-center" : ""}
             ${left ? "text-center lg:text-left" : ""}
           ${right ? "text-center lg:text-right" : ""}`}
           >

@@ -14,7 +14,7 @@ export default function Watch() {
   return (
     <div id="watch" className="w-full ">
       <div className="my-6 lg:mb-8 lg:mt-0">
-        <Title subTitle="Watch" right={true} />
+        <Title subTitle="Watch" left={true} />
       </div>
       {isLoaded ? (
         <>

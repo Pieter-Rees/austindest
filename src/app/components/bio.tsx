@@ -6,7 +6,7 @@ export default function Bio() {
   return (
     <div id="bio">
       <div className="my-6 lg:mb-8 lg:mt-0">
-        <Title subTitle="Bio" right={true} />
+        <Title subTitle="Bio" left={true} />
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
         <div className="flex flex-wrap flex-col justify-center">

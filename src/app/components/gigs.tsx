@@ -71,12 +71,11 @@ const columns = [
 
 export default function Gigs() {
   return (
-    <div id="gigs" className="w-full h-full lg:grid grid-cols-3 gap-4 lg:gap-8">
-      <div className="flex items-center my-6 lg:my-0">
+    <div id="gigs" className="w-full h-full lg:grid grid-cols-4 gap-4 lg:gap-8">
+      <div className="flex lg:hidden items-center my-6 lg:my-0">
         <Title left={true} subTitle="Gigs" />
       </div>
-
-      <div className="col-span-2 lg:col-span-auto">
+      <div className="col-span-3 lg:col-span-auto">
         <table className="w-full border-separate lg:border-spacing-4 table-auto">
           <tbody>
             {rows.map((row, i) => {
@@ -157,6 +156,9 @@ export default function Gigs() {
             })}
           </tbody>
         </table>
+      </div>
+      <div className="hidden lg:flex items-center my-6 lg:my-0">
+        <Title left={true} subTitle="Gigs" />
       </div>
     </div>
   );

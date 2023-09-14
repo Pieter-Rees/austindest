@@ -6,6 +6,7 @@ export default function Landing() {
     <div id="landing" className="w-full h-full my-6 lg:my-0 relative z-2">
       <Title
         margin={true}
+        left={true}
         center={true}
         title="Austin"
         subTitle="All About The Groove"
