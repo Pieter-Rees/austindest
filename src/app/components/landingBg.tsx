@@ -9,7 +9,7 @@ export default function Landing() {
     setIsLoaded(true);
   }, []);
   return (
-    <div className="fixed left-0 right-0 h-screen z-0 brightness-0.41 ">
+    <div className="fixed left-0 right-0 h-screen z-0 brightness-0.4 scale-150">
       {isLoaded ? (
         <ReactPlayer
           playbackRate={0.8}
