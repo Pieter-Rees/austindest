@@ -10,7 +10,7 @@ export default function Contact() {
         <div className="text-center">
           <div className="uppercase">
             <a
-              className="text-lg lg:text-lg 2xl:text-2xl md:hover:text-bubblegum"
+              className="text-lg lg:text-lg 2xl:text-2xl text-white md:hover:text-bubblegum"
               rel="noreferrer noopener"
               href="mailto:contact@austindest.com"
             >
@@ -19,7 +19,7 @@ export default function Contact() {
           </div>
           <div className="uppercase">
             <a
-              className="text-lg lg:text-lg 2xl:text-2xl md:hover:text-bubblegum"
+              className="text-lg lg:text-lg 2xl:text-2xl text-white md:hover:text-bubblegum"
               target="_blank"
               rel="noreferrer noopener"
               href="https://www.instagram.com/austindestmusic/"

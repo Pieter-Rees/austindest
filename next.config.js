@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
+  distDir: "build",
   images: {
-    output: "export",
-    minimumCacheTTL: 60,
+    unoptimized: true,
   },
 };
 
