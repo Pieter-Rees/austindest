@@ -25,7 +25,7 @@ jobs:
                   username: u139611p133233
                   password: ${{ secrets.password }}
                   local-dir: ./build/
-                  server-dir: /domains/austindest.com/public_html/
+                  server-dir: ./domains/austindest.com/public_html/
                   exclude: |
                       **/.git*
                       **/.git*/**
