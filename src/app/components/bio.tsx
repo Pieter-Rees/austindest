@@ -12,21 +12,21 @@ export default function Bio() {
         <div className="flex flex-wrap flex-col justify-center">
           <div className="grid grid-cols-3 gap-4 lg:gap-8 mb-4">
             <Image
-              src="/images/a1.jpg"
+              src="/images/a1.webp"
               width={200}
               height={300}
               className="object-cover w-full h-full rounded-3xl fancy-border"
               alt="Picture of the author"
             />
             <Image
-              src="/images/a2.jpg"
+              src="/images/a2.webp"
               width={200}
               height={200}
               className="object-cover w-full h-full rounded-3xl fancy-border"
               alt="Picture of the author"
             />
             <Image
-              src="/images/a3.jpg"
+              src="/images/a3.webp"
               width={200}
               height={200}
               className="object-cover w-full h-full rounded-3xl fancy-border"
@@ -35,7 +35,7 @@ export default function Bio() {
           </div>
           <div className="w-full max-h-64">
             <Image
-              src="/images/a4.jpg"
+              src="/images/a4.webp"
               width={1000}
               height={200}
               className="object-cover w-full h-full rounded-3xl fancy-border"
