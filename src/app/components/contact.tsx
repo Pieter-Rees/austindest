@@ -8,7 +8,7 @@ export default function Contact() {
         </div>
 
         <div className="text-center">
-          <div className="uppercase">
+          <div>
             <a
               className="text-lg lg:text-lg 2xl:text-2xl text-white md:hover:text-bubblegum"
               rel="noreferrer noopener"
@@ -17,7 +17,7 @@ export default function Contact() {
               contact@austindest.com
             </a>
           </div>
-          <div className="uppercase">
+          <div>
             <a
               className="text-lg lg:text-lg 2xl:text-2xl text-white md:hover:text-bubblegum"
               target="_blank"

@@ -8,16 +8,19 @@ export default function Listen() {
         <Title right={true} subTitle="Listen" />
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="rounded-lg fancy-border overflow-hidden safari-fix">
-          <iframe
-            className="h-full "
-            title="soundcloud sets"
-            width="100%"
-            height="300"
-            loading="lazy"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1412583274&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-          ></iframe>
+        <div className="h-96 lg:h-auto">
+          <div className="rounded-lg fancy-border overflow-hidden safari-fix ">
+            <iframe
+              className="h-full "
+              title="soundcloud sets"
+              width="100%"
+              loading="lazy"
+              height="600px"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1412583274&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+            ></iframe>
+          </div>
         </div>
+
         <div className="flex flex-col gap-4 lg:gap-8">
           <div className="overflow-hidden rounded-lg fancy-border safari-fix">
             <iframe
