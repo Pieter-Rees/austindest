@@ -1,3 +1,6 @@
+"use client"; // This is a client component 👈🏽
+
+import { useState, useEffect } from "react";
 import Header from "./components/header";
 import { Section } from "./components/section";
 import Landing from "./components/landing";
@@ -8,8 +11,12 @@ import Bio from "./components/bio";
 import Listen from "./components/listen";
 import Contact from "./components/contact";
 import Copyright from "./components/copyright";
+import * as gtag from "./lib/gtag";
 
 export default function Home() {
+  useEffect(() => {
+    gtag.pageview();
+  });
   return (
     <>
       <LandingBg />
