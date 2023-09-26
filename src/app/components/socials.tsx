@@ -283,7 +283,7 @@ export default function Socials() {
         </div>
       </div>
       <hr />
-      <div className="flex items-center flex-col justify-center uppercase">
+      <div className="flex items-center flex-col justify-center">
         <a
           className="text-lg 2xl:text-2xl md text-white hover:text-bubblegum"
           rel="noreferrer noopener"
