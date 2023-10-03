@@ -7,6 +7,19 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Austin Dest",
   description: "Austin Dest, DJ, Producer, and Musician",
+  keywords: [
+    "Austin",
+    "Austin Dest",
+    "Dest",
+    "DJ Austin",
+    "DJ Austin Dest",
+    "DJ",
+    "JayDee",
+    "Austin Martin",
+    "House",
+    "Progressive",
+    "Groove",
+  ],
 };
 
 export default function RootLayout({
