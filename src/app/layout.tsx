@@ -19,7 +19,14 @@ export const metadata: Metadata = {
     "House",
     "Progressive",
     "Groove",
+    "ADE",
+    "A.D.E.",
+    "Amsterdam",
+    "Amsterdam Dance Event",
+    "Amsterdam Dance Event 2023",
+    "Amsterdam Dance Event 2022",
   ],
+  creator: "Pieter Rees",
 };
 
 export default function RootLayout({

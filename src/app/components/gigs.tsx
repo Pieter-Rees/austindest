@@ -5,28 +5,6 @@ import React from "react";
 const rows = [
   {
     key: "1",
-    date: "08•09•2023",
-    name: "Hartstocht Festival",
-    location: "Elp",
-    info: "https://henkeningrid.events/",
-    link: "https://www.facebook.com/events/800463961507035/",
-  },
-  {
-    key: "2",
-    date: "16•09•2023",
-    name: "Jaydee Invites",
-    location: "Bergen",
-  },
-  {
-    key: "3",
-    date: "23•09•2023",
-    name: "Wander One More Time",
-    location: "Vinkeveen",
-    info: "https://wanderisland.nl/agenda/",
-    link: "https://www.facebook.com/events/669074861274082",
-  },
-  {
-    key: "4",
     date: "20•10•2023",
     name: "Dijkbreuk (ADE)",
     location: "Amsterdam",
@@ -34,7 +12,13 @@ const rows = [
     link: "https://www.facebook.com/events/1282644745955918/",
   },
   {
-    key: "5",
+    key: "2",
+    date: "27•10•2023",
+    name: "Jaydee Invites",
+    location: "Bergen",
+  },
+  {
+    key: "3",
     date: "21•10•2023",
     name: "Cinematique (ADE)",
     location: "Amsterdam",
@@ -42,11 +26,17 @@ const rows = [
     link: "https://www.facebook.com/events/605624798310058",
   },
   {
-    key: "6",
+    key: "4",
     date: "18•11•2023",
     name: "Charlatan",
     location: "Gent, BE",
     info: "https://www.charlatan.be/agenda/",
+  },
+  {
+    key: "5",
+    date: "25•11•2023",
+    name: "Gebr. de Nobel",
+    location: "Leiden",
   },
 ];
 
