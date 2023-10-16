@@ -11,19 +11,20 @@ const rows = [
     info: "https://www.amsterdam-dance-event.nl/en/program/2023/dijkbreuk/2076555/",
     link: "https://www.facebook.com/events/1282644745955918/",
   },
+
   {
     key: "2",
-    date: "27•10•2023",
-    name: "Jaydee Invites",
-    location: "Bergen",
-  },
-  {
-    key: "3",
     date: "21•10•2023",
     name: "Cinematique (ADE)",
     location: "Amsterdam",
     info: "https://www.amsterdam-dance-event.nl/en/program/2023/cinematique-ade-label-showcase/2170717/",
     link: "https://www.facebook.com/events/605624798310058",
+  },
+  {
+    key: "3",
+    date: "27•10•2023",
+    name: "Jaydee Invites",
+    location: "Bergen",
   },
   {
     key: "4",
