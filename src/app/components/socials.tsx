@@ -285,7 +285,7 @@ export default function Socials() {
       <hr />
       <div className="flex items-center flex-col justify-center">
         <a
-          className="text-lg 2xl:text-2xl md text-white hover:text-bubblegum"
+          className="text-lg 2xl:text-2xl md text-white md:hover:text-bubblegum"
           rel="noreferrer noopener"
           href="mailto:contact@austindest.com"
         >
