@@ -83,13 +83,10 @@ export default function Gigs() {
       <div className="flex items-center my-6 lg:my-0">
         <Title right={true} center={true} subTitle="Gigs" />
       </div>
-      <div
-        id="gigs"
-        className="w-full h-full lg:grid grid-cols-4 gap-4 lg:gap-8"
-      >
+      <div id="gigs" className="w-full h-full ">
         <div className="col-span-3 lg:col-span-auto">
           <table className="w-full border-separate lg:border-spacing-4 table-auto">
-            <thead className="flex justify-center sm:justify-end text-center sm:text-right lg:text-lg 2xl:text-xl font-bold">
+            <thead className="flex justify-center sm:justify-end text-center sm:text-right lg:text-xl 2xl:text-2xl font-bold">
               <tr className="flex">
                 <td className="mb-4">Upcoming</td>
               </tr>
@@ -187,7 +184,7 @@ export default function Gigs() {
                 );
               })}
             </tbody>
-            <thead className="flex justify-center sm:justify-end text-center sm:text-right lg:text-lg 2xl:text-xl font-bold ">
+            <thead className="flex justify-center sm:justify-end text-center sm:text-right lg:text-xl 2xl:text-2xl font-bold ">
               <tr className="flex ">
                 <td className="my-4">Passed</td>
               </tr>
