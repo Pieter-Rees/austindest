@@ -89,9 +89,11 @@ export default function Gigs() {
       >
         <div className="col-span-3 lg:col-span-auto">
           <table className="w-full border-separate lg:border-spacing-4 table-auto">
-            <span className="block text-center sm:text-right font-bold mb-2  lg:text-lg 2xl:text-xl">
-              Upcoming
-            </span>
+            <thead className="flex justify-center sm:justify-end text-center sm:text-right lg:text-lg 2xl:text-xl font-bold">
+              <tr className="flex">
+                <td className="mb-4">Upcoming</td>
+              </tr>
+            </thead>
 
             <tbody>
               {upcomingGigs.map((row, i) => {
@@ -185,9 +187,11 @@ export default function Gigs() {
                 );
               })}
             </tbody>
-            <span className="block text-center sm:text-right  lg:text-lg 2xl:text-xl font-bold my-2">
-              Passed
-            </span>
+            <thead className="flex justify-center sm:justify-end text-center sm:text-right lg:text-lg 2xl:text-xl font-bold ">
+              <tr className="flex ">
+                <td className="my-4">Passed</td>
+              </tr>
+            </thead>
 
             <tbody>
               {passedGigs.map((row, i) => {
