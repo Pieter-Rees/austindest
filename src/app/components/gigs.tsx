@@ -65,7 +65,7 @@ const columns = [
   },
 ];
 
-const dateConverter = (date) => {
+const dateConverter = (date:string) => {
   return date.split("•").reverse().join("-");
 };
 
