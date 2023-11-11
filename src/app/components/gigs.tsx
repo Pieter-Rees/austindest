@@ -65,7 +65,7 @@ const columns = [
   },
 ];
 
-const dateConverter = (date:string) => {
+const dateConverter = (date: string) => {
   return date.split("•").reverse().join("-");
 };
 
@@ -86,7 +86,7 @@ export default function Gigs() {
       <div id="gigs" className="w-full h-full ">
         <div className="col-span-3 lg:col-span-auto">
           <table className="w-full border-separate lg:border-spacing-4 table-auto">
-            <thead className="flex justify-center sm:justify-end text-center sm:text-right lg:text-xl 2xl:text-2xl font-bold">
+            <thead className="flex justify-start sm:justify-center lg:text-xl 2xl:text-2xl font-bold">
               <tr className="flex">
                 <td className="mb-4">Upcoming</td>
               </tr>
@@ -97,13 +97,13 @@ export default function Gigs() {
                 // Return the element. Also pass key
                 return (
                   <tr
-                    className=" pt-8 text-xs text-white lg:text-lg 2xl:text-xl"
+                    className=" pt-8 text-xs text-white lg:text-xl 2xl:text-2xl"
                     key={row.key}
                   >
-                    <td className="hidden sm:block text-right text-xs text-white lg:text-lg 2xl:text-2xl">
+                    <td className="hidden sm:block text-center text-xs text-white lg:text-xl 2xl:text-2xl">
                       <span>{row.date}</span>
                     </td>
-                    <td className="text-xs text-center text-white  lg:text-lg 2xl:text-2xl">
+                    <td className="text-sm text-white sm:text-center lg:text-lg 2xl:text-2xl">
                       {row.info ? (
                         <>
                           <a
@@ -112,7 +112,7 @@ export default function Gigs() {
                             className="hover:text-bubblegum"
                           >
                             {row.name}
-                            <div className="block sm:hidden sm:text-right ">
+                            <div className="block sm:hidden text-left sm:text-right ">
                               {row.date}
                             </div>
                           </a>
@@ -126,7 +126,7 @@ export default function Gigs() {
                         </>
                       )}
                     </td>
-                    <td className="text-xs text-white lg:text-lg 2xl:text-2xl">
+                    <td className="text-md text-white lg:text-xl 2xl:text-2xl">
                       {row.location}
                     </td>
                     <td>
@@ -184,7 +184,7 @@ export default function Gigs() {
                 );
               })}
             </tbody>
-            <thead className="flex justify-center sm:justify-end text-center sm:text-right lg:text-xl 2xl:text-2xl font-bold ">
+            <thead className="flex justify-start sm:justify-center lg:text-xl 2xl:text-2xl font-bold ">
               <tr className="flex ">
                 <td className="my-4">Passed</td>
               </tr>
@@ -195,14 +195,14 @@ export default function Gigs() {
                 // Return the element. Also pass key
                 return (
                   <tr
-                    className="pt-8 text-xs text-white lg:text-lg 2xl:text-xl"
+                    className="pt-8 text-xs text-white lg:text-xl 2xl:text-2xl"
                     key={row.key}
                   >
-                    <td className="hidden sm:block text-right text-xs text-white lg:text-lg 2xl:text-2xl">
+                    <td className="hidden sm:block sm:text-center text-xs text-white lg:text-xl 2xl:text-2xl">
                       <span>{row.date}</span>
                     </td>
 
-                    <td className="text-xs text-center text-white  lg:text-lg 2xl:text-2xl">
+                    <td className="text-sm text-left sm:text-center text-white  lg:text-xl 2xl:text-2xl">
                       {row.info ? (
                         <>
                           <a
@@ -226,7 +226,7 @@ export default function Gigs() {
                       )}
                     </td>
 
-                    <td className="text-xs text-white lg:text-lg 2xl:text-2xl">
+                    <td className="text-md text-white lg:text-xl 2xl:text-2xl">
                       {row.location}
                     </td>
                     <td>
