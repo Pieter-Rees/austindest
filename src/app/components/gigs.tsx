@@ -4,7 +4,6 @@ import React from "react";
 
 const rows = [
   {
-    key: "1",
     date: "20•10•2023",
     name: "Dijkbreuk (ADE)",
     location: "Amsterdam",
@@ -13,7 +12,6 @@ const rows = [
   },
 
   {
-    key: "2",
     date: "21•10•2023",
     name: "Cinematique (ADE)",
     location: "Amsterdam",
@@ -21,20 +19,17 @@ const rows = [
     link: "https://www.facebook.com/events/605624798310058",
   },
   {
-    key: "3",
     date: "27•10•2023",
     name: "Jaydee Invites",
     location: "Bergen",
   },
   {
-    key: "4",
     date: "18•11•2023",
     name: "Charlatan",
     location: "Gent, BE",
     info: "https://www.charlatan.be/agenda/",
   },
   {
-    key: "5",
     date: "25•11•2023",
     name: "Gebr. de Nobel",
     location: "Leiden",
@@ -69,11 +64,15 @@ const dateConverter = (date: string) => {
   return date.split("•").reverse().join("-");
 };
 
-const upcomingGigs = rows.filter((row) => {
+const sortedDates = rows.sort((a, b) => {
+  return Date.parse(dateConverter(a.date)) - Date.parse(dateConverter(b.date));
+});
+
+const upcomingGigs = sortedDates.filter((row) => {
   return Date.parse(dateConverter(row.date)) > Date.now();
 });
 
-const passedGigs = rows.filter((row) => {
+const passedGigs = sortedDates.filter((row) => {
   return Date.parse(dateConverter(row.date)) < Date.now();
 });
 
