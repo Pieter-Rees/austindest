@@ -68,11 +68,15 @@ const sortedDates = rows.sort((a, b) => {
   return Date.parse(dateConverter(a.date)) - Date.parse(dateConverter(b.date));
 });
 
+const revertedSortedDates = rows.sort((a, b) => {
+  return Date.parse(dateConverter(b.date)) - Date.parse(dateConverter(a.date));
+});
+
 const upcomingGigs = sortedDates.filter((row) => {
   return Date.parse(dateConverter(row.date)) > Date.now();
 });
 
-const passedGigs = sortedDates.filter((row) => {
+const passedGigs = revertedSortedDates.filter((row) => {
   return Date.parse(dateConverter(row.date)) < Date.now();
 });
 
