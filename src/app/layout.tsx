@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Austin Dest",
   description: "Austin Dest, DJ, Producer, and Musician",
+  themeColor: "#ff77e9",
   keywords: [
     "Austin",
     "Austin Dest",
