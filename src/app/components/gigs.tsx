@@ -101,7 +101,7 @@ export default function Gigs() {
                 return (
                   <tr
                     className=" pt-8 text-xs text-white lg:text-xl 2xl:text-2xl"
-                    key={row.toString()}
+                    key={i.toString()}
                   >
                     <td className="hidden sm:block text-center text-xs text-white lg:text-xl 2xl:text-2xl">
                       <span>{row.date}</span>
@@ -199,7 +199,7 @@ export default function Gigs() {
                 return (
                   <tr
                     className="pt-8 text-xs text-white lg:text-xl 2xl:text-2xl"
-                    key={row.toString()}
+                    key={i.toString()}
                   >
                     <td className="hidden sm:block sm:text-center text-xs text-white lg:text-xl 2xl:text-2xl">
                       <span>{row.date}</span>
