@@ -34,6 +34,21 @@ const rows = [
     name: "Gebr. de Nobel",
     location: "Leiden",
   },
+  {
+    date: "03•02•2024",
+    name: "Gebr. de Nobel",
+    location: "Leiden",
+  },
+  {
+    date: "06•04•2024",
+    name: "30 Love",
+    location: "Rotterdam",
+  },
+  {
+    date: "25•05•2024",
+    name: "Play Festival",
+    location: "Leeuwarden",
+  },
 ];
 
 const columns = [
