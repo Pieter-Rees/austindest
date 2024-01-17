@@ -13,7 +13,9 @@ export const Section = ({
     <>
       <section
         className={` w-full flex  justify-center items-center relative z-2 ${
-          bg ? "bg-blue/20 backdrop-blur-md" : ""
+          bg
+            ? "bg-gradient-to-r from-bubblegum/20 to=blue/20 backdrop-blur-md"
+            : ""
         }
        ${fullVh ? "h-screen" : ""}`}
       >
