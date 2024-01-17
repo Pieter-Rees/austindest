@@ -29,10 +29,41 @@ const rows = [
     location: "Gent, BE",
     info: "https://www.charlatan.be/agenda/",
   },
+
   {
-    date: "25•11•2023",
-    name: "Gebr. de Nobel",
-    location: "Leiden",
+    date: "28•10•2023",
+    name: "De Neushoorn",
+    location: "Leeuwarden",
+  },
+  {
+    date: "04•11•2023",
+    name: "Proton Radio",
+    location: "Online Radio",
+  },
+  {
+    date: "15•01•2024",
+    name: "Ritmotica",
+    location: "Online Radio",
+  },
+  {
+    date: "19•01•2024",
+    name: "Wahlhafen",
+    location: "Rotterdam",
+  },
+  {
+    date: "16•03•2024",
+    name: "SWAF",
+    location: "Hoorn",
+  },
+  {
+    date: "23•03•2024",
+    name: "Besloten Feest RLGC",
+    location: "Amsterdam",
+  },
+  {
+    date: "30•03•2024",
+    name: "Recycle Lounge Gallery Club",
+    location: "Amsterdam",
   },
   {
     date: "03•02•2024",
@@ -95,6 +126,8 @@ const passedGigs = revertedSortedDates.filter((row) => {
   return Date.parse(dateConverter(row.date)) < Date.now();
 });
 
+const reversedUpcomingGigs = upcomingGigs.reverse();
+
 export default function Gigs() {
   return (
     <>
@@ -111,7 +144,7 @@ export default function Gigs() {
             </thead>
 
             <tbody>
-              {upcomingGigs.map((row, i) => {
+              {reversedUpcomingGigs.map((row, i) => {
                 // Return the element. Also pass key
                 return (
                   <tr
