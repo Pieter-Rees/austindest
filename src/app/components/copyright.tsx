@@ -15,9 +15,9 @@ export default function Copyright() {
       <div className="block lg:hidden">
         <hr />
       </div>
-      <div className=" flex flex-col items-center">
+      <div className="flex-col justify-center flex items-center">
         <div
-          className="cursor-pointer mt-4 lg:mt-0 transition-all fill-white hover:fill-bubblegum ease-in-out"
+          className="cursor-pointer  transition-all fill-white hover:fill-bubblegum ease-in-out"
           onClick={() => scrollToTop()}
         >
           <Logo />
