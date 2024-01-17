@@ -21,7 +21,7 @@ export default function Home() {
         <Gigs />
       </Section>
 
-      <Section bg={true}>
+      <Section bg={false}>
         <Bio />
       </Section>
 
@@ -29,7 +29,7 @@ export default function Home() {
         <Listen />
       </Section>
 
-      <Section bg={true}>
+      <Section>
         <Watch />
       </Section>
 
