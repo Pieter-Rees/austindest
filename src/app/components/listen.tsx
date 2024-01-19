@@ -3,7 +3,7 @@ import "./border.css";
 
 export default function Listen() {
   return (
-    <div id="listen">
+    <div>
       <div className="my-6 lg:mb-8 lg:mt-0">
         <Title right={true} subTitle="Listen" />
       </div>

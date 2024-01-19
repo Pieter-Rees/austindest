@@ -134,7 +134,7 @@ export default function Gigs() {
       <div className="flex items-center my-6 lg:my-0">
         <Title right={true} center={true} subTitle="Gigs" />
       </div>
-      <div id="gigs" className="w-full h-full ">
+      <div className="w-full h-full ">
         <div className="col-span-3 lg:col-span-auto">
           <table className="w-full border-separate lg:border-spacing-4 table-auto">
             <thead className="flex justify-start sm:justify-center lg:text-xl 2xl:text-2xl font-bold">

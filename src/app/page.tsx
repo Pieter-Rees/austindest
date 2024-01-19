@@ -14,26 +14,27 @@ export default function Home() {
     <>
       <LandingBg />
 
-      <Section fullVh={true}>
+      <Section id="landing" fullVh={true}>
         <Landing />
       </Section>
-      <Section bg={true}>
+
+      <Section id="gigs" bg={true}>
         <Gigs />
       </Section>
 
-      <Section bg={false}>
+      <Section id="bio" bg={false}>
         <Bio />
       </Section>
 
-      <Section bg={true}>
+      <Section id="listen" bg={true}>
         <Listen />
       </Section>
 
-      <Section>
+      <Section id="watch">
         <Watch />
       </Section>
 
-      <Section bg={true} fullVh={true}>
+      <Section bg={true} fullVh={true} id="contact">
         <Contact />
       </Section>
       <Copyright />
