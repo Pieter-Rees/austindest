@@ -153,7 +153,6 @@ export default function Header() {
             activeClass="text-bubblegum hover:cursor-default"
             to="contact"
             spy={true}
-            offset={-300}
             smooth={true}
             className="text-lg 2xl:text-2xl cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
             duration={500}

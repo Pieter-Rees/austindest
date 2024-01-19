@@ -22,7 +22,7 @@ export default function Home() {
         <Gigs />
       </Section>
 
-      <Section id="bio" bg={false}>
+      <Section id="bio">
         <Bio />
       </Section>
 
