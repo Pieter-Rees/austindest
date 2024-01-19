@@ -34,7 +34,7 @@ export default function Header() {
       <nav
         className={
           "px-4 fixed z-2 top-0 w-full flex items-center justify-between flex- transition-all   " +
-          (navBackground ? "bg-black/90 backdrop-blur-md" : "")
+          (navBackground ? "bg-black/90 backdrop-blur-md" : "opacity-0")
         }
       >
         <div className="flex items-center flex-shrink-0 text-white mr-6">
