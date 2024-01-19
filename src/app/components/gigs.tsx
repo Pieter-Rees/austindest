@@ -119,11 +119,19 @@ const revertedSortedDates = rows.sort((a, b) => {
 });
 
 const upcomingGigs = sortedDates.filter((row) => {
-  return Date.parse(dateConverter(row.date)) > Date.now();
+  const today = new Date();
+  const tomorrow = new Date();
+  tomorrow.setDate(today.getDate() - 1);
+  const currentDate = Date.parse(tomorrow.toString());
+  return Date.parse(dateConverter(row.date)) > currentDate;
 });
 
 const passedGigs = revertedSortedDates.filter((row) => {
-  return Date.parse(dateConverter(row.date)) < Date.now();
+  const today = new Date();
+  const tomorrow = new Date();
+  tomorrow.setDate(today.getDate() - 1);
+  const currentDate = Date.parse(tomorrow.toString());
+  return Date.parse(dateConverter(row.date)) < currentDate;
 });
 
 const reversedUpcomingGigs = upcomingGigs.reverse();
