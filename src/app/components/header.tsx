@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useState } from "react";
 import Logo from "./logo";
 import localFont from "next/font/local";
@@ -7,10 +6,12 @@ import "./neon.css";
 const myFont = localFont({
   src: "../../../public/fonts/Monoton-Regular.woff2",
 });
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link, Events, animateScroll as scroll, scrollSpy } from "react-scroll";
+import { useEffect } from "react";
 import Sidenav from "./sidenav";
 export default function Header() {
   const [showSideNav, setShowSideNav] = useState(false);
+  const [navBackground, setnavBackground] = useState(false);
 
   const handleToggle = () => {
     setShowSideNav((showSideNav) => !showSideNav);
@@ -20,9 +21,22 @@ export default function Header() {
     scroll.scrollToTop();
   };
 
+  const handleSetActive = (to: string) => {
+    if (to !== "landing") {
+      setnavBackground(true);
+    } else {
+      setnavBackground(false);
+    }
+  };
+
   return (
     <>
-      <nav className="px-4 fixed z-2 top-0 w-full flex items-center justify-between flex-wrap bg-black/90 backdrop-blur-md">
+      <nav
+        className={
+          "px-4 fixed z-2 top-0 w-full flex items-center justify-between flex- transition-all   " +
+          (navBackground ? "bg-black/90 backdrop-blur-md" : "")
+        }
+      >
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <div
             onClick={() => scrollToTop()}
@@ -106,6 +120,7 @@ export default function Header() {
             smooth={true}
             className="text-lg 2xl:text-2xl cursor-pointer block mt-4 lg:inline-block md:mt-0 hover:text-bubblegum mr-4"
             duration={500}
+            onSetActive={handleSetActive}
           >
             Home
           </Link>
@@ -116,6 +131,7 @@ export default function Header() {
             smooth={true}
             className=" text-lg 2xl:text-2xl cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
             duration={500}
+            onSetActive={handleSetActive}
           >
             Gigs
           </Link>
@@ -126,6 +142,7 @@ export default function Header() {
             smooth={true}
             className="text-lg 2xl:text-2xl cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
             duration={500}
+            onSetActive={handleSetActive}
           >
             Bio
           </Link>
@@ -136,6 +153,7 @@ export default function Header() {
             smooth={true}
             className="text-lg 2xl:text-2xl cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
             duration={500}
+            onSetActive={handleSetActive}
           >
             Listen
           </Link>
@@ -146,6 +164,7 @@ export default function Header() {
             smooth={true}
             className="text-lg 2xl:text-2xl cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
             duration={500}
+            onSetActive={handleSetActive}
           >
             Watch
           </Link>
@@ -156,6 +175,7 @@ export default function Header() {
             smooth={true}
             className="text-lg 2xl:text-2xl cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
             duration={500}
+            onSetActive={handleSetActive}
           >
             Contact
           </Link>
