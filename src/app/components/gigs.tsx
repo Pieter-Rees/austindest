@@ -4,73 +4,6 @@ import React from "react";
 
 const rows = [
   {
-    date: "20•10•2023",
-    name: "Dijkbreuk (ADE)",
-    location: "Amsterdam",
-    info: "https://www.amsterdam-dance-event.nl/en/program/2023/dijkbreuk/2076555/",
-    link: "https://www.facebook.com/events/1282644745955918/",
-  },
-
-  {
-    date: "21•10•2023",
-    name: "Cinematique (ADE)",
-    location: "Amsterdam",
-    info: "https://www.amsterdam-dance-event.nl/en/program/2023/cinematique-ade-label-showcase/2170717/",
-    link: "https://www.facebook.com/events/605624798310058",
-  },
-  {
-    date: "27•10•2023",
-    name: "Jaydee Invites",
-    location: "Bergen",
-  },
-  {
-    date: "18•11•2023",
-    name: "Charlatan",
-    location: "Gent, BE",
-    info: "https://www.charlatan.be/agenda/",
-  },
-
-  {
-    date: "28•10•2023",
-    name: "De Neushoorn",
-    location: "Leeuwarden",
-  },
-  {
-    date: "04•11•2023",
-    name: "Proton Radio",
-    location: "Online Radio",
-  },
-  {
-    date: "15•01•2024",
-    name: "Ritmotica",
-    location: "Online Radio",
-  },
-  {
-    date: "19•01•2024",
-    name: "Wahlhafen",
-    location: "Rotterdam",
-  },
-  {
-    date: "16•03•2024",
-    name: "SWAF",
-    location: "Hoorn",
-  },
-  {
-    date: "23•03•2024",
-    name: "Besloten Feest RLGC",
-    location: "Amsterdam",
-  },
-  {
-    date: "30•03•2024",
-    name: "Recycle Lounge Gallery Club",
-    location: "Amsterdam",
-  },
-  {
-    date: "03•02•2024",
-    name: "Gebr. de Nobel",
-    location: "Leiden",
-  },
-  {
     date: "06•04•2024",
     name: "30 Love",
     location: "Rotterdam",
@@ -79,6 +12,41 @@ const rows = [
     date: "25•05•2024",
     name: "Play Festival",
     location: "Leeuwarden",
+  },
+  {
+    date: "13•04•2024",
+    name: "The Deep Club",
+    location: "Hoofddorp",
+  },
+  {
+    date: "04•05•2024",
+    name: "Charlatan",
+    location: "Gent, BE",
+  },
+  {
+    date: "29•06•2024",
+    name: "SAM Ibiza Radio",
+    location: "Waddinxveen",
+  },
+  {
+    date: "13•07•2024",
+    name: "Jaydee Invites",
+    location: "Bergen (NH)",
+  },
+  {
+    date: "31•08•2024",
+    name: "Hartstocht Festival",
+    location: "Elp",
+  },
+  {
+    date: "07•09•2024",
+    name: "Spees Festival",
+    location: "Elp",
+  },
+  {
+    date: "18•10•2024",
+    name: "ADE (TBA)",
+    location: "Amsterdam",
   },
 ];
 
