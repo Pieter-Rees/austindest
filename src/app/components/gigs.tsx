@@ -1,4 +1,5 @@
 "use client";
+import { link } from "fs";
 import { Title } from "./title";
 import React from "react";
 
@@ -47,6 +48,8 @@ const rows = [
     date: "18•10•2024",
     name: "ADE (TBA)",
     location: "Amsterdam",
+    info: "https://www.amsterdam-dance-event.nl/",
+    link: "https://www.facebook.com/amsterdamdanceevent",
   },
 ];
 
@@ -121,7 +124,6 @@ export default function Gigs() {
 
             <tbody>
               {reversedUpcomingGigs.map((row, i) => {
-                // Return the element. Also pass key
                 return (
                   <tr
                     className=" pt-8 text-xs text-white lg:text-xl 2xl:text-2xl"
