@@ -61,13 +61,14 @@ export default function Bio() {
           <p className="text-white ">
             With the producer/DJ duo Austin Martin, founded in 2016, Austin
             released records on Cinematique Records and Particles/Proton. Her
-            First solo record was released on Robin ‘Jaydee' Albers’ label First
-            Impression in 2022, from whom she continues to recieve support. She
-            has played ADE for the first time in 2022, and is a well-known guest
-            at ISLA Radio, Amsterdam's Most Wanted, Jaguar House, Henk & Ingrid
-            Events. She has played all around the country and beyond, in clubs
-            as Noorderlicht, ClubNL and Recycle Lounge Gallery Club (Amsterdam),
-            Gebr. Nobel (Leiden), and Charlatan (Gent, BE).
+            First solo record was released on Robin &apos;Jaydee&apos; Albers
+            label First Impression in 2022, from whom she continues to recieve
+            support. She has played ADE for the first time in 2022, and is a
+            well-known guest at ISLA Radio, Amsterdam&apos;s Most Wanted, Jaguar
+            House, Henk & Ingrid Events. She has played all around the country
+            and beyond, in clubs as Noorderlicht, ClubNL and Recycle Lounge
+            Gallery Club (Amsterdam), Gebr. Nobel (Leiden), and Charlatan (Gent,
+            BE).
           </p>
         </div>
       </div>
