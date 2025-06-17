@@ -1,14 +1,30 @@
 .fancy-border {
-  height: 100%;
-  border: double 2px transparent;
+  position: relative;
   border-radius: 1.5rem;
-  background-image: linear-gradient(white, white),
-    radial-gradient(
-      circle at top left,
-      rgba(255, 0, 0, 1),
-      rgba(255, 0, 180, 1),
-      rgba(0, 100, 200, 1)
-    );
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
+  overflow: hidden;
 }
+
+.fancy-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff77e9, #0064c8);
+  z-index: -1;
+  border-radius: 1.5rem;
+  animation: border-animation 3s linear infinite;
+}
+
+@keyframes border-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} 

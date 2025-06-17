@@ -1,14 +1,20 @@
 "use client";
 import { useState } from "react";
 import Logo from "./logo";
-import localFont from "next/font/local";
 import "./neon.css";
-const myFont = localFont({
-  src: "../../../public/fonts/Monoton-Regular.woff2",
-});
 import { Link, Events, animateScroll as scroll, scrollSpy } from "react-scroll";
 import { useEffect } from "react";
 import Sidenav from "./sidenav";
+
+const navItems = [
+  { id: "landing", label: "Home" },
+  { id: "gigs", label: "Gigs" },
+  { id: "bio", label: "Bio" },
+  { id: "listen", label: "Listen" },
+  { id: "watch", label: "Watch" },
+  { id: "contact", label: "Contact" },
+];
+
 export default function Header() {
   const [showSideNav, setShowSideNav] = useState(false);
   const [navBackground, setnavBackground] = useState(false);
@@ -113,72 +119,20 @@ export default function Header() {
           </button>
         </div>
         <div className="hidden md:flex w-full justify-end flex-grow md:items-center md:w-auto md:flex-grow uppercase">
-          <Link
-            activeClass="text-bubblegum hover:cursor-default"
-            to="landing"
-            spy={true}
-            smooth={true}
-            className="text-lg 2xl:text-2xl cursor-pointer block mt-4 lg:inline-block md:mt-0 hover:text-bubblegum mr-4"
-            duration={500}
-            onSetActive={handleSetActive}
-          >
-            Home
-          </Link>
-          <Link
-            activeClass="text-bubblegum hover:cursor-default"
-            to="gigs"
-            spy={true}
-            smooth={true}
-            className=" text-lg 2xl:text-2xl cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
-            duration={500}
-            onSetActive={handleSetActive}
-          >
-            Gigs
-          </Link>
-          <Link
-            activeClass="text-bubblegum hover:cursor-default"
-            to="bio"
-            spy={true}
-            smooth={true}
-            className="text-lg 2xl:text-2xl cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
-            duration={500}
-            onSetActive={handleSetActive}
-          >
-            Bio
-          </Link>
-          <Link
-            activeClass="text-bubblegum hover:cursor-default"
-            to="listen"
-            spy={true}
-            smooth={true}
-            className="text-lg 2xl:text-2xl cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
-            duration={500}
-            onSetActive={handleSetActive}
-          >
-            Listen
-          </Link>
-          <Link
-            activeClass="text-bubblegum hover:cursor-default"
-            to="watch"
-            spy={true}
-            smooth={true}
-            className="text-lg 2xl:text-2xl cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
-            duration={500}
-            onSetActive={handleSetActive}
-          >
-            Watch
-          </Link>
-          <Link
-            activeClass="text-bubblegum hover:cursor-default"
-            to="contact"
-            spy={true}
-            smooth={true}
-            className="text-lg 2xl:text-2xl cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
-            duration={500}
-            onSetActive={handleSetActive}
-          >
-            Contact
-          </Link>
+          {navItems.map((item) => (
+            <Link
+              key={item.id}
+              activeClass="text-bubblegum hover:cursor-default"
+              to={item.id}
+              spy={true}
+              smooth={true}
+              className="text-lg 2xl:text-2xl cursor-pointer block mt-4 lg:inline-block md:mt-0 hover:text-bubblegum mr-4"
+              duration={500}
+              onSetActive={handleSetActive}
+            >
+              {item.label}
+            </Link>
+          ))}
         </div>
       </nav>
       <Sidenav showSideNav={showSideNav} handleToggle={handleToggle} />

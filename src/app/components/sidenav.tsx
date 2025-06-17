@@ -6,6 +6,15 @@ interface sideNavProps {
   showSideNav: boolean;
 }
 
+const navItems = [
+  { id: "landing", label: "Home", offset: -300 },
+  { id: "gigs", label: "Gigs", offset: -150 },
+  { id: "bio", label: "Bio", offset: -150 },
+  { id: "listen", label: "Listen", offset: -150 },
+  { id: "watch", label: "Watch", offset: -150 },
+  { id: "contact", label: "Contact", offset: -300 },
+];
+
 export default function Sidenav(props: sideNavProps) {
   return (
     <nav
@@ -15,72 +24,20 @@ export default function Sidenav(props: sideNavProps) {
     >
       <div>
         <div className="flex flex-col justify-center w-full justify-end uppercase gap-4 lg:gap-8 mt-8">
-          <Link
-            activeClass="text-bubblegum hover:cursor-default"
-            to="landing"
-            spy={true}
-            smooth={true}
-            offset={-300}
-            className="text-3xl text-center cursor-pointer block mt-4 lg:inline-block md:mt-0 hover:text-bubblegum mr-4"
-            duration={500}
-          >
-            <span onClick={() => props.handleToggle()}>Home</span>
-          </Link>
-          <Link
-            activeClass="text-bubblegum hover:cursor-default"
-            to="gigs"
-            spy={true}
-            smooth={true}
-            offset={-150}
-            className="text-3xl text-center cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
-            duration={500}
-          >
-            <span onClick={() => props.handleToggle()}>Gigs</span>
-          </Link>
-          <Link
-            activeClass="text-bubblegum hover:cursor-default"
-            to="bio"
-            spy={true}
-            smooth={true}
-            offset={-150}
-            className="text-3xl text-center cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
-            duration={500}
-          >
-            <span onClick={() => props.handleToggle()}>Bio</span>
-          </Link>
-          <Link
-            activeClass="text-bubblegum hover:cursor-default"
-            to="listen"
-            spy={true}
-            offset={-150}
-            smooth={true}
-            className="text-3xl text-center cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
-            duration={500}
-          >
-            <span onClick={() => props.handleToggle()}>Listen</span>
-          </Link>
-          <Link
-            activeClass="text-bubblegum hover:cursor-default"
-            to="watch"
-            spy={true}
-            smooth={true}
-            offset={-150}
-            className="text-3xl text-center cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
-            duration={500}
-          >
-            <span onClick={() => props.handleToggle()}>Watch</span>
-          </Link>
-          <Link
-            activeClass="text-bubblegum hover:cursor-default"
-            to="contact"
-            spy={true}
-            offset={-300}
-            smooth={true}
-            className="text-3xl text-center cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
-            duration={500}
-          >
-            <span onClick={() => props.handleToggle()}>Contact</span>
-          </Link>
+          {navItems.map((item) => (
+            <Link
+              key={item.id}
+              activeClass="text-bubblegum hover:cursor-default"
+              to={item.id}
+              spy={true}
+              smooth={true}
+              offset={item.offset}
+              className="text-3xl text-center cursor-pointer block mt-4 lg:inline-block md:mt-0 hover:text-bubblegum mr-4"
+              duration={500}
+            >
+              <span onClick={() => props.handleToggle()}>{item.label}</span>
+            </Link>
+          ))}
         </div>
         <div className="mt-24">
           <Socials />

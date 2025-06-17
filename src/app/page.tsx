@@ -1,4 +1,3 @@
-import Header from "./components/header";
 import { Section } from "./components/section";
 import Landing from "./components/landing";
 import LandingBg from "./components/landingBg";
@@ -38,8 +37,6 @@ export default function Home() {
         <Contact />
       </Section>
       <Copyright />
-
-      <Header />
     </>
   );
 }

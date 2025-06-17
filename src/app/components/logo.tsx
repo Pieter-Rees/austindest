@@ -1,16 +1,10 @@
-import localFont from "next/font/local";
 import "./neon.css";
-
-// Font files can be colocated inside of `pages`
-const myFont = localFont({
-  src: "../../../public/fonts/Monoton-Regular.woff2",
-});
 
 export default function Logo() {
   return (
-    <div className={myFont.className}>
+    <div className="font-monoton">
       <div className="relative hover:animate-spin-slow cursor-grab">
-        <span className="absolute z-2 left-0 text-5xl lg:text-5xl text-neon-title">
+        <span className="absolute z-2 left-0 text-5xl lg:text-5xl neon-text">
           A
         </span>
         <span className="relative z-0 text-5xl lg:text-5xl text-shine">A</span>
