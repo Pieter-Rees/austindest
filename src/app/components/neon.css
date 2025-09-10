@@ -1,6 +1,6 @@
 .neon-text {
   color: #fff;
-  text-shadow: 
+  text-shadow:
     0 0 5px #fff,
     0 0 10px #fff,
     0 0 20px #fff,
@@ -14,7 +14,7 @@
 
 @keyframes neon-pulse {
   from {
-    text-shadow: 
+    text-shadow:
       0 0 5px #fff,
       0 0 10px #fff,
       0 0 20px #fff,
@@ -25,7 +25,7 @@
       0 0 150px #0ff;
   }
   to {
-    text-shadow: 
+    text-shadow:
       0 0 2.5px #fff,
       0 0 5px #fff,
       0 0 10px #fff,
@@ -35,4 +35,4 @@
       0 0 50px #0ff,
       0 0 75px #0ff;
   }
-} 
+}

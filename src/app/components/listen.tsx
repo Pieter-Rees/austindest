@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { Title } from "./title";
-import "./border.css";
-import { useEffect, useState } from "react";
+import { Title } from './title';
+import './border.css';
+import { useEffect, useState } from 'react';
 
 interface SpotifyEmbed {
   url: string;
@@ -11,17 +11,17 @@ interface SpotifyEmbed {
 
 const spotifyEmbeds: SpotifyEmbed[] = [
   {
-    url: "https://open.spotify.com/embed/artist/4i1SjBqGZ4lVlEgMfpKVjb?utm_source=generator&theme=0",
-    height: 152
+    url: 'https://open.spotify.com/embed/artist/4i1SjBqGZ4lVlEgMfpKVjb?utm_source=generator&theme=0',
+    height: 152,
   },
   {
-    url: "https://open.spotify.com/embed/track/6aV4L76qLqOXKWM2KDI1IU?utm_source=generator",
-    height: 152
+    url: 'https://open.spotify.com/embed/track/6aV4L76qLqOXKWM2KDI1IU?utm_source=generator',
+    height: 152,
   },
   {
-    url: "https://open.spotify.com/embed/track/21RfPY7y0nx5B0KuZm3k77?utm_source=generator",
-    height: 152
-  }
+    url: 'https://open.spotify.com/embed/track/21RfPY7y0nx5B0KuZm3k77?utm_source=generator',
+    height: 152,
+  },
 ];
 
 export default function Listen() {
@@ -42,13 +42,14 @@ export default function Listen() {
     setError('Failed to load SoundCloud player');
   };
 
-  const handleSpotifyError = (index: number) => (e: React.SyntheticEvent<HTMLIFrameElement, Event>) => {
-    console.error(`Spotify iframe error at index ${index}:`, e);
-    setSpotifyErrors(prev => ({
-      ...prev,
-      [index]: 'Failed to load Spotify player'
-    }));
-  };
+  const handleSpotifyError =
+    (index: number) => (e: React.SyntheticEvent<HTMLIFrameElement, Event>) => {
+      console.error(`Spotify iframe error at index ${index}:`, e);
+      setSpotifyErrors(prev => ({
+        ...prev,
+        [index]: 'Failed to load Spotify player',
+      }));
+    };
 
   return (
     <div>

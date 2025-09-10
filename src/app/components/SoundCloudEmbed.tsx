@@ -33,9 +33,9 @@ export default function SoundCloudEmbed({ url, height = '600px' }: SoundCloudEmb
           allow="encrypted-media"
           sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
           src={url}
-          onError={(e) => setError('Failed to load SoundCloud player')}
+          onError={e => setError('Failed to load SoundCloud player')}
         />
       )}
     </div>
   );
-} 
+}

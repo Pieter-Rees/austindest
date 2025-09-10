@@ -18,30 +18,29 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb)))
     rgb(var(--background-start-rgb));
 }
 
 a {
-  background: linear-gradient(
-      to right,
-      rgba(100, 200, 200, 0),
-      rgba(100, 200, 200, 0)
-    ),
+  background:
+    linear-gradient(to right, rgba(100, 200, 200, 0), rgba(100, 200, 200, 0)),
     linear-gradient(to right, rgba(0, 100, 200, 1), #ff77e9);
-  background-size: 100% 3px, 0 1px;
-  background-position: 100% 100%, 0 100%;
+  background-size:
+    100% 3px,
+    0 1px;
+  background-position:
+    100% 100%,
+    0 100%;
   background-repeat: no-repeat;
   transition: background-size 400ms;
 }
 
 @media only screen and (min-width: 768px) {
   a:hover {
-    background-size: 0 3px, 100% 1px;
+    background-size:
+      0 3px,
+      100% 1px;
   }
 }
 

@@ -34,4 +34,4 @@ export interface BioSection {
   title: string;
   content: string;
   image?: string;
-} 
+}

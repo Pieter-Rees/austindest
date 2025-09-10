@@ -6,7 +6,7 @@ export const SocialLinks = () => {
 
   return (
     <div className={`flex justify-center space-x-6 ${animationClass}`}>
-      {SOCIAL_LINKS.map((social) => (
+      {SOCIAL_LINKS.map(social => (
         <a
           key={social.platform}
           href={social.url}
@@ -21,4 +21,4 @@ export const SocialLinks = () => {
       ))}
     </div>
   );
-}; 
+};

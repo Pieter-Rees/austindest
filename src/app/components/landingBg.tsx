@@ -1,6 +1,6 @@
-"use client";
-import { useEffect, useState } from "react";
-import ReactPlayer from "react-player/youtube";
+'use client';
+import { useEffect, useState } from 'react';
+import ReactPlayer from 'react-player/youtube';
 
 export default function Landing() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -16,8 +16,8 @@ export default function Landing() {
           playing={true}
           loop={true}
           muted={true}
-          width={"100%"}
-          height={"100%"}
+          width={'100%'}
+          height={'100%'}
           url="https://youtu.be/oB325uTDKIw?si=FbP7X-cNp9hmUk2M"
         />
       ) : null}

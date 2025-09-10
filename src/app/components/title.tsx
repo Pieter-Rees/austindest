@@ -1,9 +1,9 @@
-import localFont from "next/font/local";
-import "./neon.css";
+import localFont from 'next/font/local';
+import './neon.css';
 
 // Font files can be colocated inside of `pages`
 const myFont = localFont({
-  src: "../../../public/fonts/Monoton-Regular.woff2",
+  src: '../../../public/fonts/Monoton-Regular.woff2',
 });
 
 interface TitleProps {
@@ -28,14 +28,14 @@ export const Title = ({
   centerText,
 }: TitleProps) => {
   const titleClasses = `text-7xl sm:text-8xl lg:text-9xl text-shine text-neon-title ${
-    center ? "text-center lg:text-left" : ""
+    center ? 'text-center lg:text-left' : ''
   }`;
 
   const subTitleClasses = `text-4xl sm:text-5xl lg:text-6xl text-white text-neon
-    ${margin ? "mt-8" : ""}
-    ${left ? "text-center lg:text-left" : ""}
-    ${right ? "text-center lg:text-right" : ""}
-    ${center ? "text-center" : ""}
+    ${margin ? 'mt-8' : ''}
+    ${left ? 'text-center lg:text-left' : ''}
+    ${right ? 'text-center lg:text-right' : ''}
+    ${center ? 'text-center' : ''}
   `;
 
   return (
@@ -48,7 +48,7 @@ export const Title = ({
             </h1>
             <span
               className={`absolute top-0 text-7xl sm:text-8xl lg:text-9xl text-shine ${
-                center ? "text-center lg:text-left left-0 right-0" : ""
+                center ? 'text-center lg:text-left left-0 right-0' : ''
               }`}
               key="title-shadow"
             >

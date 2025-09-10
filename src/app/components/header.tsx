@@ -1,18 +1,18 @@
-"use client";
-import { useState } from "react";
-import Logo from "./logo";
-import "./neon.css";
-import { Link, Events, animateScroll as scroll, scrollSpy } from "react-scroll";
-import { useEffect } from "react";
-import Sidenav from "./sidenav";
+'use client';
+import { useState } from 'react';
+import Logo from './logo';
+import './neon.css';
+import { Link, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
+import { useEffect } from 'react';
+import Sidenav from './sidenav';
 
 const navItems = [
-  { id: "landing", label: "Home" },
-  { id: "gigs", label: "Gigs" },
-  { id: "bio", label: "Bio" },
-  { id: "listen", label: "Listen" },
-  { id: "watch", label: "Watch" },
-  { id: "contact", label: "Contact" },
+  { id: 'landing', label: 'Home' },
+  { id: 'gigs', label: 'Gigs' },
+  { id: 'bio', label: 'Bio' },
+  { id: 'listen', label: 'Listen' },
+  { id: 'watch', label: 'Watch' },
+  { id: 'contact', label: 'Contact' },
 ];
 
 export default function Header() {
@@ -20,7 +20,7 @@ export default function Header() {
   const [navBackground, setnavBackground] = useState(false);
 
   const handleToggle = () => {
-    setShowSideNav((showSideNav) => !showSideNav);
+    setShowSideNav(showSideNav => !showSideNav);
   };
 
   const scrollToTop = () => {
@@ -28,7 +28,7 @@ export default function Header() {
   };
 
   const handleSetActive = (to: string) => {
-    if (to !== "landing") {
+    if (to !== 'landing') {
       setnavBackground(true);
     } else {
       setnavBackground(false);
@@ -39,8 +39,8 @@ export default function Header() {
     <>
       <nav
         className={
-          "px-4 fixed z-2 top-0 w-full flex items-center justify-between flex- transition-all " +
-          (navBackground ? "bg-black/90 backdrop-blur-md" : "opacity-0")
+          'px-4 fixed z-2 top-0 w-full flex items-center justify-between flex- transition-all ' +
+          (navBackground ? 'bg-black/90 backdrop-blur-md' : 'opacity-0')
         }
       >
         <div className="flex items-center flex-shrink-0 text-white mr-6">
@@ -56,8 +56,7 @@ export default function Header() {
             title="Menu"
             onClick={handleToggle}
             className={
-              "flex items-center px-3 py-2 transition-all " +
-              (showSideNav ? "rotate-90" : "")
+              'flex items-center px-3 py-2 transition-all ' + (showSideNav ? 'rotate-90' : '')
             }
           >
             <svg
@@ -71,7 +70,7 @@ export default function Header() {
               viewBox="0 0 50 50"
             >
               <polygon
-                style={{ fill: "#fff", stroke: "none" }}
+                style={{ fill: '#fff', stroke: 'none' }}
                 points="40,25 10,45 10,5 40,25 "
                 id="shape1"
               >
@@ -94,7 +93,7 @@ export default function Header() {
               </polygon>
 
               <polygon
-                style={{ fill: "#fff", stroke: "none" }}
+                style={{ fill: '#fff', stroke: 'none' }}
                 points="40,25 10,45 10,5 40,25 "
                 id="shape2"
               >
@@ -119,7 +118,7 @@ export default function Header() {
           </button>
         </div>
         <div className="hidden md:flex w-full justify-end flex-grow md:items-center md:w-auto md:flex-grow uppercase">
-          {navItems.map((item) => (
+          {navItems.map(item => (
             <Link
               key={item.id}
               activeClass="text-bubblegum hover:cursor-default"

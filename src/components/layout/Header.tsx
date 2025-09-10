@@ -14,7 +14,10 @@ export const Header = () => {
     <header className={`fixed w-full z-50 bg-black/80 backdrop-blur-sm ${animationClass}`}>
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold text-white hover:text-primary-400 transition-colors">
+          <Link
+            href="/"
+            className="text-2xl font-bold text-white hover:text-primary-400 transition-colors"
+          >
             {SITE_NAME}
           </Link>
 
@@ -32,17 +35,8 @@ export const Header = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-white"
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
+          <button className="md:hidden text-white" onClick={toggleMenu} aria-label="Toggle menu">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isMenuOpen ? (
                 <path
                   strokeLinecap="round"
@@ -80,4 +74,4 @@ export const Header = () => {
       </nav>
     </header>
   );
-}; 
+};

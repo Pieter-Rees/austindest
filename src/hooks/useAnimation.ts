@@ -24,12 +24,10 @@ export const useAnimation = ({
     return () => clearTimeout(timer);
   }, [initialDelay]);
 
-  const animationClass = isVisible
-    ? `animate-${type} duration-${delay}`
-    : 'opacity-0';
+  const animationClass = isVisible ? `animate-${type} duration-${delay}` : 'opacity-0';
 
   return {
     animationClass,
     isVisible,
   };
-}; 
+};

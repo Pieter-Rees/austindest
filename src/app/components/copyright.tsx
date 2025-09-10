@@ -1,7 +1,7 @@
-"use client";
-import { animateScroll as scroll } from "react-scroll";
-import Logo from "./logo";
-import Socials from "./socials";
+'use client';
+import { animateScroll as scroll } from 'react-scroll';
+import Logo from './logo';
+import Socials from './socials';
 export default function Copyright() {
   const scrollToTop = () => {
     scroll.scrollToTop();
@@ -23,9 +23,7 @@ export default function Copyright() {
           <Logo />
         </div>
 
-        <div className="text-center 2xl:text-2xl mt-4 text-white ">
-          Copyright © {year}
-        </div>
+        <div className="text-center 2xl:text-2xl mt-4 text-white ">Copyright © {year}</div>
         <div className="text-center 2xl:text-2xl text-white ">Austin Dest</div>
       </div>
     </div>

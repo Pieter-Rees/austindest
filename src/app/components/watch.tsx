@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { Title } from "./title";
-import { useEffect, useState } from "react";
-import ReactPlayer from "react-player/lazy";
-import "./border.css";
+import { Title } from './title';
+import { useEffect, useState } from 'react';
+import ReactPlayer from 'react-player/lazy';
+import './border.css';
 
 export default function Watch() {
   const [isLoaded, setIsLoaded] = useState(false);

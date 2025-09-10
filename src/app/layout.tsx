@@ -22,11 +22,7 @@ export const metadata: Metadata = {
   themeColor: '#000000',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
@@ -36,9 +32,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} ${monoton.variable} bg-black text-white min-h-screen`}>
         <Header />
-        <main className="pt-16">
-          {children}
-        </main>
+        <main className="pt-16">{children}</main>
       </body>
     </html>
   );
