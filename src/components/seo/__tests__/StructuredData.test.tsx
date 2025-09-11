@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 
 import { StructuredData } from "../StructuredData";
 
@@ -42,7 +42,8 @@ describe("StructuredData", () => {
     render(<StructuredData />);
 
     const script = document.querySelector('script[type="application/ld+json"]');
-    const jsonData = JSON.parse(script.textContent!);
+    expect(script).not.toBeNull();
+    const jsonData = JSON.parse(script!.textContent!);
 
     expect(jsonData["@type"]).toBe("Person");
     expect(jsonData.name).toBe("Austin Dest");
@@ -52,7 +53,8 @@ describe("StructuredData", () => {
     render(<StructuredData />);
 
     const script = document.querySelector('script[type="application/ld+json"]');
-    const jsonData = JSON.parse(script.textContent!);
+    expect(script).not.toBeNull();
+    const jsonData = JSON.parse(script!.textContent!);
 
     expect(jsonData["@type"]).toBe("Person");
     expect(jsonData.url).toBeDefined();

@@ -4,7 +4,15 @@ import Bio from "../bio";
 
 // Mock next/image
 jest.mock("next/image", () => {
-  return function MockImage({ src, alt, ...props }) {
+  return function MockImage({
+    src,
+    alt,
+    ...props
+  }: {
+    src: string;
+    alt: string;
+    [key: string]: any;
+  }) {
     return <img src={src} alt={alt} {...props} />;
   };
 });
@@ -42,7 +50,7 @@ describe("Bio", () => {
     const images = screen.getAllByRole("img");
     images.forEach(image => {
       expect(image).toHaveAttribute("alt");
-      expect(image.alt).not.toBe("");
+      expect((image as HTMLImageElement).alt).not.toBe("");
     });
   });
 

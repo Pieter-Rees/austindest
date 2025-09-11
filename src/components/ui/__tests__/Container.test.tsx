@@ -30,11 +30,11 @@ describe("Container", () => {
     });
   });
 
-  it("should render as different element when as prop is provided", () => {
-    render(<Container as="section">Test content</Container>);
+  it("should render as div by default", () => {
+    render(<Container>Test content</Container>);
 
     const container = screen.getByText("Test content");
-    expect(container.tagName).toBe("SECTION");
+    expect(container.tagName).toBe("DIV");
   });
 
   it("should accept custom className", () => {

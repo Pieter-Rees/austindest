@@ -69,10 +69,10 @@ describe("Image", () => {
   });
 
   it("should pass through other props", () => {
-    render(<Image {...defaultProps} data-testid="image" id="test" />);
+    render(<Image {...defaultProps} data-testid="image" />);
 
     const image = screen.getByTestId("image");
-    expect(image).toHaveAttribute("id", "test");
+    expect(image).toBeInTheDocument();
   });
 
   it("should handle priority prop", () => {

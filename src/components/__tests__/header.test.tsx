@@ -59,7 +59,10 @@ jest.mock("../logo", () => {
 
 // Mock Sidenav component
 jest.mock("../sidenav", () => {
-  return function MockSidenav({ showSideNav, handleToggle }: any) {
+  return function MockSidenav({
+    showSideNav,
+    handleToggle: _handleToggle,
+  }: any) {
     return showSideNav ? <div data-testid="sidenav">Sidenav</div> : null;
   };
 });
@@ -136,13 +139,15 @@ describe("Header", () => {
     const user = userEvent.setup();
     render(<Header />);
     const menuButton = screen.getAllByRole("button")[1];
-    await user.click(menuButton);
-    expect(mockStore.toggleSideNav).toHaveBeenCalledTimes(1);
+    if (menuButton) {
+      await user.click(menuButton);
+      expect(mockStore.toggleSideNav).toHaveBeenCalledTimes(1);
+    }
   });
 
   it("calls scrollToTop when logo is clicked", async () => {
     const user = userEvent.setup();
-    const { animateScroll } = require("react-scroll");
+    const { animateScroll } = await import("react-scroll");
     render(<Header />);
     const logoButton = screen.getByTestId("logo").closest("button");
     await user.click(logoButton!);

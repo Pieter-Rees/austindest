@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 
 import { PerformanceMonitor } from "../PerformanceMonitor";
 
@@ -8,6 +8,13 @@ const mockObserve = jest.fn();
 const mockDisconnect = jest.fn();
 
 global.PerformanceObserver = class PerformanceObserver {
+  static readonly supportedEntryTypes: readonly string[] = [
+    "navigation",
+    "paint",
+    "largest-contentful-paint",
+    "first-input",
+  ];
+
   constructor(callback: PerformanceObserverCallback) {
     mockPerformanceObserver(callback);
   }
@@ -20,7 +27,7 @@ global.PerformanceObserver = class PerformanceObserver {
   takeRecords() {
     return [];
   }
-};
+} as any;
 
 describe("PerformanceMonitor", () => {
   beforeEach(() => {

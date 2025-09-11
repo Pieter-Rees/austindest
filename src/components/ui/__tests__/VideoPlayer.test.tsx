@@ -1,4 +1,4 @@
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import { useRef } from "react";
 
 import { VideoPlayer } from "../VideoPlayer";
@@ -458,12 +458,6 @@ describe("VideoPlayer", () => {
       />
     );
     const video = screen.getByTitle("Test Video");
-
-    const mockEvent = {
-      currentTarget: {
-        playbackRate: 1.0,
-      },
-    };
 
     Object.defineProperty(video, "playbackRate", {
       writable: true,

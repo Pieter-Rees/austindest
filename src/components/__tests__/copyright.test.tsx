@@ -78,7 +78,7 @@ describe("Copyright", () => {
   });
 
   it("should have clickable logo that calls scrollToTop", async () => {
-    const { animateScroll } = require("react-scroll");
+    const { animateScroll } = await import("react-scroll");
     const user = userEvent.setup();
 
     render(<Copyright />);

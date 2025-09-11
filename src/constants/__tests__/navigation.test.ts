@@ -45,8 +45,8 @@ describe("navigation constants", () => {
       // TypeScript readonly prevents compilation errors, but allows runtime modification
       // This test verifies the array is defined as readonly
       expect(NAV_ITEMS).toHaveLength(6);
-      expect(NAV_ITEMS[0].id).toBe("landing");
-      expect(NAV_ITEMS[0].label).toBe("Home");
+      expect(NAV_ITEMS[0]?.id).toBe("landing");
+      expect(NAV_ITEMS[0]?.label).toBe("Home");
     });
   });
 });
