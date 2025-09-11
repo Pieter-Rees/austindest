@@ -1,40 +1,105 @@
 {
-  "name": "press-kit-ad",
-  "version": "0.1.0",
+  "name": "austindest-website",
+  "version": "1.0.0",
+  "description": "Modern website for Austin Dest - DJ, Producer, and Musician",
   "private": true,
+  "author": "Pieter Rees",
+  "license": "UNLICENSED",
+  "type": "module",
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "music",
+    "dj",
+    "producer",
+    "pwa"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pieterrees/austindest-website.git"
+  },
+  "homepage": "https://austindest.com",
   "engines": {
-    "node": ">=24.0.0"
+    "node": ">=24.0.0",
+    "pnpm": ">=8.0.0"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "NODE_ENV=production next build",
     "start": "next start",
-    "lint": "next lint",
+    "export": "next build && next export",
+    "lint": "eslint src/ --ext .ts,.tsx",
+    "lint:fix": "eslint src/ --ext .ts,.tsx --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit",
-    "preview": "next build && next start"
+    "check": "pnpm run typecheck && pnpm run lint && pnpm run format:check",
+    "fix": "pnpm run lint:fix && pnpm run format",
+    "preview": "next build && next start",
+    "clean": "rm -rf .next build node_modules/.cache coverage",
+    "analyze": "ANALYZE=true pnpm run build",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:ci": "jest --ci --coverage --watchAll=false",
+    "test:update": "jest --updateSnapshot"
   },
   "dependencies": {
-    "@types/node": "24.3.1",
-    "@types/react": "19.1.12",
-    "@types/react-dom": "19.1.9",
-    "autoprefixer": "10.4.21",
+    "@radix-ui/react-slot": "^1.2.3",
     "clsx": "^2.1.1",
-    "eslint": "^9.35.0",
-    "eslint-config-next": "15.5.3",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.544.0",
     "next": "15.5.3",
-    "postcss": "8.5.6",
     "react": "19.1.1",
     "react-dom": "19.1.1",
-    "react-player": "^3.3.2",
     "react-scroll": "^1.9.3",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "4.1.13",
-    "typescript": "5.9.2"
+    "zustand": "^5.0.8"
   },
   "devDependencies": {
+    "@eslint/js": "^9.35.0",
     "@tailwindcss/postcss": "^4.1.13",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.3.1",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
     "@types/react-scroll": "^1.8.10",
     "@typescript-eslint/eslint-plugin": "^8.43.0",
-    "@typescript-eslint/parser": "^8.43.0"
+    "@typescript-eslint/parser": "^8.43.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.35.0",
+    "eslint-config-next": "^15.5.3",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "jest": "^30.1.3",
+    "jest-environment-jsdom": "^30.1.2",
+    "postcss": "^8.5.6",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "preset": "next/jest"
   }
 }

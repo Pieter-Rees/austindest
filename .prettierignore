@@ -1,0 +1,60 @@
+# Dependencies
+node_modules/
+
+# Production builds
+build/
+dist/
+.next/
+out/
+
+# Environment files
+.env*
+
+# Logs
+*.log
+
+# Cache
+.cache/
+.parcel-cache/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Generated files
+*.tsbuildinfo
+next-env.d.ts
+
+# Documentation
+CHANGELOG.md
+LICENSE
+
+# Images
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+*.svg
+*.ico
+
+# Fonts
+*.woff
+*.woff2
+*.ttf
+*.eot
+
+# CSS files (handled by Tailwind)
+*.css
+
+# Markdown files (optional - uncomment if you want to format them)
+# *.md

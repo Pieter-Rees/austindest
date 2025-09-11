@@ -1,9 +1,19 @@
 "use client";
-import { link } from "fs";
-import { Title } from "./title";
-import React from "react";
 
-const rows = [
+import { Title } from "@/components";
+import type { Gig } from "@/types";
+
+interface GigData
+  extends Omit<
+    Gig,
+    "id" | "title" | "venue" | "time" | "ticketUrl" | "description"
+  > {
+  name: string;
+  info?: string;
+  link?: string;
+}
+
+const gigsData: readonly GigData[] = [
   {
     date: "06•04•2024",
     name: "30 Love",
@@ -51,67 +61,48 @@ const rows = [
     info: "https://www.amsterdam-dance-event.nl/",
     link: "https://www.facebook.com/amsterdamdanceevent",
   },
-];
+] as const;
 
-const columns = [
-  {
-    key: "date",
-    label: "",
-  },
-  {
-    key: "venue",
-    label: "",
-  },
-  {
-    key: "location",
-    label: "",
-  },
-
-  {
-    key: "info",
-    label: "",
-  },
-  {
-    key: "link",
-    label: "",
-  },
-];
-
-const dateConverter = (date: string) => {
+const dateConverter = (date: string): string => {
   return date.split("•").reverse().join("-");
 };
 
-const sortedDates = rows.sort((a, b) => {
-  return Date.parse(dateConverter(a.date)) - Date.parse(dateConverter(b.date));
-});
+const sortGigsByDate = (
+  gigs: readonly GigData[],
+  ascending = true
+): readonly GigData[] => {
+  return [...gigs].sort((a, b) => {
+    const dateA = Date.parse(dateConverter(a.date));
+    const dateB = Date.parse(dateConverter(b.date));
+    return ascending ? dateA - dateB : dateB - dateA;
+  });
+};
 
-const revertedSortedDates = rows.sort((a, b) => {
-  return Date.parse(dateConverter(b.date)) - Date.parse(dateConverter(a.date));
-});
-
-const upcomingGigs = sortedDates.filter((row) => {
+const filterGigsByDate = (
+  gigs: readonly GigData[],
+  upcoming = true
+): readonly GigData[] => {
   const today = new Date();
-  const tomorrow = new Date();
-  tomorrow.setDate(today.getDate() - 1);
-  const currentDate = Date.parse(tomorrow.toString());
-  return Date.parse(dateConverter(row.date)) > currentDate;
-});
+  const yesterday = new Date();
+  yesterday.setDate(today.getDate() - 1);
+  const currentDate = Date.parse(yesterday.toString());
 
-const passedGigs = revertedSortedDates.filter((row) => {
-  const today = new Date();
-  const tomorrow = new Date();
-  tomorrow.setDate(today.getDate() - 1);
-  const currentDate = Date.parse(tomorrow.toString());
-  return Date.parse(dateConverter(row.date)) < currentDate;
-});
+  return gigs.filter(gig => {
+    const gigDate = Date.parse(dateConverter(gig.date));
+    return upcoming ? gigDate > currentDate : gigDate < currentDate;
+  });
+};
 
-const reversedUpcomingGigs = upcomingGigs.reverse();
+const upcomingGigs = [
+  ...filterGigsByDate(sortGigsByDate(gigsData), true),
+].reverse();
+const passedGigs = filterGigsByDate(sortGigsByDate(gigsData, false), false);
 
 export default function Gigs() {
   return (
     <>
       <div className="flex items-center my-6 lg:my-0">
-        <Title right={true} center={true} subTitle="Gigs" />
+        <Title align="right" subtitle="Gigs" />
       </div>
       <div className="w-full h-full ">
         <div className="col-span-3 lg:col-span-auto">
@@ -123,7 +114,7 @@ export default function Gigs() {
             </thead>
 
             <tbody>
-              {reversedUpcomingGigs.map((row, i) => {
+              {upcomingGigs.map((row: GigData, i: number) => {
                 return (
                   <tr
                     className=" pt-8 text-xs text-white lg:text-xl 2xl:text-2xl"
@@ -137,6 +128,7 @@ export default function Gigs() {
                         <>
                           <a
                             target="_blank"
+                            rel="noreferrer"
                             href={row.info}
                             className="hover:text-bubblegum"
                           >
@@ -161,7 +153,7 @@ export default function Gigs() {
                     <td>
                       {row.link ? (
                         <>
-                          <a target="_blank" href={row.link}>
+                          <a target="_blank" rel="noreferrer" href={row.link}>
                             <svg
                               version="1.1"
                               className="h-6 w-6 lg:w-8 lg:h-8"
@@ -220,8 +212,7 @@ export default function Gigs() {
             </thead>
 
             <tbody>
-              {passedGigs.map((row, i) => {
-                // Return the element. Also pass key
+              {passedGigs.map((row: GigData, i: number) => {
                 return (
                   <tr
                     className="pt-8 text-xs text-white lg:text-xl 2xl:text-2xl"
@@ -236,6 +227,7 @@ export default function Gigs() {
                         <>
                           <a
                             target="_blank"
+                            rel="noreferrer"
                             href={row.info}
                             className="hover:text-bubblegum"
                           >
@@ -261,7 +253,7 @@ export default function Gigs() {
                     <td>
                       {row.link ? (
                         <>
-                          <a target="_blank" href={row.link}>
+                          <a target="_blank" rel="noreferrer" href={row.link}>
                             <svg
                               version="1.1"
                               className="h-6 w-6 lg:w-8 lg:h-8"
