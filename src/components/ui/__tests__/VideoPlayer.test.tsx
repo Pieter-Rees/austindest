@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { useRef } from "react";
 
-import { VideoPlayer } from "../VideoPlayer";
+import { VideoPlayer, type VideoPlayerRef } from "../VideoPlayer";
 
 const mockPlay = jest.fn().mockResolvedValue(undefined);
 const mockPause = jest.fn();
@@ -147,7 +147,7 @@ describe("VideoPlayer", () => {
 
   it("forwards ref correctly", () => {
     const TestComponent = () => {
-      const ref = useRef(null);
+      const ref = useRef<VideoPlayerRef>(null);
       return <VideoPlayer {...defaultProps} ref={ref} />;
     };
     render(<TestComponent />);
@@ -157,7 +157,7 @@ describe("VideoPlayer", () => {
 
   it("exposes imperative handle methods", () => {
     const TestComponent = () => {
-      const ref = useRef(null);
+      const ref = useRef<VideoPlayerRef>(null);
       const handleClick = () => {
         if (ref.current) {
           ref.current.play();
@@ -288,7 +288,7 @@ describe("VideoPlayer", () => {
 
   it("exposes video properties through ref", () => {
     const TestComponent = () => {
-      const ref = useRef(null);
+      const ref = useRef<VideoPlayerRef>(null);
       const handleClick = () => {
         if (ref.current) {
           expect(ref.current.currentTime).toBe(0);
@@ -317,7 +317,7 @@ describe("VideoPlayer", () => {
 
   it("exposes seekTo method", () => {
     const TestComponent = () => {
-      const ref = useRef(null);
+      const ref = useRef<VideoPlayerRef>(null);
       const handleClick = () => {
         if (ref.current) {
           ref.current.seekTo(50);
@@ -337,7 +337,7 @@ describe("VideoPlayer", () => {
 
   it("exposes setVolume method", () => {
     const TestComponent = () => {
-      const ref = useRef(null);
+      const ref = useRef<VideoPlayerRef>(null);
       const handleClick = () => {
         if (ref.current) {
           ref.current.setVolume(0.5);
@@ -357,7 +357,7 @@ describe("VideoPlayer", () => {
 
   it("exposes setMuted method", () => {
     const TestComponent = () => {
-      const ref = useRef(null);
+      const ref = useRef<VideoPlayerRef>(null);
       const handleClick = () => {
         if (ref.current) {
           ref.current.setMuted(true);
@@ -377,7 +377,7 @@ describe("VideoPlayer", () => {
 
   it("exposes getVideoElement method", () => {
     const TestComponent = () => {
-      const ref = useRef(null);
+      const ref = useRef<VideoPlayerRef>(null);
       const handleClick = () => {
         if (ref.current) {
           const element = ref.current.getVideoElement();
@@ -398,7 +398,7 @@ describe("VideoPlayer", () => {
 
   it("clamps volume between 0 and 1", () => {
     const TestComponent = () => {
-      const ref = useRef(null);
+      const ref = useRef<VideoPlayerRef>(null);
       const handleClick = () => {
         if (ref.current) {
           ref.current.setVolume(1.5);
@@ -425,7 +425,7 @@ describe("VideoPlayer", () => {
 
   it("handles ref methods when video element is null", () => {
     const TestComponent = () => {
-      const ref = useRef(null);
+      const ref = useRef<VideoPlayerRef>(null);
       const handleClick = () => {
         if (ref.current) {
           ref.current.play();
@@ -486,7 +486,7 @@ describe("VideoPlayer", () => {
 
   it("tests volume clamping edge cases", () => {
     const TestComponent = () => {
-      const ref = useRef(null);
+      const ref = useRef<VideoPlayerRef>(null);
       const handleClick = () => {
         if (ref.current) {
           ref.current.setVolume(0); // Minimum
@@ -508,7 +508,7 @@ describe("VideoPlayer", () => {
 
   it("handles video element properties when null", () => {
     const TestComponent = () => {
-      const ref = useRef(null);
+      const ref = useRef<VideoPlayerRef>(null);
       const handleClick = () => {
         if (ref.current) {
           expect(ref.current.currentTime).toBe(0);

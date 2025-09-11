@@ -45,8 +45,7 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "test:ci": "jest --ci --coverage --watchAll=false",
-    "test:update": "jest --updateSnapshot",
-    "prepare": "husky"
+    "test:update": "jest --updateSnapshot"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
