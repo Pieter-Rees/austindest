@@ -2,7 +2,7 @@
 
 import { Title } from "./title";
 import { useEffect, useState } from "react";
-import ReactPlayer from "react-player/lazy";
+import ReactPlayer from "react-player";
 import "./border.css";
 
 export default function Watch() {
@@ -23,7 +23,7 @@ export default function Watch() {
               width="100%"
               height="500px"
               light={true}
-              url="https://youtu.be/3DWK8802N00?t=2546"
+              src="https://youtu.be/3DWK8802N00?t=2546"
             />
           </div>
         </>
