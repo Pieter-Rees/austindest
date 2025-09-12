@@ -1,5 +1,5 @@
 import "./globals.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -7,7 +7,6 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Austin Dest",
   description: "Austin Dest, DJ, Producer, and Musician",
-  themeColor: "#ff77e9",
   keywords: [
     "Austin",
     "Austin Dest",
@@ -28,6 +27,10 @@ export const metadata: Metadata = {
     "Amsterdam Dance Event 2022",
   ],
   creator: "Pieter Rees",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#ff77e9",
 };
 
 export default function RootLayout({

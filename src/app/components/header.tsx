@@ -29,12 +29,27 @@ export default function Header() {
     }
   };
 
+  useEffect(() => {
+    if (showSideNav) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [showSideNav]);
+
   return (
     <>
       <nav
         className={
-          "px-4 fixed z-2 top-0 w-full flex items-center justify-between flex- transition-all " +
-          (navBackground ? "bg-black/90 backdrop-blur-md" : "opacity-0")
+          "px-4 fixed z-50 top-0 w-full flex items-center justify-between transition-all duration-300 " +
+          (navBackground
+            ? "bg-black/20 backdrop-blur-lg border-b border-white/10 shadow-lg"
+            : "bg-transparent backdrop-blur-none"
+          )
         }
       >
         <div className="flex items-center flex-shrink-0 text-white mr-6">
