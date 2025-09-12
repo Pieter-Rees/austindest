@@ -77,7 +77,7 @@ export interface OptimizedImageProps {
   className?: string;
   priority?: boolean;
   quality?: number;
-  placeholder?: "blur" | "empty";
+  placeholder?: 'blur' | 'empty';
   blurDataURL?: string;
 }
 
@@ -87,6 +87,6 @@ export interface LazyIframeProps {
   width?: string;
   height?: string;
   className?: string;
-  loading?: "lazy" | "eager";
+  loading?: 'lazy' | 'eager';
   onLoad?: () => void;
 }

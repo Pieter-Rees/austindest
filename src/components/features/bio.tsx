@@ -1,24 +1,21 @@
-import { SectionHeader } from "../ui/SectionHeader";
-import { ImageGrid } from "../ui/ImageGrid";
-import { BIO_IMAGES } from "@/lib";
-import "@/styles/border.css";
+import { SectionHeader } from '../ui/SectionHeader';
+import { ImageGrid } from '../ui/ImageGrid';
+import { BIO_IMAGES } from '@/lib';
+import '@/styles/border.css';
 
 export default function Bio() {
   return (
     <div>
-      <SectionHeader subTitle="Bio" left={true} />
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
-        <div className="flex flex-wrap flex-col justify-center">
+      <SectionHeader subTitle='Bio' left={true} />
+      <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8'>
+        <div className='flex flex-wrap flex-col justify-center'>
           <ImageGrid images={BIO_IMAGES.slice(0, 3)} />
-          <div className="w-full max-h-64">
-            <ImageGrid
-              images={[BIO_IMAGES[3]]}
-              className="grid-cols-1"
-            />
+          <div className='w-full max-h-64'>
+            <ImageGrid images={[BIO_IMAGES[3]]} className='grid-cols-1' />
           </div>
         </div>
-        <div className="flex flex-col justify-center text-lg lg:text-lg 2xl:text-xl">
-          <p className="text-white mt-8 lg:mt-0 first-letter:text-7xl first-letter:font-bold first-letter:mr-3 first-letter:mt-2 first-letter:float-left">
+        <div className='flex flex-col justify-center text-lg lg:text-lg 2xl:text-xl'>
+          <p className='text-white mt-8 lg:mt-0 first-letter:text-7xl first-letter:font-bold first-letter:mr-3 first-letter:mt-2 first-letter:float-left'>
             For DJ and producer Austin Dest, her love for music has been a huge
             drive and source of inspiration throughout her life. She got
             introducted to House and Deep House around 2012, and from there her
@@ -32,7 +29,7 @@ export default function Bio() {
             choices.
           </p>
           <hr />
-          <p className="text-white ">
+          <p className='text-white '>
             With the producer/DJ duo Austin Martin, founded in 2016, Austin
             released records on Cinematique Records and Particles/Proton. Her
             First solo record was released on Robin &apos;Jaydee&apos; Albers

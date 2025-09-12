@@ -1,4 +1,14 @@
-import { SOCIAL_LINKS, GIGS, SPOTIFY_EMBEDS, SOUNDCLOUD_EMBED, YOUTUBE_VIDEO, BACKGROUND_VIDEO, BIO_IMAGES, NAVIGATION_ITEMS, SITE_CONFIG } from '@/lib/constants';
+import {
+  SOCIAL_LINKS,
+  GIGS,
+  SPOTIFY_EMBEDS,
+  SOUNDCLOUD_EMBED,
+  YOUTUBE_VIDEO,
+  BACKGROUND_VIDEO,
+  BIO_IMAGES,
+  NAVIGATION_ITEMS,
+  SITE_CONFIG,
+} from '@/lib/constants';
 
 describe('Constants', () => {
   describe('SOCIAL_LINKS', () => {
@@ -62,7 +72,9 @@ describe('Constants', () => {
 
   describe('SOUNDCLOUD_EMBED', () => {
     it('is a valid SoundCloud embed URL', () => {
-      expect(SOUNDCLOUD_EMBED).toMatch(/^https:\/\/w\.soundcloud\.com\/player\//);
+      expect(SOUNDCLOUD_EMBED).toMatch(
+        /^https:\/\/w\.soundcloud\.com\/player\//
+      );
     });
   });
 

@@ -1,5 +1,5 @@
-"use client";
-import { useEffect, useState } from "react";
+'use client';
+import { useEffect, useState } from 'react';
 
 export function useLoading(initialState = false) {
   const [isLoading, setIsLoading] = useState(initialState);

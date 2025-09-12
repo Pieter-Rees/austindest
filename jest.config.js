@@ -1,8 +1,8 @@
-import nextJest from 'next/jest.js'
+import nextJest from 'next/jest.js';
 
 const createJestConfig = nextJest({
   dir: './',
-})
+});
 
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
@@ -11,9 +11,7 @@ const customJestConfig = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
   },
-  transformIgnorePatterns: [
-    'node_modules/(?!(react-player|@react-player)/)',
-  ],
+  transformIgnorePatterns: ['node_modules/(?!(react-player|@react-player)/)'],
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}',
     '!src/**/*.d.ts',
@@ -27,6 +25,11 @@ const customJestConfig = {
       statements: 100,
     },
   },
-}
+  globals: {
+    'ts-jest': {
+      useESM: true,
+    },
+  },
+};
 
-export default createJestConfig(customJestConfig)
+export default createJestConfig(customJestConfig);

@@ -24,7 +24,7 @@ describe('useLoading', () => {
 
   it('sets loading to true when startLoading is called', () => {
     const { result } = renderHook(() => useLoading(false));
-    
+
     act(() => {
       result.current.startLoading();
     });
@@ -33,7 +33,7 @@ describe('useLoading', () => {
 
   it('sets loading to false when stopLoading is called', () => {
     const { result } = renderHook(() => useLoading(true));
-    
+
     act(() => {
       result.current.stopLoading();
     });

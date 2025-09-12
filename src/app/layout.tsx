@@ -1,9 +1,9 @@
-import "../styles/globals.css";
-import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
-import { SITE_CONFIG } from "@/lib";
+import '../styles/globals.css';
+import type { Metadata, Viewport } from 'next';
+import { Inter } from 'next/font/google';
+import { SITE_CONFIG } from '@/lib';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: SITE_CONFIG.name,
@@ -23,11 +23,11 @@ export const metadata: Metadata = {
         alt: SITE_CONFIG.name,
       },
     ],
-    locale: "en_US",
-    type: "website",
+    locale: 'en_US',
+    type: 'website',
   },
   twitter: {
-    card: "summary_large_image",
+    card: 'summary_large_image',
     title: SITE_CONFIG.name,
     description: SITE_CONFIG.description,
     images: [SITE_CONFIG.ogImage],
@@ -44,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body className={inter.className}>{children}</body>
     </html>
   );

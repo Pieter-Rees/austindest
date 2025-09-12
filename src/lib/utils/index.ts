@@ -1,15 +1,18 @@
-import { type ClassValue, clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
 export function formatDate(dateString: string): string {
-  return dateString.split("•").reverse().join("-");
+  return dateString.split('•').reverse().join('-');
 }
 
-export function sortGigsByDate(gigs: Array<{ date: string }>, ascending = true) {
+export function sortGigsByDate(
+  gigs: Array<{ date: string }>,
+  ascending = true
+) {
   return [...gigs].sort((a, b) => {
     const dateA = Date.parse(formatDate(a.date));
     const dateB = Date.parse(formatDate(b.date));

@@ -3,7 +3,12 @@ import React from 'react';
 // Mock react-player to avoid ESM import issues
 jest.mock('react-player', () => ({
   __esModule: true,
-  default: () => React.createElement('div', { 'data-testid': 'react-player-mock' }, 'React Player Mock'),
+  default: () =>
+    React.createElement(
+      'div',
+      { 'data-testid': 'react-player-mock' },
+      'React Player Mock'
+    ),
 }));
 
 import * as Components from '@/components';

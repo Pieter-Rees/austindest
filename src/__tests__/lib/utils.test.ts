@@ -1,4 +1,12 @@
-import { cn, formatDate, sortGigsByDate, filterUpcomingGigs, filterPassedGigs, debounce, throttle } from '@/lib/utils';
+import {
+  cn,
+  formatDate,
+  sortGigsByDate,
+  filterUpcomingGigs,
+  filterPassedGigs,
+  debounce,
+  throttle,
+} from '@/lib/utils';
 
 describe('Utils', () => {
   describe('cn', () => {
@@ -7,7 +15,9 @@ describe('Utils', () => {
     });
 
     it('handles conditional classes', () => {
-      expect(cn('class1', { class2: true, class3: false })).toBe('class1 class2');
+      expect(cn('class1', { class2: true, class3: false })).toBe(
+        'class1 class2'
+      );
     });
 
     it('handles undefined and null values', () => {
