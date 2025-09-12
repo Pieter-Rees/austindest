@@ -1,36 +1,41 @@
-import "./globals.css";
+import "../styles/globals.css";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import { SITE_CONFIG } from "@/lib";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Austin Dest",
-  description: "Austin Dest, DJ, Producer, and Musician",
-  keywords: [
-    "Austin",
-    "Austin Dest",
-    "Dest",
-    "DJ Austin",
-    "DJ Austin Dest",
-    "DJ",
-    "JayDee",
-    "Austin Martin",
-    "House",
-    "Progressive",
-    "Groove",
-    "ADE",
-    "A.D.E.",
-    "Amsterdam",
-    "Amsterdam Dance Event",
-    "Amsterdam Dance Event 2023",
-    "Amsterdam Dance Event 2022",
-  ],
-  creator: "Pieter Rees",
+  title: SITE_CONFIG.name,
+  description: SITE_CONFIG.description,
+  keywords: SITE_CONFIG.keywords,
+  creator: SITE_CONFIG.creator,
+  openGraph: {
+    title: SITE_CONFIG.name,
+    description: SITE_CONFIG.description,
+    url: SITE_CONFIG.url,
+    siteName: SITE_CONFIG.name,
+    images: [
+      {
+        url: SITE_CONFIG.ogImage,
+        width: 1200,
+        height: 630,
+        alt: SITE_CONFIG.name,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_CONFIG.name,
+    description: SITE_CONFIG.description,
+    images: [SITE_CONFIG.ogImage],
+  },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#ff77e9",
+  themeColor: SITE_CONFIG.themeColor,
 };
 
 export default function RootLayout({

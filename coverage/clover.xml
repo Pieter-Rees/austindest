@@ -1,42 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1757637235515" clover="3.2.0">
-  <project timestamp="1757637235515" name="All files">
-    <metrics statements="329" coveredstatements="320" conditionals="169" coveredconditionals="139" methods="114" coveredmethods="110" elements="612" coveredelements="569" complexity="0" loc="329" ncloc="329" packages="9" files="32" classes="32"/>
+<coverage generated="1757689113093" clover="3.2.0">
+  <project timestamp="1757689113093" name="All files">
+    <metrics statements="258" coveredstatements="254" conditionals="83" coveredconditionals="79" methods="79" coveredmethods="76" elements="420" coveredelements="409" complexity="0" loc="258" ncloc="258" packages="9" files="33" classes="33"/>
     <package name="app">
-      <metrics statements="33" coveredstatements="32" conditionals="2" coveredconditionals="1" methods="6" coveredmethods="6"/>
-      <file name="error.tsx" path="/home/pieter/Development/austindest/src/app/error.tsx">
-        <metrics statements="6" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="7" count="5" type="stmt"/>
-        <line num="14" count="5" type="stmt"/>
-        <line num="16" count="5" type="cond" truecount="1" falsecount="1"/>
-        <line num="17" count="0" type="stmt"/>
-      </file>
+      <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="layout.tsx" path="/home/pieter/Development/austindest/src/app/layout.tsx">
-        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="11" count="14" type="stmt"/>
-        <line num="92" count="6" type="stmt"/>
-        <line num="103" count="4" type="stmt"/>
-      </file>
-      <file name="loading.tsx" path="/home/pieter/Development/austindest/src/app/loading.tsx">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="3" count="4" type="stmt"/>
-        <line num="4" count="4" type="stmt"/>
-      </file>
-      <file name="not-found.tsx" path="/home/pieter/Development/austindest/src/app/not-found.tsx">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="6" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="41" count="3" type="stmt"/>
       </file>
       <file name="page.tsx" path="/home/pieter/Development/austindest/src/app/page.tsx">
-        <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
@@ -45,413 +26,364 @@
         <line num="8" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="17" count="6" type="stmt"/>
-      </file>
-    </package>
-    <package name="app.components">
-      <metrics statements="22" coveredstatements="21" conditionals="12" coveredconditionals="8" methods="8" coveredmethods="7"/>
-      <file name="gigs.tsx" path="/home/pieter/Development/austindest/src/app/components/gigs.tsx">
-        <metrics statements="22" coveredstatements="21" conditionals="12" coveredconditionals="8" methods="8" coveredmethods="7"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="66" count="1" type="stmt"/>
-        <line num="67" count="98" type="stmt"/>
-        <line num="70" count="1" type="stmt"/>
-        <line num="74" count="2" type="stmt"/>
-        <line num="75" count="40" type="stmt"/>
-        <line num="76" count="40" type="stmt"/>
-        <line num="77" count="40" type="cond" truecount="2" falsecount="0"/>
-        <line num="81" count="1" type="stmt"/>
-        <line num="85" count="2" type="stmt"/>
-        <line num="86" count="2" type="stmt"/>
-        <line num="87" count="2" type="stmt"/>
-        <line num="88" count="2" type="stmt"/>
-        <line num="90" count="2" type="stmt"/>
-        <line num="91" count="18" type="stmt"/>
-        <line num="92" count="18" type="cond" truecount="2" falsecount="0"/>
-        <line num="96" count="1" type="stmt"/>
-        <line num="99" count="1" type="stmt"/>
-        <line num="101" count="15" type="stmt"/>
-        <line num="118" count="0" type="stmt"/>
-        <line num="216" count="135" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
       </file>
     </package>
     <package name="components">
-      <metrics statements="124" coveredstatements="123" conditionals="32" coveredconditionals="29" methods="41" coveredmethods="38"/>
-      <file name="bio.tsx" path="/home/pieter/Development/austindest/src/components/bio.tsx">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="3" type="stmt"/>
-        <line num="2" count="3" type="stmt"/>
-        <line num="4" count="3" type="stmt"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="80" count="10" type="stmt"/>
-      </file>
-      <file name="contact.tsx" path="/home/pieter/Development/austindest/src/components/contact.tsx">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="3" type="stmt"/>
-        <line num="2" count="11" type="stmt"/>
-      </file>
-      <file name="copyright.tsx" path="/home/pieter/Development/austindest/src/components/copyright.tsx">
-        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-        <line num="2" count="3" type="stmt"/>
-        <line num="4" count="3" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="6" count="13" type="stmt"/>
-        <line num="7" count="10" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="11" count="10" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-      </file>
-      <file name="gigs.tsx" path="/home/pieter/Development/austindest/src/components/gigs.tsx">
-        <metrics statements="22" coveredstatements="21" conditionals="10" coveredconditionals="7" methods="8" coveredmethods="7"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="17" count="3" type="stmt"/>
-        <line num="67" count="3" type="stmt"/>
-        <line num="68" count="294" type="stmt"/>
-        <line num="71" count="3" type="stmt"/>
-        <line num="75" count="6" type="stmt"/>
-        <line num="76" count="120" type="stmt"/>
-        <line num="77" count="120" type="stmt"/>
-        <line num="78" count="120" type="cond" truecount="2" falsecount="0"/>
-        <line num="82" count="3" type="stmt"/>
-        <line num="86" count="6" type="stmt"/>
-        <line num="87" count="6" type="stmt"/>
-        <line num="88" count="6" type="stmt"/>
-        <line num="89" count="6" type="stmt"/>
-        <line num="91" count="6" type="stmt"/>
-        <line num="92" count="54" type="stmt"/>
-        <line num="93" count="54" type="cond" truecount="2" falsecount="0"/>
-        <line num="97" count="3" type="stmt"/>
-        <line num="100" count="3" type="stmt"/>
-        <line num="102" count="19" type="stmt"/>
-        <line num="117" count="0" type="stmt"/>
-        <line num="172" count="144" type="stmt"/>
-      </file>
-      <file name="header.tsx" path="/home/pieter/Development/austindest/src/components/header.tsx">
-        <metrics statements="35" coveredstatements="35" conditionals="14" coveredconditionals="14" methods="13" coveredmethods="11"/>
-        <line num="3" count="3" type="stmt"/>
-        <line num="4" count="3" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="11" count="3" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="14" count="26" type="stmt"/>
-        <line num="15" count="45" type="stmt"/>
-        <line num="23" count="45" type="stmt"/>
-        <line num="25" count="45" type="stmt"/>
-        <line num="26" count="23" type="stmt"/>
-        <line num="29" count="45" type="stmt"/>
-        <line num="30" count="2" type="stmt"/>
-        <line num="31" count="2" type="stmt"/>
-        <line num="34" count="45" type="stmt"/>
-        <line num="35" count="45" type="cond" truecount="2" falsecount="0"/>
-        <line num="37" count="22" type="stmt"/>
-        <line num="38" count="22" type="stmt"/>
-        <line num="41" count="45" type="stmt"/>
-        <line num="42" count="45" type="cond" truecount="2" falsecount="0"/>
-        <line num="44" count="22" type="stmt"/>
-        <line num="45" count="22" type="stmt"/>
-        <line num="46" count="22" type="stmt"/>
-        <line num="48" count="22" type="stmt"/>
-        <line num="49" count="22" type="stmt"/>
-        <line num="50" count="22" type="stmt"/>
-        <line num="54" count="45" type="stmt"/>
-        <line num="55" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="56" count="1" type="stmt"/>
-        <line num="59" count="45" type="cond" truecount="2" falsecount="0"/>
-        <line num="72" count="138" type="stmt"/>
-        <line num="142" count="132" type="stmt"/>
-        <line num="152" count="1" type="stmt"/>
-      </file>
+      <metrics statements="22" coveredstatements="22" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="index.ts" path="/home/pieter/Development/austindest/src/components/index.ts">
-        <metrics statements="23" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="22" coveredstatements="22" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.features">
+      <metrics statements="45" coveredstatements="44" conditionals="2" coveredconditionals="2" methods="10" coveredmethods="9"/>
+      <file name="bio.tsx" path="/home/pieter/Development/austindest/src/components/features/bio.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+      </file>
+      <file name="contact.tsx" path="/home/pieter/Development/austindest/src/components/features/contact.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="8" type="stmt"/>
+      </file>
+      <file name="gigs.tsx" path="/home/pieter/Development/austindest/src/components/features/gigs.tsx">
+        <metrics statements="9" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="2"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="74" count="14" type="stmt"/>
+        <line num="75" count="12" type="stmt"/>
+        <line num="76" count="12" type="stmt"/>
+        <line num="91" count="0" type="stmt"/>
+        <line num="101" count="36" type="stmt"/>
+      </file>
+      <file name="landing.tsx" path="/home/pieter/Development/austindest/src/components/features/landing.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
+      </file>
+      <file name="landingBg.tsx" path="/home/pieter/Development/austindest/src/components/features/landingBg.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="7" type="stmt"/>
+      </file>
+      <file name="listen.tsx" path="/home/pieter/Development/austindest/src/components/features/listen.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+      </file>
+      <file name="socials.tsx" path="/home/pieter/Development/austindest/src/components/features/socials.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="3" type="stmt"/>
         <line num="3" count="3" type="stmt"/>
         <line num="4" count="3" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="10" count="3" type="stmt"/>
-        <line num="11" count="3" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="13" count="3" type="stmt"/>
-        <line num="14" count="3" type="stmt"/>
-        <line num="15" count="3" type="stmt"/>
-        <line num="16" count="3" type="stmt"/>
-        <line num="17" count="3" type="stmt"/>
-        <line num="18" count="3" type="stmt"/>
-        <line num="19" count="18" type="stmt"/>
-        <line num="20" count="3" type="stmt"/>
-        <line num="21" count="3" type="stmt"/>
-        <line num="22" count="3" type="stmt"/>
-        <line num="23" count="3" type="stmt"/>
+        <line num="6" count="25" type="stmt"/>
       </file>
-      <file name="landing.tsx" path="/home/pieter/Development/austindest/src/components/landing.tsx">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="3" type="stmt"/>
-        <line num="2" count="3" type="stmt"/>
-        <line num="4" count="12" type="stmt"/>
+      <file name="watch.tsx" path="/home/pieter/Development/austindest/src/components/features/watch.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
       </file>
-      <file name="landingBg.tsx" path="/home/pieter/Development/austindest/src/components/landingBg.tsx">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="10" type="stmt"/>
+    </package>
+    <package name="components.layout">
+      <metrics statements="35" coveredstatements="35" conditionals="13" coveredconditionals="12" methods="19" coveredmethods="18"/>
+      <file name="copyright.tsx" path="/home/pieter/Development/austindest/src/components/layout/copyright.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="11" type="stmt"/>
+        <line num="6" count="9" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="10" count="9" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
       </file>
-      <file name="listen.tsx" path="/home/pieter/Development/austindest/src/components/listen.tsx">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="3" type="stmt"/>
-        <line num="3" count="16" type="stmt"/>
+      <file name="header.tsx" path="/home/pieter/Development/austindest/src/components/layout/header.tsx">
+        <metrics statements="17" coveredstatements="17" conditionals="6" coveredconditionals="5" methods="8" coveredmethods="7"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="12" count="14" type="stmt"/>
+        <line num="13" count="16" type="stmt"/>
+        <line num="14" count="16" type="stmt"/>
+        <line num="16" count="16" type="stmt"/>
+        <line num="17" count="16" type="stmt"/>
+        <line num="18" count="16" type="stmt"/>
+        <line num="20" count="16" type="stmt"/>
+        <line num="21" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="16" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
       </file>
-      <file name="logo.tsx" path="/home/pieter/Development/austindest/src/components/logo.tsx">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="3" type="stmt"/>
-        <line num="3" count="3" type="stmt"/>
-        <line num="7" count="14" type="stmt"/>
-      </file>
-      <file name="section.tsx" path="/home/pieter/Development/austindest/src/components/section.tsx">
+      <file name="section.tsx" path="/home/pieter/Development/austindest/src/components/layout/section.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-        <line num="3" count="48" type="stmt"/>
+        <line num="3" count="10" type="stmt"/>
       </file>
-      <file name="sidenav.tsx" path="/home/pieter/Development/austindest/src/components/sidenav.tsx">
-        <metrics statements="15" coveredstatements="15" conditionals="4" coveredconditionals="4" methods="8" coveredmethods="8"/>
-        <line num="3" count="3" type="stmt"/>
-        <line num="4" count="3" type="stmt"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="13" count="31" type="stmt"/>
-        <line num="14" count="54" type="stmt"/>
-        <line num="16" count="54" type="stmt"/>
-        <line num="17" count="26" type="stmt"/>
-        <line num="20" count="54" type="cond" truecount="2" falsecount="0"/>
-        <line num="21" count="26" type="stmt"/>
-        <line num="41" count="18" type="stmt"/>
-        <line num="52" count="2" type="stmt"/>
-        <line num="63" count="2" type="stmt"/>
-        <line num="74" count="2" type="stmt"/>
-        <line num="85" count="2" type="stmt"/>
-        <line num="96" count="2" type="stmt"/>
-      </file>
-      <file name="socials.tsx" path="/home/pieter/Development/austindest/src/components/socials.tsx">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="19" type="stmt"/>
-      </file>
-      <file name="watch.tsx" path="/home/pieter/Development/austindest/src/components/watch.tsx">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="sidenav.tsx" path="/home/pieter/Development/austindest/src/components/layout/sidenav.tsx">
+        <metrics statements="9" coveredstatements="9" conditionals="3" coveredconditionals="3" methods="7" coveredmethods="7"/>
         <line num="1" count="3" type="stmt"/>
         <line num="2" count="3" type="stmt"/>
-        <line num="4" count="15" type="stmt"/>
-      </file>
-    </package>
-    <package name="components.analytics">
-      <metrics statements="22" coveredstatements="18" conditionals="16" coveredconditionals="12" methods="4" coveredmethods="4"/>
-      <file name="PerformanceMonitor.tsx" path="/home/pieter/Development/austindest/src/components/analytics/PerformanceMonitor.tsx">
-        <metrics statements="22" coveredstatements="18" conditionals="16" coveredconditionals="12" methods="4" coveredmethods="4"/>
-        <line num="3" count="3" type="stmt"/>
-        <line num="5" count="22" type="stmt"/>
-        <line num="6" count="19" type="stmt"/>
-        <line num="7" count="19" type="cond" truecount="3" falsecount="1"/>
-        <line num="8" count="19" type="stmt"/>
-        <line num="9" count="8" type="stmt"/>
-        <line num="10" count="10" type="cond" truecount="2" falsecount="0"/>
-        <line num="11" count="3" type="stmt"/>
-        <line num="12" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="23" count="10" type="cond" truecount="2" falsecount="0"/>
-        <line num="24" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="29" count="10" type="cond" truecount="2" falsecount="0"/>
-        <line num="30" count="3" type="stmt"/>
-        <line num="31" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="41" count="19" type="stmt"/>
-        <line num="45" count="19" type="stmt"/>
-        <line num="46" count="19" type="stmt"/>
-        <line num="50" count="0" type="stmt"/>
-        <line num="53" count="19" type="stmt"/>
-      </file>
-    </package>
-    <package name="components.pwa">
-      <metrics statements="11" coveredstatements="9" conditionals="8" coveredconditionals="5" methods="5" coveredmethods="5"/>
-      <file name="PWARegistration.tsx" path="/home/pieter/Development/austindest/src/components/pwa/PWARegistration.tsx">
-        <metrics statements="11" coveredstatements="9" conditionals="8" coveredconditionals="5" methods="5" coveredmethods="5"/>
-        <line num="3" count="3" type="stmt"/>
-        <line num="5" count="21" type="stmt"/>
-        <line num="6" count="18" type="stmt"/>
-        <line num="7" count="18" type="cond" truecount="3" falsecount="1"/>
-        <line num="8" count="18" type="stmt"/>
-        <line num="9" count="111" type="stmt"/>
-        <line num="12" count="41" type="cond" truecount="1" falsecount="1"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="17" count="70" type="cond" truecount="1" falsecount="1"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="25" count="18" type="stmt"/>
-      </file>
-    </package>
-    <package name="components.seo">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="StructuredData.tsx" path="/home/pieter/Development/austindest/src/components/seo/StructuredData.tsx">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="2" count="7" type="stmt"/>
+        <line num="9" count="31" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="76" count="1" type="stmt"/>
+        <line num="87" count="1" type="stmt"/>
       </file>
     </package>
     <package name="components.ui">
-      <metrics statements="97" coveredstatements="97" conditionals="99" coveredconditionals="84" methods="38" coveredmethods="38"/>
-      <file name="Button.tsx" path="/home/pieter/Development/austindest/src/components/ui/Button.tsx">
-        <metrics statements="9" coveredstatements="9" conditionals="9" coveredconditionals="8" methods="1" coveredmethods="1"/>
-        <line num="3" count="5" type="stmt"/>
-        <line num="4" count="5" type="stmt"/>
-        <line num="5" count="5" type="stmt"/>
-        <line num="7" count="5" type="stmt"/>
-        <line num="24" count="5" type="stmt"/>
-        <line num="44" count="5" type="stmt"/>
-        <line num="58" count="32" type="cond" truecount="1" falsecount="1"/>
-        <line num="79" count="5" type="stmt"/>
-        <line num="81" count="35" type="stmt"/>
+      <metrics statements="56" coveredstatements="56" conditionals="54" coveredconditionals="54" methods="22" coveredmethods="22"/>
+      <file name="EmbedContainer.tsx" path="/home/pieter/Development/austindest/src/components/ui/EmbedContainer.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="9" count="7" type="stmt"/>
       </file>
-      <file name="Container.tsx" path="/home/pieter/Development/austindest/src/components/ui/Container.tsx">
-        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="2" count="3" type="stmt"/>
-        <line num="4" count="3" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="17" count="15" type="stmt"/>
-        <line num="41" count="3" type="stmt"/>
-        <line num="43" count="18" type="stmt"/>
+      <file name="ErrorBoundary.tsx" path="/home/pieter/Development/austindest/src/components/ui/ErrorBoundary.tsx">
+        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="15" count="9" type="stmt"/>
+        <line num="17" count="13" type="stmt"/>
+        <line num="18" count="12" type="stmt"/>
+        <line num="22" count="10" type="stmt"/>
+        <line num="26" count="5" type="stmt"/>
+        <line num="30" count="22" type="cond" truecount="1" falsecount="0"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="47" count="12" type="stmt"/>
       </file>
-      <file name="Image.tsx" path="/home/pieter/Development/austindest/src/components/ui/Image.tsx">
-        <metrics statements="7" coveredstatements="7" conditionals="18" coveredconditionals="18" methods="1" coveredmethods="1"/>
+      <file name="ImageGrid.tsx" path="/home/pieter/Development/austindest/src/components/ui/ImageGrid.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="5" coveredconditionals="5" methods="2" coveredmethods="2"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="14" count="9" type="cond" truecount="1" falsecount="0"/>
+        <line num="18" count="17" type="stmt"/>
+      </file>
+      <file name="LazyIframe.tsx" path="/home/pieter/Development/austindest/src/components/ui/LazyIframe.tsx">
+        <metrics statements="16" coveredstatements="16" conditionals="10" coveredconditionals="10" methods="5" coveredmethods="5"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="14" count="12" type="stmt"/>
+        <line num="23" count="16" type="stmt"/>
+        <line num="24" count="16" type="stmt"/>
+        <line num="25" count="16" type="stmt"/>
+        <line num="27" count="16" type="stmt"/>
+        <line num="28" count="10" type="stmt"/>
+        <line num="30" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="31" count="5" type="stmt"/>
+        <line num="32" count="5" type="stmt"/>
+        <line num="38" count="10" type="cond" truecount="1" falsecount="0"/>
+        <line num="39" count="10" type="stmt"/>
+        <line num="42" count="10" type="stmt"/>
+        <line num="45" count="16" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+      </file>
+      <file name="LoadingWrapper.tsx" path="/home/pieter/Development/austindest/src/components/ui/LoadingWrapper.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="16" count="8" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+      </file>
+      <file name="OptimizedImage.tsx" path="/home/pieter/Development/austindest/src/components/ui/OptimizedImage.tsx">
+        <metrics statements="9" coveredstatements="9" conditionals="10" coveredconditionals="10" methods="3" coveredmethods="3"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="17" count="13" type="stmt"/>
+        <line num="28" count="14" type="stmt"/>
+        <line num="29" count="14" type="stmt"/>
+        <line num="31" count="14" type="cond" truecount="1" falsecount="0"/>
+        <line num="61" count="2" type="stmt"/>
+        <line num="63" count="1" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+      </file>
+      <file name="SectionHeader.tsx" path="/home/pieter/Development/austindest/src/components/ui/SectionHeader.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="14" count="22" type="stmt"/>
+      </file>
+      <file name="SocialIcons.tsx" path="/home/pieter/Development/austindest/src/components/ui/SocialIcons.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="157" count="23" type="stmt"/>
+      </file>
+      <file name="SocialLink.tsx" path="/home/pieter/Development/austindest/src/components/ui/SocialLink.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="12" count="169" type="stmt"/>
+      </file>
+      <file name="logo.tsx" path="/home/pieter/Development/austindest/src/components/ui/logo.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="3" type="stmt"/>
         <line num="2" count="3" type="stmt"/>
         <line num="4" count="3" type="stmt"/>
-        <line num="21" count="3" type="stmt"/>
-        <line num="41" count="16" type="cond" truecount="2" falsecount="0"/>
-        <line num="81" count="3" type="stmt"/>
-        <line num="83" count="19" type="stmt"/>
+        <line num="8" count="25" type="stmt"/>
       </file>
-      <file name="Loading.tsx" path="/home/pieter/Development/austindest/src/components/ui/Loading.tsx">
-        <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
-        <line num="3" count="4" type="stmt"/>
+      <file name="title.tsx" path="/home/pieter/Development/austindest/src/components/ui/title.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="15" coveredconditionals="15" methods="1" coveredmethods="1"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
         <line num="4" count="4" type="stmt"/>
-        <line num="6" count="4" type="stmt"/>
-        <line num="14" count="4" type="stmt"/>
-        <line num="16" count="28" type="stmt"/>
-        <line num="39" count="4" type="stmt"/>
-        <line num="52" count="4" type="stmt"/>
-        <line num="54" count="12" type="stmt"/>
-        <line num="77" count="4" type="stmt"/>
-        <line num="79" count="15" type="stmt"/>
-      </file>
-      <file name="Title.tsx" path="/home/pieter/Development/austindest/src/components/ui/Title.tsx">
-        <metrics statements="8" coveredstatements="8" conditionals="17" coveredconditionals="17" methods="1" coveredmethods="1"/>
-        <line num="3" count="9" type="stmt"/>
-        <line num="5" count="9" type="stmt"/>
-        <line num="20" count="9" type="stmt"/>
-        <line num="38" count="110" type="cond" truecount="8" falsecount="0"/>
-        <line num="40" count="110" type="stmt"/>
-        <line num="47" count="110" type="stmt"/>
-        <line num="90" count="9" type="stmt"/>
-        <line num="92" count="113" type="stmt"/>
-      </file>
-      <file name="VideoPlayer.tsx" path="/home/pieter/Development/austindest/src/components/ui/VideoPlayer.tsx">
-        <metrics statements="57" coveredstatements="57" conditionals="49" coveredconditionals="35" methods="32" coveredmethods="32"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="11" count="3" type="stmt"/>
-        <line num="67" count="3" type="stmt"/>
-        <line num="99" count="37" type="stmt"/>
-        <line num="101" count="37" type="stmt"/>
-        <line num="103" count="4" type="cond" truecount="1" falsecount="1"/>
-        <line num="104" count="4" type="stmt"/>
-        <line num="108" count="4" type="cond" truecount="1" falsecount="1"/>
-        <line num="109" count="4" type="stmt"/>
-        <line num="113" count="4" type="cond" truecount="1" falsecount="1"/>
-        <line num="114" count="4" type="stmt"/>
-        <line num="118" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="121" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="124" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="127" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="130" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="133" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="136" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="139" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="142" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="145" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="148" count="4" type="cond" truecount="1" falsecount="1"/>
-        <line num="149" count="4" type="stmt"/>
-        <line num="153" count="9" type="cond" truecount="1" falsecount="1"/>
-        <line num="154" count="9" type="stmt"/>
-        <line num="158" count="4" type="cond" truecount="1" falsecount="1"/>
-        <line num="159" count="4" type="stmt"/>
-        <line num="162" count="3" type="stmt"/>
-        <line num="165" count="37" type="stmt"/>
-        <line num="166" count="1" type="stmt"/>
-        <line num="169" count="37" type="stmt"/>
-        <line num="170" count="1" type="stmt"/>
-        <line num="173" count="37" type="stmt"/>
-        <line num="174" count="1" type="stmt"/>
-        <line num="177" count="37" type="stmt"/>
-        <line num="179" count="2" type="stmt"/>
-        <line num="184" count="37" type="stmt"/>
-        <line num="185" count="1" type="stmt"/>
-        <line num="188" count="37" type="stmt"/>
-        <line num="189" count="1" type="stmt"/>
-        <line num="192" count="37" type="stmt"/>
-        <line num="194" count="4" type="cond" truecount="1" falsecount="1"/>
-        <line num="195" count="4" type="stmt"/>
-        <line num="197" count="4" type="stmt"/>
-        <line num="202" count="37" type="stmt"/>
-        <line num="203" count="1" type="stmt"/>
-        <line num="206" count="37" type="stmt"/>
-        <line num="207" count="1" type="stmt"/>
-        <line num="210" count="37" type="stmt"/>
-        <line num="212" count="2" type="stmt"/>
-        <line num="217" count="37" type="stmt"/>
-        <line num="219" count="2" type="stmt"/>
-        <line num="224" count="37" type="stmt"/>
-        <line num="226" count="4" type="stmt"/>
-        <line num="245" count="37" type="stmt"/>
-        <line num="269" count="3" type="stmt"/>
-        <line num="271" count="40" type="stmt"/>
+        <line num="19" count="35" type="stmt"/>
       </file>
     </package>
-    <package name="constants">
-      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="navigation.ts" path="/home/pieter/Development/austindest/src/constants/navigation.ts">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="58" type="stmt"/>
+    <package name="hooks">
+      <metrics statements="39" coveredstatements="36" conditionals="10" coveredconditionals="7" methods="12" coveredmethods="11"/>
+      <file name="index.ts" path="/home/pieter/Development/austindest/src/hooks/index.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+      </file>
+      <file name="useIntersectionObserver.ts" path="/home/pieter/Development/austindest/src/hooks/useIntersectionObserver.ts">
+        <metrics statements="16" coveredstatements="13" conditionals="8" coveredconditionals="5" methods="4" coveredmethods="3"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="10" count="11" type="cond" truecount="1" falsecount="0"/>
+        <line num="15" count="9" type="stmt"/>
+        <line num="16" count="9" type="stmt"/>
+        <line num="17" count="9" type="stmt"/>
+        <line num="19" count="9" type="stmt"/>
+        <line num="20" count="9" type="stmt"/>
+        <line num="21" count="9" type="cond" truecount="1" falsecount="0"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="40" count="3" type="stmt"/>
+        <line num="44" count="9" type="stmt"/>
+      </file>
+      <file name="useLoading.ts" path="/home/pieter/Development/austindest/src/hooks/useLoading.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="10" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="13" count="8" type="stmt"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="16" count="8" type="stmt"/>
+      </file>
+      <file name="useScroll.ts" path="/home/pieter/Development/austindest/src/hooks/useScroll.ts">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="14" type="stmt"/>
+        <line num="5" count="12" type="stmt"/>
+        <line num="6" count="12" type="stmt"/>
+        <line num="8" count="12" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="18" count="12" type="stmt"/>
       </file>
     </package>
     <package name="lib">
-      <metrics statements="17" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="11"/>
-      <file name="store.ts" path="/home/pieter/Development/austindest/src/lib/store.ts">
-        <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="10"/>
-        <line num="3" count="3" type="stmt"/>
-        <line num="4" count="3" type="stmt"/>
-        <line num="26" count="3" type="stmt"/>
-        <line num="34" count="22" type="stmt"/>
-        <line num="37" count="3" type="stmt"/>
-        <line num="40" count="2" type="stmt"/>
-        <line num="43" count="2" type="stmt"/>
-        <line num="45" count="2" type="stmt"/>
-        <line num="47" count="2" type="stmt"/>
-        <line num="49" count="2" type="stmt"/>
-        <line num="51" count="5" type="stmt"/>
-        <line num="53" count="2" type="stmt"/>
-        <line num="57" count="17" type="stmt"/>
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/home/pieter/Development/austindest/src/lib/index.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="8" type="stmt"/>
+        <line num="2" count="8" type="stmt"/>
+        <line num="3" count="8" type="stmt"/>
       </file>
-      <file name="utils.ts" path="/home/pieter/Development/austindest/src/lib/utils.ts">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="18" type="stmt"/>
-        <line num="2" count="18" type="stmt"/>
-        <line num="4" count="417" type="stmt"/>
-        <line num="5" count="417" type="stmt"/>
+    </package>
+    <package name="lib.constants">
+      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/home/pieter/Development/austindest/src/lib/constants/index.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="141" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="60" count="22" type="stmt"/>
+        <line num="66" count="7" type="stmt"/>
+        <line num="68" count="5" type="stmt"/>
+        <line num="70" count="5" type="stmt"/>
+        <line num="72" count="5" type="stmt"/>
+        <line num="79" count="5" type="stmt"/>
+        <line num="88" count="13" type="stmt"/>
+      </file>
+    </package>
+    <package name="lib.utils">
+      <metrics statements="31" coveredstatements="31" conditionals="4" coveredconditionals="4" methods="14" coveredmethods="14"/>
+      <file name="index.ts" path="/home/pieter/Development/austindest/src/lib/utils/index.ts">
+        <metrics statements="31" coveredstatements="31" conditionals="4" coveredconditionals="4" methods="14" coveredmethods="14"/>
+        <line num="1" count="8" type="stmt"/>
+        <line num="2" count="8" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="32" type="stmt"/>
+        <line num="12" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="12" type="stmt"/>
+        <line num="15" count="12" type="stmt"/>
+        <line num="16" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="3" type="stmt"/>
+        <line num="34" count="3" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="3" type="stmt"/>
+        <line num="41" count="3" type="stmt"/>
+        <line num="45" count="3" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="52" count="2" type="stmt"/>
+        <line num="53" count="2" type="stmt"/>
+        <line num="54" count="2" type="stmt"/>
       </file>
     </package>
   </project>

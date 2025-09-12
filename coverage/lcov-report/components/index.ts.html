@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>46/46</span>
+                <span class='fraction'>44/44</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>23/23</span>
+                <span class='fraction'>22/22</span>
             </div>
         
             
@@ -86,52 +86,55 @@
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">18x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export { default as Header } from "./header";
-export { default as Sidenav } from "./sidenav";
-export { Section } from "./section";
-export { default as Bio } from "./bio";
-export { default as Contact } from "./contact";
-export { default as Copyright } from "./copyright";
-export { default as Gigs } from "./gigs";
-export { default as Landing } from "./landing";
-export { default as LandingBg } from "./landingBg";
-export { default as Listen } from "./listen";
-export { default as Logo } from "./logo";
-export { default as Socials } from "./socials";
-export { default as Watch } from "./watch";
-export { Button } from "./ui/Button";
-export { Container } from "./ui/Container";
-export { Image } from "./ui/Image";
-export { Loading, PageLoading } from "./ui/Loading";
-export { SectionLoading } from "./ui/Loading";
-export { Title } from "./ui/Title";
-export { VideoPlayer } from "./ui/VideoPlayer";
-export { PerformanceMonitor } from "./analytics/PerformanceMonitor";
-export { PWARegistration } from "./pwa/PWARegistration";
-export { StructuredData } from "./seo/StructuredData";
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export { EmbedContainer } from "./ui/EmbedContainer";
+export { ErrorBoundary } from "./ui/ErrorBoundary";
+export { ImageGrid } from "./ui/ImageGrid";
+export { LazyIframe } from "./ui/LazyIframe";
+export { LoadingWrapper } from "./ui/LoadingWrapper";
+export { OptimizedImage } from "./ui/OptimizedImage";
+export { SectionHeader } from "./ui/SectionHeader";
+export { SocialLink } from "./ui/SocialLink";
+export { default as Logo } from "./ui/logo";
+export { Title } from "./ui/title";
+&nbsp;
+export { default as Header } from "./layout/header";
+export { Section } from "./layout/section";
+export { default as Sidenav } from "./layout/sidenav";
+export { default as Copyright } from "./layout/copyright";
+&nbsp;
+export { default as Bio } from "./features/bio";
+export { default as Contact } from "./features/contact";
+export { default as Gigs } from "./features/gigs";
+export { default as Landing } from "./features/landing";
+export { default as LandingBg } from "./features/landingBg";
+export { default as Listen } from "./features/listen";
+export { default as Socials } from "./features/socials";
+export { default as Watch } from "./features/watch";
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -139,7 +142,7 @@ export { StructuredData } from "./seo/StructuredData";
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-09-12T00:33:55.487Z
+                at 2025-09-12T14:58:33.061Z
             </div>
         <script src="../prettify.js"></script>
         <script>
