@@ -34,23 +34,23 @@ describe('Utils', () => {
 
   describe('sortGigsByDate', () => {
     const mockGigs = [
-      { date: '06•04•2024', name: 'Gig 1' },
-      { date: '25•05•2024', name: 'Gig 2' },
-      { date: '13•04•2024', name: 'Gig 3' },
+      { date: '06•04•2024' },
+      { date: '25•05•2024' },
+      { date: '13•04•2024' },
     ];
 
     it('sorts gigs in ascending order by default', () => {
       const sorted = sortGigsByDate(mockGigs);
-      expect(sorted[0].name).toBe('Gig 1');
-      expect(sorted[1].name).toBe('Gig 3');
-      expect(sorted[2].name).toBe('Gig 2');
+      expect(sorted[0]?.date).toBe('06•04•2024');
+      expect(sorted[1]?.date).toBe('13•04•2024');
+      expect(sorted[2]?.date).toBe('25•05•2024');
     });
 
     it('sorts gigs in descending order when specified', () => {
       const sorted = sortGigsByDate(mockGigs, false);
-      expect(sorted[0].name).toBe('Gig 2');
-      expect(sorted[1].name).toBe('Gig 3');
-      expect(sorted[2].name).toBe('Gig 1');
+      expect(sorted[0]?.date).toBe('25•05•2024');
+      expect(sorted[1]?.date).toBe('13•04•2024');
+      expect(sorted[2]?.date).toBe('06•04•2024');
     });
 
     it('does not mutate original array', () => {

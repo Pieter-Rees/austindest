@@ -36,7 +36,15 @@ const FacebookIcon = () => (
   </svg>
 );
 
-const GigRow = ({ gig }: { gig: any }) => (
+interface Gig {
+  date: string;
+  name: string;
+  location: string;
+  info?: string;
+  link?: string;
+}
+
+const GigRow = ({ gig }: { gig: Gig }) => (
   <tr className='pt-8 text-xs text-white lg:text-xl 2xl:text-2xl'>
     <td className='hidden sm:block text-center text-xs text-white lg:text-xl 2xl:text-2xl'>
       <span>{gig.date}</span>
@@ -74,8 +82,12 @@ const GigRow = ({ gig }: { gig: any }) => (
 );
 
 export default function Gigs() {
-  const upcomingGigs = filterUpcomingGigs(sortGigsByDate([...GIGS], true));
-  const passedGigs = filterPassedGigs(sortGigsByDate([...GIGS], false));
+  const upcomingGigs = filterUpcomingGigs(
+    sortGigsByDate([...GIGS], true)
+  ) as Gig[];
+  const passedGigs = filterPassedGigs(
+    sortGigsByDate([...GIGS], false)
+  ) as Gig[];
 
   return (
     <>

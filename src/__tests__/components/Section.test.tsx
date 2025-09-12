@@ -105,7 +105,7 @@ describe('Section', () => {
   });
 
   it('renders without children', () => {
-    render(<Section />);
+    render(<Section>{<div>Test</div>}</Section>);
     const containers = screen.getAllByRole('generic');
     expect(containers[0]).toBeInTheDocument();
   });

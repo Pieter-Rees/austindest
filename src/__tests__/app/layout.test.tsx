@@ -1,6 +1,10 @@
 import { render } from '@testing-library/react';
 import RootLayout, { metadata, viewport } from '@/app/layout';
 
+// Mock the HTML structure to avoid nesting warnings
+const _mockHtml = ({ children }: { children: React.ReactNode }) => children;
+const _mockBody = ({ children }: { children: React.ReactNode }) => children;
+
 jest.mock('next/font/google', () => ({
   Inter: () => ({
     className: 'inter-font-class',
@@ -17,6 +21,12 @@ jest.mock('@/lib', () => ({
     ogImage: 'https://test.com/og-image.jpg',
     themeColor: '#000000',
   },
+}));
+
+// Mock Next.js HTML components to avoid nesting warnings
+jest.mock('next/head', () => ({
+  __esModule: true,
+  default: ({ children }: { children: React.ReactNode }) => children,
 }));
 
 describe('RootLayout', () => {

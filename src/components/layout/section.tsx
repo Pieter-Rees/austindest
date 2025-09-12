@@ -5,6 +5,7 @@ interface SectionProps {
   bg?: boolean;
   children: ReactElement;
   id?: string;
+  className?: string;
 }
 
 export const Section = ({
@@ -12,11 +13,13 @@ export const Section = ({
   fullVh = false,
   bg = false,
   id,
+  className,
 }: SectionProps) => {
   const sectionClasses = [
     'w-full flex justify-center items-center relative z-2',
     bg && 'bg-gradient-to-b from-bubblegum/20 to-blue/20 backdrop-blur-md',
     fullVh && 'h-screen',
+    className,
   ]
     .filter(Boolean)
     .join(' ');

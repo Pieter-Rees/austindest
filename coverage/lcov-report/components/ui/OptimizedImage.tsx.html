@@ -32,7 +32,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>10/10</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
@@ -133,7 +133,8 @@
 <a name='L68'></a><a href='#L68'>68</a>
 <a name='L69'></a><a href='#L69'>69</a>
 <a name='L70'></a><a href='#L70'>70</a>
-<a name='L71'></a><a href='#L71'>71</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -193,6 +194,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -203,75 +205,76 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use client";
-import Image from "next/image";
-import { useState } from "react";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use client';
+import Image from 'next/image';
+import { useState } from 'react';
 &nbsp;
 interface OptimizedImageProps {
-    src: string;
-    alt: string;
-    width?: number;
-    height?: number;
-    className?: string;
-    priority?: boolean;
-    quality?: number;
-    placeholder?: "blur" | "empty";
-    blurDataURL?: string;
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
+  quality?: number;
+  placeholder?: 'blur' | 'empty';
+  blurDataURL?: string;
 }
 &nbsp;
 export const OptimizedImage = ({
-    src,
-    alt,
-    width = 200,
-    height = 300,
-    className = "",
-    priority = false,
-    quality = 75,
-    placeholder = "empty",
-    blurDataURL,
+  src,
+  alt,
+  width = 200,
+  height = 300,
+  className = '',
+  priority = false,
+  quality = 75,
+  placeholder = 'empty',
+  blurDataURL,
 }: OptimizedImageProps) =&gt; {
-    const [isLoading, setIsLoading] = useState(true);
-    const [hasError, setHasError] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
 &nbsp;
-    if (hasError) {
-        return (
-            &lt;div
-                className={`flex items-center justify-center bg-gray-800 text-gray-400 ${className}`}
-                style={{ width, height }}
-            &gt;
-                &lt;span&gt;Image unavailable&lt;/span&gt;
-            &lt;/div&gt;
-        );
-    }
-&nbsp;
+  if (hasError) {
     return (
-        &lt;div className={`relative ${className}`}&gt;
-            {isLoading &amp;&amp; (
-                &lt;div
-                    className="absolute inset-0 bg-gray-800 animate-pulse rounded-3xl"
-                    style={{ width, height }}
-                /&gt;
-            )}
-            &lt;Image
-                src={src}
-                alt={alt}
-                width={width}
-                height={height}
-                className={`object-cover w-full h-full rounded-3xl transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'
-                    }`}
-                priority={priority}
-                quality={quality}
-                placeholder={placeholder}
-                blurDataURL={blurDataURL}
-                onLoad={() =&gt; setIsLoading(false)}
-                onError={() =&gt; {
-                    setIsLoading(false);
-                    setHasError(true);
-                }}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            /&gt;
-        &lt;/div&gt;
+      &lt;div
+        className={`flex items-center justify-center bg-gray-800 text-gray-400 ${className}`}
+        style={{ width, height }}
+      &gt;
+        &lt;span&gt;Image unavailable&lt;/span&gt;
+      &lt;/div&gt;
     );
+  }
+&nbsp;
+  return (
+    &lt;div className={`relative ${className}`}&gt;
+      {isLoading &amp;&amp; (
+        &lt;div
+          className='absolute inset-0 bg-gray-800 animate-pulse rounded-3xl'
+          style={{ width, height }}
+        /&gt;
+      )}
+      &lt;Image
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        className={`object-cover w-full h-full rounded-3xl transition-opacity duration-300 ${
+          isLoading ? 'opacity-0' : 'opacity-100'
+        }`}
+        priority={priority}
+        quality={quality}
+        placeholder={placeholder}
+        blurDataURL={blurDataURL}
+        onLoad={() =&gt; setIsLoading(false)}
+        onError={() =&gt; {
+          setIsLoading(false);
+          setHasError(true);
+        }}
+        sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+      /&gt;
+    &lt;/div&gt;
+  );
 };
 &nbsp;</pre></td></tr></table></pre>
 
@@ -280,7 +283,7 @@ export const OptimizedImage = ({
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-09-12T14:58:33.061Z
+                at 2025-09-12T15:35:04.767Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

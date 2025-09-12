@@ -52,7 +52,7 @@ describe('EmbedContainer', () => {
   });
 
   it('renders without children', () => {
-    render(<EmbedContainer />);
+    render(<EmbedContainer>{null}</EmbedContainer>);
     const containers = screen.getAllByRole('generic');
     expect(containers[0]).toBeInTheDocument();
   });

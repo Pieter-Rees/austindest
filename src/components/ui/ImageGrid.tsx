@@ -18,8 +18,8 @@ export const ImageGrid = ({ images, className = '' }: ImageGridProps) => {
         <EmbedContainer key={index}>
           <OptimizedImage
             src={image.src}
-            width={image.width || 200}
-            height={image.height || 300}
+            width={image.width ?? 200}
+            height={image.height ?? 300}
             alt={image.alt}
             priority={index === 0}
             quality={85}

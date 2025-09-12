@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">95.45% </span>
+                <span class="strong">95% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>21/22</span>
+                <span class='fraction'>19/20</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>17/17</span>
+                <span class='fraction'>16/16</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -241,21 +241,12 @@
 <a name='L176'></a><a href='#L176'>176</a>
 <a name='L177'></a><a href='#L177'>177</a>
 <a name='L178'></a><a href='#L178'>178</a>
-<a name='L179'></a><a href='#L179'>179</a>
-<a name='L180'></a><a href='#L180'>180</a>
-<a name='L181'></a><a href='#L181'>181</a>
-<a name='L182'></a><a href='#L182'>182</a>
-<a name='L183'></a><a href='#L183'>183</a>
-<a name='L184'></a><a href='#L184'>184</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L179'></a><a href='#L179'>179</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-yes">16x</span>
@@ -268,7 +259,7 @@
 <span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -428,179 +419,173 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use client";
-import { useState, useEffect } from "react";
-import { Link, Events, animateScroll as scroll, scrollSpy } from "react-scroll";
-import Logo from "../ui/logo";
-import Sidenav from "./sidenav";
-import localFont from "next/font/local";
-import "@/styles/neon.css";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use client';
+import { useState, useEffect } from 'react';
+import { Link, animateScroll as scroll } from 'react-scroll';
+import Logo from '../ui/logo';
+import Sidenav from './sidenav';
+import '@/styles/neon.css';
 &nbsp;
-const myFont = localFont({
-  src: "../../../public/fonts/Monoton-Regular.woff2",
-});
 export default function Header() {
   const [showSideNav, setShowSideNav] = useState(false);
-  const [navBackground, setnavBackground] = useState(false);
+  const [navBackground, setNavBackground] = useState(false);
 &nbsp;
   const handleToggle = () =&gt; setShowSideNav(prev =&gt; !prev);
   const scrollToTop = () =&gt; scroll.scrollToTop();
-  const handleSetActive = <span class="fstat-no" title="function not covered" >(t</span>o: string) =&gt; <span class="cstat-no" title="statement not covered" >setnavBackground(to !== "landing");</span>
+  const handleSetActive = <span class="fstat-no" title="function not covered" >(t</span>o: string) =&gt; <span class="cstat-no" title="statement not covered" >setNavBackground(to !== 'landing');</span>
 &nbsp;
   useEffect(() =&gt; {
     document.body.style.overflow = showSideNav ? 'hidden' : 'unset';
-    return () =&gt; { document.body.style.overflow = 'unset'; };
+    return () =&gt; {
+      document.body.style.overflow = 'unset';
+    };
   }, [showSideNav]);
 &nbsp;
   return (
     &lt;&gt;
       &lt;nav
-        className={
-          "px-4 fixed z-50 top-0 w-full flex items-center justify-between transition-all duration-300 " +
-          (navBackground
-            ? <span class="branch-0 cbranch-no" title="branch not covered" >"bg-black/20 backdrop-blur-lg border-b border-white/10 shadow-lg"</span>
-            : "bg-transparent backdrop-blur-none"
-          )
-        }
+        className={`px-4 fixed z-50 top-0 w-full flex items-center justify-between transition-all duration-300 ${
+          navBackground
+            ? <span class="branch-0 cbranch-no" title="branch not covered" >'bg-black/20 backdrop-blur-lg border-b border-white/10 shadow-lg'</span>
+            : 'bg-transparent backdrop-blur-none'
+        }`}
       &gt;
-        &lt;div className="flex items-center flex-shrink-0 text-white mr-6"&gt;
+        &lt;div className='flex items-center flex-shrink-0 text-white mr-6'&gt;
           &lt;div
             onClick={() =&gt; scrollToTop()}
-            className="cursor-pointer m-4 transition-all fill-white hover:fill-bubblegum ease-in-out"
+            className='cursor-pointer m-4 transition-all fill-white hover:fill-bubblegum ease-in-out'
           &gt;
             &lt;Logo /&gt;
           &lt;/div&gt;
         &lt;/div&gt;
-        &lt;div className="md:hidden"&gt;
+        &lt;div className='md:hidden'&gt;
           &lt;button
-            title="Menu"
+            title='Menu'
             onClick={handleToggle}
-            className={
-              "flex items-center px-3 py-2 transition-all " +
-              (showSideNav ? "rotate-90" : "")
-            }
+            className={`flex items-center px-3 py-2 transition-all ${
+              showSideNav ? 'rotate-90' : ''
+            }`}
           &gt;
             &lt;svg
-              version="1.1"
-              id="icon"
-              xmlns="http://www.w3.org/2000/svg"
-              x="0px"
-              y="0px"
-              width="30px"
-              height="30px"
-              viewBox="0 0 50 50"
+              version='1.1'
+              id='icon'
+              xmlns='http://www.w3.org/2000/svg'
+              x='0px'
+              y='0px'
+              width='30px'
+              height='30px'
+              viewBox='0 0 50 50'
             &gt;
               &lt;polygon
-                style={{ fill: "#fff", stroke: "none" }}
-                points="40,25 10,45 10,5 40,25 "
-                id="shape1"
+                style={{ fill: '#fff', stroke: 'none' }}
+                points='40,25 10,45 10,5 40,25 '
+                id='shape1'
               &gt;
                 &lt;animate
-                  id="animPauseOne"
-                  begin="indefinite"
-                  attributeName="points"
-                  dur="500ms"
-                  to="5,45 15,45 15,5 5,5 "
-                  fill="freeze"
+                  id='animPauseOne'
+                  begin='indefinite'
+                  attributeName='points'
+                  dur='500ms'
+                  to='5,45 15,45 15,5 5,5 '
+                  fill='freeze'
                 /&gt;
                 &lt;animate
-                  id="animPlayOne"
-                  begin="indefinite"
-                  attributeName="points"
-                  dur="500ms"
-                  to="40,25 10,45 10,5 40,25 "
-                  fill="freeze"
+                  id='animPlayOne'
+                  begin='indefinite'
+                  attributeName='points'
+                  dur='500ms'
+                  to='40,25 10,45 10,5 40,25 '
+                  fill='freeze'
                 /&gt;
               &lt;/polygon&gt;
 &nbsp;
               &lt;polygon
-                style={{ fill: "#fff", stroke: "none" }}
-                points="40,25 10,45 10,5 40,25 "
-                id="shape2"
+                style={{ fill: '#fff', stroke: 'none' }}
+                points='40,25 10,45 10,5 40,25 '
+                id='shape2'
               &gt;
                 &lt;animate
-                  id="animPauseTwo"
-                  begin="indefinite"
-                  attributeName="points"
-                  dur="500ms"
-                  to="35,45 45,45 45,5 35,5 "
-                  fill="freeze"
+                  id='animPauseTwo'
+                  begin='indefinite'
+                  attributeName='points'
+                  dur='500ms'
+                  to='35,45 45,45 45,5 35,5 '
+                  fill='freeze'
                 /&gt;
                 &lt;animate
-                  id="animPlayTwo"
-                  begin="indefinite"
-                  attributeName="points"
-                  dur="500ms"
-                  to="40,25 10,45 10,5 40,25 "
-                  fill="freeze"
+                  id='animPlayTwo'
+                  begin='indefinite'
+                  attributeName='points'
+                  dur='500ms'
+                  to='40,25 10,45 10,5 40,25 '
+                  fill='freeze'
                 /&gt;
               &lt;/polygon&gt;
             &lt;/svg&gt;
           &lt;/button&gt;
         &lt;/div&gt;
-        &lt;div className="hidden md:flex w-full justify-end flex-grow md:items-center md:w-auto md:flex-grow uppercase"&gt;
+        &lt;div className='hidden md:flex w-full justify-end flex-grow md:items-center md:w-auto md:flex-grow uppercase'&gt;
           &lt;Link
-            activeClass="text-bubblegum hover:cursor-default"
-            to="landing"
+            activeClass='text-bubblegum hover:cursor-default'
+            to='landing'
             spy={true}
             smooth={true}
-            className="text-lg 2xl:text-2xl cursor-pointer block mt-4 lg:inline-block md:mt-0 hover:text-bubblegum mr-4"
+            className='text-lg 2xl:text-2xl cursor-pointer block mt-4 lg:inline-block md:mt-0 hover:text-bubblegum mr-4'
             duration={500}
             onSetActive={handleSetActive}
           &gt;
             Home
           &lt;/Link&gt;
           &lt;Link
-            activeClass="text-bubblegum hover:cursor-default"
-            to="gigs"
+            activeClass='text-bubblegum hover:cursor-default'
+            to='gigs'
             spy={true}
             smooth={true}
-            className=" text-lg 2xl:text-2xl cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
+            className=' text-lg 2xl:text-2xl cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4'
             duration={500}
             onSetActive={handleSetActive}
           &gt;
             Gigs
           &lt;/Link&gt;
           &lt;Link
-            activeClass="text-bubblegum hover:cursor-default"
-            to="bio"
+            activeClass='text-bubblegum hover:cursor-default'
+            to='bio'
             spy={true}
             smooth={true}
-            className="text-lg 2xl:text-2xl cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
+            className='text-lg 2xl:text-2xl cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4'
             duration={500}
             onSetActive={handleSetActive}
           &gt;
             Bio
           &lt;/Link&gt;
           &lt;Link
-            activeClass="text-bubblegum hover:cursor-default"
-            to="listen"
+            activeClass='text-bubblegum hover:cursor-default'
+            to='listen'
             spy={true}
             smooth={true}
-            className="text-lg 2xl:text-2xl cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
+            className='text-lg 2xl:text-2xl cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4'
             duration={500}
             onSetActive={handleSetActive}
           &gt;
             Listen
           &lt;/Link&gt;
           &lt;Link
-            activeClass="text-bubblegum hover:cursor-default"
-            to="watch"
+            activeClass='text-bubblegum hover:cursor-default'
+            to='watch'
             spy={true}
             smooth={true}
-            className="text-lg 2xl:text-2xl cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
+            className='text-lg 2xl:text-2xl cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4'
             duration={500}
             onSetActive={handleSetActive}
           &gt;
             Watch
           &lt;/Link&gt;
           &lt;Link
-            activeClass="text-bubblegum hover:cursor-default"
-            to="contact"
+            activeClass='text-bubblegum hover:cursor-default'
+            to='contact'
             spy={true}
             smooth={true}
-            className="text-lg 2xl:text-2xl cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4"
+            className='text-lg 2xl:text-2xl cursor-pointer block mt-4 md:inline-block md:mt-0 hover:text-bubblegum mr-4'
             duration={500}
             onSetActive={handleSetActive}
           &gt;
@@ -619,7 +604,7 @@ export default function Header() {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-09-12T14:58:33.061Z
+                at 2025-09-12T15:35:04.767Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

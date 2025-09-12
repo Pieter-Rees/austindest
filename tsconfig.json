@@ -15,7 +15,7 @@
     "jsx": "preserve",
     "incremental": true,
     "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
+    "verbatimModuleSyntax": false,
     "noUncheckedIndexedAccess": true,
     "plugins": [
       {

@@ -171,11 +171,36 @@
 <a name='L106'></a><a href='#L106'>106</a>
 <a name='L107'></a><a href='#L107'>107</a>
 <a name='L108'></a><a href='#L108'>108</a>
-<a name='L109'></a><a href='#L109'>109</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -246,7 +271,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -279,67 +308,78 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use client";
-import { SectionHeader } from "../ui/SectionHeader";
-import { SocialLink } from "../ui/SocialLink";
-import { GIGS } from "@/lib";
-import { sortGigsByDate, filterUpcomingGigs, filterPassedGigs } from "@/lib/utils";
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use client';
+import { SectionHeader } from '../ui/SectionHeader';
+import { SocialLink } from '../ui/SocialLink';
+import { GIGS } from '@/lib';
+import {
+  sortGigsByDate,
+  filterUpcomingGigs,
+  filterPassedGigs,
+} from '@/lib/utils';
 &nbsp;
 const FacebookIcon = () =&gt; (
   &lt;svg
-    className="h-6 w-6 lg:w-8 lg:h-8"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 512.002 512.002"
+    className='h-6 w-6 lg:w-8 lg:h-8'
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 0 512.002 512.002'
   &gt;
-    &lt;circle style={{ fill: "#4E598F" }} cx="256.001" cy="256" r="256" /&gt;
+    &lt;circle style={{ fill: '#4E598F' }} cx='256.001' cy='256' r='256' /&gt;
     &lt;path
-      style={{ fill: "#364270" }}
-      d="M511.596,241.7L391.019,121.085c-1.998,0.605-6.982-1.714-9.173-1.274c-51.717,8.62-101.71,0-151.704,13.791c-24.135,6.896-25.859,36.202-34.478,55.165c-12.067,34.478-10.343,72.404-25.859,105.158c-10.343,22.411-34.478,36.202-43.098,62.061c-2.875,10.785-2.705,24.379-5.956,34.69l120.98,120.922c4.725,0.26,9.48,0.403,14.269,0.403c141.384,0,256-114.616,256-256C512.001,251.201,511.858,246.434,511.596,241.7z"
+      style={{ fill: '#364270' }}
+      d='M511.596,241.7L391.019,121.085c-1.998,0.605-6.982-1.714-9.173-1.274c-51.717,8.62-101.71,0-151.704,13.791c-24.135,6.896-25.859,36.202-34.478,55.165c-12.067,34.478-10.343,72.404-25.859,105.158c-10.343,22.411-34.478,36.202-43.098,62.061c-2.875,10.785-2.705,24.379-5.956,34.69l120.98,120.922c4.725,0.26,9.48,0.403,14.269,0.403c141.384,0,256-114.616,256-256C512.001,251.201,511.858,246.434,511.596,241.7z'
     /&gt;
     &lt;g&gt;
       &lt;path
-        style={{ fill: "#FFFFFF" }}
-        d="M363.043,109.466H148.958c-21.809,0-39.49,17.68-39.49,39.49v214.085c0,21.811,17.68,39.49,39.49,39.49h105.584l0.183-104.722h-27.21c-3.536,0-6.406-2.86-6.418-6.396l-0.133-33.759c-0.014-3.553,2.867-6.444,6.42-6.444h27.162v-32.618c0-37.852,23.118-58.463,56.884-58.463h27.71c3.543,0,6.42,2.874,6.42,6.42v28.463c0,3.546-2.874,6.42-6.416,6.42l-17.006,0.01c-18.363,0-21.921,8.725-21.921,21.533v28.239h40.351c3.848,0,6.83,3.358,6.375,7.173l-4.001,33.759c-0.381,3.232-3.122,5.665-6.375,5.665h-36.168l-0.183,104.726h62.826c21.809,0,39.49-17.682,39.49-39.491v-214.09C402.533,127.147,384.852,109.466,363.043,109.466L363.043,109.466z"
+        style={{ fill: '#FFFFFF' }}
+        d='M363.043,109.466H148.958c-21.809,0-39.49,17.68-39.49,39.49v214.085c0,21.811,17.68,39.49,39.49,39.49h105.584l0.183-104.722h-27.21c-3.536,0-6.406-2.86-6.418-6.396l-0.133-33.759c-0.014-3.553,2.867-6.444,6.42-6.444h27.162v-32.618c0-37.852,23.118-58.463,56.884-58.463h27.71c3.543,0,6.42,2.874,6.42,6.42v28.463c0,3.546-2.874,6.42-6.416,6.42l-17.006,0.01c-18.363,0-21.921,8.725-21.921,21.533v28.239h40.351c3.848,0,6.83,3.358,6.375,7.173l-4.001,33.759c-0.381,3.232-3.122,5.665-6.375,5.665h-36.168l-0.183,104.726h62.826c21.809,0,39.49-17.682,39.49-39.491v-214.09C402.533,127.147,384.852,109.466,363.043,109.466L363.043,109.466z'
       /&gt;
       &lt;polygon
-        style={{ fill: "#FFFFFF" }}
-        points="254.542,402.53 254.725,297.808 254.277,297.808 254.277,402.53"
+        style={{ fill: '#FFFFFF' }}
+        points='254.542,402.53 254.725,297.808 254.277,297.808 254.277,402.53'
       /&gt;
     &lt;/g&gt;
     &lt;path
-      style={{ fill: "#D1D1D1" }}
-      d="M363.043,109.466H254.277v141.741h0.269V218.59c0-37.852,23.118-58.463,56.884-58.463h27.71c3.543,0,6.42,2.874,6.42,6.42v28.463c0,3.546-2.874,6.42-6.416,6.42l-17.006,0.01c-18.363,0-21.921,8.725-21.921,21.533v28.238h40.351c3.848,0,6.83,3.358,6.375,7.173l-4.001,33.759c-0.381,3.232-3.122,5.665-6.375,5.665h-36.168l-0.183,104.726h62.826c21.809,0,39.49-17.682,39.49-39.491V148.956C402.533,127.147,384.852,109.466,363.043,109.466z"
+      style={{ fill: '#D1D1D1' }}
+      d='M363.043,109.466H254.277v141.741h0.269V218.59c0-37.852,23.118-58.463,56.884-58.463h27.71c3.543,0,6.42,2.874,6.42,6.42v28.463c0,3.546-2.874,6.42-6.416,6.42l-17.006,0.01c-18.363,0-21.921,8.725-21.921,21.533v28.238h40.351c3.848,0,6.83,3.358,6.375,7.173l-4.001,33.759c-0.381,3.232-3.122,5.665-6.375,5.665h-36.168l-0.183,104.726h62.826c21.809,0,39.49-17.682,39.49-39.491V148.956C402.533,127.147,384.852,109.466,363.043,109.466z'
     /&gt;
   &lt;/svg&gt;
 );
 &nbsp;
-const GigRow = ({ gig, isUpcoming }: { gig: any; isUpcoming: boolean }) =&gt; (
-  &lt;tr className="pt-8 text-xs text-white lg:text-xl 2xl:text-2xl"&gt;
-    &lt;td className="hidden sm:block text-center text-xs text-white lg:text-xl 2xl:text-2xl"&gt;
+interface Gig {
+  date: string;
+  name: string;
+  location: string;
+  info?: string;
+  link?: string;
+}
+&nbsp;
+const GigRow = ({ gig }: { gig: Gig }) =&gt; (
+  &lt;tr className='pt-8 text-xs text-white lg:text-xl 2xl:text-2xl'&gt;
+    &lt;td className='hidden sm:block text-center text-xs text-white lg:text-xl 2xl:text-2xl'&gt;
       &lt;span&gt;{gig.date}&lt;/span&gt;
     &lt;/td&gt;
-    &lt;td className="text-sm text-white sm:text-center lg:text-lg 2xl:text-2xl"&gt;
+    &lt;td className='text-sm text-white sm:text-center lg:text-lg 2xl:text-2xl'&gt;
       {gig.info ? (
         &lt;SocialLink
           href={gig.info}
-          className="hover:text-bubblegum"
+          className='hover:text-bubblegum'
           ariaLabel={`More info about ${gig.name}`}
         &gt;
           {gig.name}
-          &lt;div className="block sm:hidden text-left sm:text-right"&gt;
+          &lt;div className='block sm:hidden text-left sm:text-right'&gt;
             {gig.date}
           &lt;/div&gt;
         &lt;/SocialLink&gt;
       ) : (
         &lt;&gt;
-          &lt;span className="cursor-not-allowed"&gt;{gig.name}&lt;/span&gt;
-          &lt;div className="block sm:hidden sm:text-right"&gt;
-            {gig.date}
-          &lt;/div&gt;
+          &lt;span className='cursor-not-allowed'&gt;{gig.name}&lt;/span&gt;
+          &lt;div className='block sm:hidden sm:text-right'&gt;{gig.date}&lt;/div&gt;
         &lt;/&gt;
       )}
     &lt;/td&gt;
-    &lt;td className="text-md text-white lg:text-xl 2xl:text-2xl"&gt;
+    &lt;td className='text-md text-white lg:text-xl 2xl:text-2xl'&gt;
       {gig.location}
     &lt;/td&gt;
     &lt;td&gt;
@@ -353,33 +393,37 @@ const GigRow = ({ gig, isUpcoming }: { gig: any; isUpcoming: boolean }) =&gt; (
 );
 &nbsp;
 export default function Gigs() {
-  const upcomingGigs = filterUpcomingGigs(sortGigsByDate([...GIGS], true));
-  const passedGigs = filterPassedGigs(sortGigsByDate([...GIGS], false));
+  const upcomingGigs = filterUpcomingGigs(
+    sortGigsByDate([...GIGS], true)
+  ) as Gig[];
+  const passedGigs = filterPassedGigs(
+    sortGigsByDate([...GIGS], false)
+  ) as Gig[];
 &nbsp;
   return (
     &lt;&gt;
-      &lt;SectionHeader right={true} center={true} subTitle="Gigs" /&gt;
-      &lt;div className="w-full h-full"&gt;
-        &lt;div className="col-span-3 lg:col-span-auto"&gt;
-          &lt;table className="w-full border-separate lg:border-spacing-4 table-auto"&gt;
-            &lt;thead className="flex justify-start sm:justify-center lg:text-xl 2xl:text-2xl font-bold"&gt;
-              &lt;tr className="flex"&gt;
-                &lt;td className="mb-4"&gt;Upcoming&lt;/td&gt;
+      &lt;SectionHeader right={true} center={true} subTitle='Gigs' /&gt;
+      &lt;div className='w-full h-full'&gt;
+        &lt;div className='col-span-3 lg:col-span-auto'&gt;
+          &lt;table className='w-full border-separate lg:border-spacing-4 table-auto'&gt;
+            &lt;thead className='flex justify-start sm:justify-center lg:text-xl 2xl:text-2xl font-bold'&gt;
+              &lt;tr className='flex'&gt;
+                &lt;td className='mb-4'&gt;Upcoming&lt;/td&gt;
               &lt;/tr&gt;
             &lt;/thead&gt;
             &lt;tbody&gt;
               {upcomingGigs.map(<span class="fstat-no" title="function not covered" >(g</span>ig, i) =&gt; (
-<span class="cstat-no" title="statement not covered" >                &lt;GigRow key={`upcoming-${i}`} g</span>ig={gig} isUpcoming={true} /&gt;
+<span class="cstat-no" title="statement not covered" >                &lt;GigRow key={`upcoming-${i}`} g</span>ig={gig} /&gt;
               ))}
             &lt;/tbody&gt;
-            &lt;thead className="flex justify-start sm:justify-center lg:text-xl 2xl:text-2xl font-bold"&gt;
-              &lt;tr className="flex"&gt;
-                &lt;td className="my-4"&gt;Passed&lt;/td&gt;
+            &lt;thead className='flex justify-start sm:justify-center lg:text-xl 2xl:text-2xl font-bold'&gt;
+              &lt;tr className='flex'&gt;
+                &lt;td className='my-4'&gt;Passed&lt;/td&gt;
               &lt;/tr&gt;
             &lt;/thead&gt;
             &lt;tbody&gt;
               {passedGigs.map((gig, i) =&gt; (
-                &lt;GigRow key={`passed-${i}`} gig={gig} isUpcoming={false} /&gt;
+                &lt;GigRow key={`passed-${i}`} gig={gig} /&gt;
               ))}
             &lt;/tbody&gt;
           &lt;/table&gt;
@@ -387,14 +431,15 @@ export default function Gigs() {
       &lt;/div&gt;
     &lt;/&gt;
   );
-}</pre></td></tr></table></pre>
+}
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-09-12T14:58:33.061Z
+                at 2025-09-12T15:35:04.767Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

@@ -61,8 +61,8 @@ describe('Title', () => {
     expect(subtitle).toHaveClass('mt-8');
   });
 
-  it('applies centerText when centerText prop is true', () => {
-    render(<Title subTitle='Test Subtitle' centerText={true} />);
+  it('applies center when center prop is true', () => {
+    render(<Title subTitle='Test Subtitle' center={true} />);
 
     const subtitle = screen.getByText('Test Subtitle');
     expect(subtitle).toHaveClass(

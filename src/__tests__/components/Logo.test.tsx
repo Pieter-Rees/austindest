@@ -13,7 +13,7 @@ describe('Logo', () => {
     render(<Logo />);
 
     const aElements = screen.getAllByText('A');
-    const logoContainer = aElements[0].closest('div');
+    const logoContainer = aElements[0]?.closest('div');
     expect(logoContainer).toHaveClass(
       'relative',
       'hover:animate-spin-slow',

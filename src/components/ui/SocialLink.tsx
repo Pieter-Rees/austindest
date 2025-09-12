@@ -1,4 +1,5 @@
-import type { ReactNode } from 'react';
+'use client';
+import { type ReactNode } from 'react';
 
 interface SocialLinkProps {
   href: string;
@@ -12,7 +13,7 @@ interface SocialLinkProps {
 export const SocialLink = ({
   href,
   children,
-  className = 'text-lg lg:text-lg 2xl:text-2xl text-white md:hover:text-bubblegum',
+  className = 'text-lg lg:text-lg 2xl:text-2xl text-white md:hover:text-bubblegum no-underline hover:no-underline',
   target = '_blank',
   rel = 'noreferrer noopener',
   ariaLabel,

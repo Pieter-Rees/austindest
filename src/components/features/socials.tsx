@@ -32,14 +32,14 @@ export default function Socials() {
       <div className='flex items-center flex-col justify-center'>
         <SocialLink
           href={`mailto:${SOCIAL_LINKS.email}`}
-          className='text-lg 2xl:text-2xl md text-white md:hover:text-bubblegum'
+          className='text-lg 2xl:text-2xl text-white md:hover:text-bubblegum no-underline hover:no-underline'
           ariaLabel='Email Contact'
         >
           {SOCIAL_LINKS.email}
         </SocialLink>
         <SocialLink
           href={SOCIAL_LINKS.instagram}
-          className='text-lg lg:text-lg 2xl:text-2xl text-white md:hover:text-bubblegum'
+          className='text-lg 2xl:text-2xl text-white md:hover:text-bubblegum no-underline hover:no-underline'
           ariaLabel='Instagram Handle'
         >
           {SOCIAL_LINKS.instagramHandle}

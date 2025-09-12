@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>9/9</span>
+                <span class='fraction'>8/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>4/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>4/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>9/9</span>
+                <span class='fraction'>8/10</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -112,9 +112,20 @@
 <a name='L47'></a><a href='#L47'>47</a>
 <a name='L48'></a><a href='#L48'>48</a>
 <a name='L49'></a><a href='#L49'>49</a>
-<a name='L50'></a><a href='#L50'>50</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -128,6 +139,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -137,7 +151,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -148,7 +166,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -161,54 +185,66 @@
 <span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use client";
-import { Component } from "react";
-import type { ReactNode } from "react";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use client';
+import { Component, type ReactNode } from 'react';
 &nbsp;
 interface ErrorBoundaryProps {
-    children: ReactNode;
-    fallback?: ReactNode;
+  children: ReactNode;
+  fallback?: ReactNode;
 }
 &nbsp;
 interface ErrorBoundaryState {
-    hasError: boolean;
-    error?: Error;
+  hasError: boolean;
+  error?: Error;
 }
 &nbsp;
-export class ErrorBoundary extends Component&lt;ErrorBoundaryProps, ErrorBoundaryState&gt; {
-    constructor(props: ErrorBoundaryProps) {
-        super(props);
-        this.state = { hasError: false };
+export class ErrorBoundary extends Component&lt;
+  ErrorBoundaryProps,
+  ErrorBoundaryState
+&gt; {
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
+    this.state = { hasError: false };
+  }
+&nbsp;
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
+    return { hasError: true, error };
+  }
+&nbsp;
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    // Log error for debugging in development
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+<span class="cstat-no" title="statement not covered" >      console.error('ErrorBoundary caught an error:', error, errorInfo);</span>
+    }
+  }
+&nbsp;
+  render() {
+    if (this.state.hasError) {
+      return (
+        this.props.fallback ?? (
+          &lt;div className='flex items-center justify-center p-8'&gt;
+            &lt;div className='text-center'&gt;
+              &lt;h2 className='text-2xl font-bold text-white mb-4'&gt;
+                Something went wrong
+              &lt;/h2&gt;
+              &lt;p className='text-gray-300 mb-4'&gt;
+                Please refresh the page to try again.
+              &lt;/p&gt;
+              &lt;button
+                onClick={<span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" >w</span>indow.location.reload()}</span>
+                className='px-4 py-2 bg-bubblegum text-black rounded-lg hover:bg-bubblegum/80 transition-colors'
+              &gt;
+                Refresh Page
+              &lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        )
+      );
     }
 &nbsp;
-    static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-        return { hasError: true, error };
-    }
-&nbsp;
-    componentDidCatch(error: Error, errorInfo: any) {
-        console.error("ErrorBoundary caught an error:", error, errorInfo);
-    }
-&nbsp;
-    render() {
-        if (this.state.hasError) {
-            return this.props.fallback || (
-                &lt;div className="flex items-center justify-center p-8"&gt;
-                    &lt;div className="text-center"&gt;
-                        &lt;h2 className="text-2xl font-bold text-white mb-4"&gt;Something went wrong&lt;/h2&gt;
-                        &lt;p className="text-gray-300 mb-4"&gt;Please refresh the page to try again.&lt;/p&gt;
-                        &lt;button
-                            onClick={() =&gt; window.location.reload()}
-                            className="px-4 py-2 bg-bubblegum text-black rounded-lg hover:bg-bubblegum/80 transition-colors"
-                        &gt;
-                            Refresh Page
-                        &lt;/button&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            );
-        }
-&nbsp;
-        return this.props.children;
-    }
+    return this.props.children;
+  }
 }
 &nbsp;</pre></td></tr></table></pre>
 
@@ -217,7 +253,7 @@ export class ErrorBoundary extends Component&lt;ErrorBoundaryProps, ErrorBoundar
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-09-12T14:58:33.061Z
+                at 2025-09-12T15:35:04.767Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

@@ -84,9 +84,10 @@ describe('Header', () => {
     render(<Header />);
 
     const logos = screen.getAllByText('A');
-    fireEvent.click(logos[0]);
-
-    expect(logos[0]).toBeInTheDocument();
+    if (logos[0]) {
+      fireEvent.click(logos[0]);
+      expect(logos[0]).toBeInTheDocument();
+    }
   });
 
   it('sets body overflow hidden when mobile menu is open', () => {

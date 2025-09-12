@@ -41,7 +41,7 @@ describe('LoadingWrapper', () => {
   });
 
   it('renders without children', () => {
-    render(<LoadingWrapper />);
+    render(<LoadingWrapper>{null}</LoadingWrapper>);
     expect(screen.getByRole('generic')).toBeInTheDocument();
   });
 });

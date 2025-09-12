@@ -7,7 +7,7 @@ declare global {
       toHaveClass(className: string): R;
       toHaveAttribute(attr: string, value?: string): R;
       toHaveTextContent(text: string | RegExp): R;
-      toHaveStyle(style: Record<string, any>): R;
+      toHaveStyle(style: Record<string, string | number>): R;
     }
   }
 }

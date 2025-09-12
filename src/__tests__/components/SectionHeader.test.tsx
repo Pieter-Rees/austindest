@@ -3,7 +3,7 @@ import { SectionHeader } from '@/components/ui/SectionHeader';
 
 describe('SectionHeader', () => {
   it('renders with title only', () => {
-    render(<SectionHeader title='Test Title' />);
+    render(<SectionHeader title='Test Title' subTitle='Test Subtitle' />);
 
     expect(screen.getAllByText('Test Title')).toHaveLength(2);
   });
@@ -22,14 +22,22 @@ describe('SectionHeader', () => {
   });
 
   it('applies center alignment when center prop is true', () => {
-    render(<SectionHeader title='Test Title' center={true} />);
+    render(
+      <SectionHeader
+        title='Test Title'
+        subTitle='Test Subtitle'
+        center={true}
+      />
+    );
 
     const title = screen.getAllByText('Test Title')[0];
     expect(title).toHaveClass('text-center');
   });
 
   it('applies right alignment when right prop is true', () => {
-    render(<SectionHeader title='Test Title' right={true} />);
+    render(
+      <SectionHeader title='Test Title' subTitle='Test Subtitle' right={true} />
+    );
 
     const title = screen.getAllByText('Test Title')[0];
     expect(title).toHaveClass(
@@ -42,7 +50,9 @@ describe('SectionHeader', () => {
   });
 
   it('applies left alignment when left prop is true', () => {
-    render(<SectionHeader title='Test Title' left={true} />);
+    render(
+      <SectionHeader title='Test Title' subTitle='Test Subtitle' left={true} />
+    );
 
     const title = screen.getAllByText('Test Title')[0];
     expect(title).toHaveClass(
@@ -62,7 +72,7 @@ describe('SectionHeader', () => {
   });
 
   it('renders without crashing when no props provided', () => {
-    render(<SectionHeader />);
+    render(<SectionHeader subTitle='Test Subtitle' />);
     const containers = screen.getAllByRole('generic');
     const container = containers[0];
     expect(container).toBeInTheDocument();

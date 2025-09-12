@@ -109,7 +109,9 @@ describe('useIntersectionObserver', () => {
   });
 
   it('updates state when intersection observer callback is triggered', () => {
-    let capturedCallback: (entries: IntersectionObserverEntry[]) => void;
+    let capturedCallback:
+      | ((entries: IntersectionObserverEntry[]) => void)
+      | undefined = undefined;
 
     mockIntersectionObserver.mockImplementation(callback => {
       capturedCallback = callback;
@@ -132,7 +134,7 @@ describe('useIntersectionObserver', () => {
     // Simulate intersection observer callback
     if (capturedCallback) {
       act(() => {
-        capturedCallback([
+        capturedCallback!([
           { isIntersecting: true } as IntersectionObserverEntry,
         ]);
       });
@@ -147,7 +149,9 @@ describe('useIntersectionObserver', () => {
   });
 
   it('does not update hasIntersected when already intersected', () => {
-    let capturedCallback: (entries: IntersectionObserverEntry[]) => void;
+    let capturedCallback:
+      | ((entries: IntersectionObserverEntry[]) => void)
+      | undefined = undefined;
 
     mockIntersectionObserver.mockImplementation(callback => {
       capturedCallback = callback;
@@ -170,7 +174,7 @@ describe('useIntersectionObserver', () => {
     if (capturedCallback) {
       // First intersection
       act(() => {
-        capturedCallback([
+        capturedCallback!([
           { isIntersecting: true } as IntersectionObserverEntry,
         ]);
       });
@@ -179,7 +183,7 @@ describe('useIntersectionObserver', () => {
 
       // Second intersection - should not change hasIntersected
       act(() => {
-        capturedCallback([
+        capturedCallback!([
           { isIntersecting: true } as IntersectionObserverEntry,
         ]);
       });

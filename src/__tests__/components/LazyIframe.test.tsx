@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen, waitFor, act } from '@testing-library/react';
 import { LazyIframe } from '@/components/ui/LazyIframe';
 
 const mockIntersectionObserver = jest.fn();
@@ -35,7 +35,9 @@ describe('LazyIframe', () => {
     const callback = mockIntersectionObserver.mock.calls[0][0];
     const mockEntry = { isIntersecting: true };
 
-    callback([mockEntry]);
+    act(() => {
+      callback([mockEntry]);
+    });
 
     await waitFor(() => {
       expect(screen.getByTitle('Test iframe')).toBeInTheDocument();
@@ -56,7 +58,9 @@ describe('LazyIframe', () => {
     const callback = mockIntersectionObserver.mock.calls[0][0];
     const mockEntry = { isIntersecting: true };
 
-    callback([mockEntry]);
+    act(() => {
+      callback([mockEntry]);
+    });
 
     await waitFor(() => {
       const iframe = screen.getByTitle('Test iframe');
@@ -73,7 +77,9 @@ describe('LazyIframe', () => {
     const callback = mockIntersectionObserver.mock.calls[0][0];
     const mockEntry = { isIntersecting: true };
 
-    callback([mockEntry]);
+    act(() => {
+      callback([mockEntry]);
+    });
 
     await waitFor(() => {
       const iframe = screen.getByTitle('Test iframe');
@@ -111,7 +117,9 @@ describe('LazyIframe', () => {
     const callback = mockIntersectionObserver.mock.calls[0][0];
     const mockEntry = { isIntersecting: true };
 
-    callback([mockEntry]);
+    act(() => {
+      callback([mockEntry]);
+    });
 
     await waitFor(() => {
       const iframe = screen.getByTitle('Test iframe');
@@ -127,7 +135,9 @@ describe('LazyIframe', () => {
     const callback = mockIntersectionObserver.mock.calls[0][0];
     const mockEntry = { isIntersecting: true };
 
-    callback([mockEntry]);
+    act(() => {
+      callback([mockEntry]);
+    });
 
     await waitFor(() => {
       const iframe = screen.getByTitle('Test iframe');
