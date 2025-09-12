@@ -1,13 +1,13 @@
-import Header from "./components/header";
-import { Section } from "./components/section";
-import Landing from "./components/landing";
-import LandingBg from "./components/landingBg";
-import Watch from "./components/watch";
-import Gigs from "./components/gigs";
-import Bio from "./components/bio";
-import Listen from "./components/listen";
-import Contact from "./components/contact";
-import Copyright from "./components/copyright";
+import Header from "@/components/layout/header";
+import { Section } from "@/components/layout/section";
+import Landing from "@/components/features/landing";
+import LandingBg from "@/components/features/landingBg";
+import Watch from "@/components/features/watch";
+import Gigs from "@/components/features/gigs";
+import Bio from "@/components/features/bio";
+import Listen from "@/components/features/listen";
+import Contact from "@/components/features/contact";
+import Copyright from "@/components/layout/copyright";
 
 export default function Home() {
   return (
