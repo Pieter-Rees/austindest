@@ -1,8 +1,15 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import Sidenav from '@/components/layout/sidenav';
 
+interface ScrollLinkProps {
+  children: React.ReactNode;
+  to: string;
+  onClick?: () => void;
+  [key: string]: unknown;
+}
+
 jest.mock('react-scroll', () => ({
-  Link: ({ children, to, onClick, ...props }: any) => (
+  Link: ({ children, to, onClick, ...props }: ScrollLinkProps) => (
     <a href={`#${to}`} onClick={onClick} {...props}>
       {children}
     </a>

@@ -22,13 +22,13 @@ export const SectionHeader = ({
   return (
     <div className='my-6 lg:mb-8 lg:mt-0'>
       <Title
-        title={title}
+        {...(title && { title })}
         subTitle={subTitle}
         left={left}
         right={right}
         center={center}
         margin={margin}
-        smallTitle={smallTitle}
+        {...(smallTitle && { smallTitle })}
       />
     </div>
   );

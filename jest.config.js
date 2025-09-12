@@ -7,15 +7,29 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jsdom',
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
+  testPathIgnorePatterns: [
+    '<rootDir>/.next/',
+    '<rootDir>/node_modules/',
+    '<rootDir>/build/',
+  ],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
+    '^@/components/(.*)$': '<rootDir>/src/components/$1',
+    '^@/lib/(.*)$': '<rootDir>/src/lib/$1',
+    '^@/hooks/(.*)$': '<rootDir>/src/hooks/$1',
+    '^@/types/(.*)$': '<rootDir>/src/types/$1',
+    '^@/styles/(.*)$': '<rootDir>/src/styles/$1',
   },
-  transformIgnorePatterns: ['node_modules/(?!(react-player|@react-player)/)'],
+  transformIgnorePatterns: [
+    'node_modules/(?!(react-player|@react-player|react-scroll)/)',
+  ],
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}',
     '!src/**/*.d.ts',
     '!src/**/*.stories.{js,jsx,ts,tsx}',
+    '!src/**/index.{js,jsx,ts,tsx}',
+    '!src/**/*.config.{js,ts}',
+    '!src/**/types/**',
   ],
   coverageThreshold: {
     global: {
@@ -25,6 +39,28 @@ const customJestConfig = {
       statements: 95,
     },
   },
+  // Modern Jest configuration
+  transform: {
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
+  },
+  // Performance optimizations
+  maxWorkers: '50%',
+  cache: true,
+  clearMocks: true,
+  restoreMocks: true,
+  // Modern test features
+  testTimeout: 10000,
+  verbose: true,
+  // Coverage reporting
+  coverageReporters: ['text', 'lcov', 'html', 'json-summary'],
+  coverageDirectory: 'coverage',
+  // Module resolution
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  // Watch mode improvements (disabled until plugins are installed)
+  // watchPlugins: [
+  //   'jest-watch-typeahead/filename',
+  //   'jest-watch-typeahead/testname',
+  // ],
   globals: {
     'ts-jest': {
       useESM: true,

@@ -1,10 +1,6 @@
 import { FlatCompat } from '@eslint/eslintrc';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
-import typescriptEslint from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
-import prettier from 'eslint-plugin-prettier';
-import prettierConfig from 'eslint-config-prettier';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -14,87 +10,85 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends('next/core-web-vitals'),
-  prettierConfig,
+  ...compat.extends('next/core-web-vitals', 'next/typescript'),
   {
-    files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
-      parser: typescriptParser,
       parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
         project: './tsconfig.json',
+        tsconfigRootDir: __dirname,
       },
     },
-    plugins: {
-      '@typescript-eslint': typescriptEslint,
-      prettier,
-    },
     rules: {
-      // Modern JavaScript/TypeScript best practices
-      'prefer-const': 'warn',
-      'no-var': 'warn',
-      'no-console': 'warn',
-      'no-debugger': 'error',
-      'prefer-template': 'warn',
-      'object-shorthand': 'warn',
-      'prefer-arrow-callback': 'warn',
-      'no-duplicate-imports': 'warn',
-      'no-unused-vars': 'off',
+      // Modern React rules (relaxed for existing codebase)
+      'react/jsx-no-useless-fragment': 'warn',
+      'react/jsx-curly-brace-presence': 'off',
+      'react/self-closing-comp': 'warn',
+      'react/jsx-sort-props': 'off',
 
-      // TypeScript specific rules
+      // TypeScript rules
       '@typescript-eslint/no-unused-vars': [
-        'warn',
+        'error',
         {
           argsIgnorePattern: '^_',
           varsIgnorePattern: '^_',
           caughtErrorsIgnorePattern: '^_',
         },
       ],
-      '@typescript-eslint/prefer-nullish-coalescing': 'warn',
-      '@typescript-eslint/prefer-optional-chain': 'warn',
-      '@typescript-eslint/no-non-null-assertion': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/prefer-as-const': 'warn',
-      '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
-      '@typescript-eslint/no-var-requires': 'error',
+      '@typescript-eslint/prefer-nullish-coalescing': 'error',
+      '@typescript-eslint/prefer-optional-chain': 'error',
+      '@typescript-eslint/no-non-null-assertion': 'warn',
       '@typescript-eslint/consistent-type-imports': [
-        'warn',
-        { prefer: 'type-imports' },
+        'error',
+        {
+          prefer: 'type-imports',
+          disallowTypeAnnotations: false,
+        },
       ],
+      '@typescript-eslint/consistent-type-exports': 'error',
 
-      // React/Next.js specific rules
-      'react/jsx-uses-react': 'off',
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
-      'react-hooks/exhaustive-deps': 'warn',
+      // General rules (relaxed for existing codebase)
+      'prefer-const': 'error',
+      'no-var': 'error',
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'no-debugger': 'error',
+      'no-duplicate-imports': 'error',
+      'no-unused-expressions': 'error',
+      'prefer-template': 'warn',
+      'prefer-arrow-callback': 'warn',
+      'arrow-spacing': 'warn',
+      'object-shorthand': 'warn',
+      'prefer-destructuring': 'off',
 
-      // Prettier integration
-      'prettier/prettier': 'error',
+      // Next.js specific
+      '@next/next/no-img-element': 'error',
+      '@next/next/no-html-link-for-pages': 'error',
+      '@next/next/no-sync-scripts': 'error',
+      '@next/next/no-title-in-document-head': 'error',
+
+      // Accessibility
+      'jsx-a11y/alt-text': 'error',
+      'jsx-a11y/anchor-has-content': 'error',
+      'jsx-a11y/anchor-is-valid': 'error',
+      'jsx-a11y/aria-props': 'error',
+      'jsx-a11y/aria-proptypes': 'error',
+      'jsx-a11y/aria-unsupported-elements': 'error',
+      'jsx-a11y/role-has-required-aria-props': 'error',
+      'jsx-a11y/role-supports-aria-props': 'error',
     },
   },
   {
-    files: ['**/*.js', '**/*.mjs'],
-    languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-    },
-    plugins: {
-      prettier,
-    },
+    files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
     rules: {
-      'prefer-const': 'warn',
-      'no-var': 'warn',
-      'no-console': 'warn',
-      'no-debugger': 'error',
-      'prefer-template': 'warn',
-      'object-shorthand': 'warn',
-      'prefer-arrow-callback': 'warn',
-      'no-duplicate-imports': 'warn',
-      'prettier/prettier': 'error',
+      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-non-null-assertion': 'off',
+      'no-console': 'off',
+    },
+  },
+  {
+    files: ['**/*.config.{js,ts}'],
+    rules: {
+      'import/no-default-export': 'off',
     },
   },
 ];

@@ -1,23 +1,38 @@
 import { render, screen } from '@testing-library/react';
 import { ImageGrid } from '@/components/ui/ImageGrid';
 
+interface ComponentProps {
+  children: React.ReactNode;
+}
+
+interface OptimizedImageProps {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  priority?: boolean;
+  quality?: number;
+}
+
 jest.mock('@/components/ui/EmbedContainer', () => ({
-  EmbedContainer: ({ children }: any) => (
+  EmbedContainer: ({ children }: ComponentProps) => (
     <div data-testid='embed-container'>{children}</div>
   ),
 }));
 
 jest.mock('@/components/ui/OptimizedImage', () => ({
-  OptimizedImage: ({ src, alt, width, height, priority, quality }: any) => (
-    <img
+  OptimizedImage: ({ src, alt, width, height, priority, quality }: OptimizedImageProps) => (
+    <div
       data-testid='optimized-image'
-      src={src}
-      alt={alt}
+      data-src={src}
+      data-alt={alt}
       data-width={width}
       data-height={height}
       data-priority={priority}
       data-quality={quality}
-    />
+    >
+      {alt}
+    </div>
   ),
 }));
 
@@ -32,9 +47,9 @@ describe('ImageGrid', () => {
     render(<ImageGrid images={mockImages} />);
 
     expect(screen.getAllByTestId('optimized-image')).toHaveLength(3);
-    expect(screen.getByAltText('Image 1')).toBeInTheDocument();
-    expect(screen.getByAltText('Image 2')).toBeInTheDocument();
-    expect(screen.getByAltText('Image 3')).toBeInTheDocument();
+    expect(screen.getByText('Image 1')).toBeInTheDocument();
+    expect(screen.getByText('Image 2')).toBeInTheDocument();
+    expect(screen.getByText('Image 3')).toBeInTheDocument();
   });
 
   it('wraps each image in EmbedContainer', () => {

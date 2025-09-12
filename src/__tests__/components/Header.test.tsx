@@ -2,8 +2,14 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import { useState } from 'react';
 import Header from '@/components/layout/header';
 
+interface ScrollLinkProps {
+  children: React.ReactNode;
+  to: string;
+  [key: string]: unknown;
+}
+
 jest.mock('react-scroll', () => ({
-  Link: ({ children, to, ...props }: any) => (
+  Link: ({ children, to, ...props }: ScrollLinkProps) => (
     <a href={`#${to}`} {...props}>
       {children}
     </a>
@@ -141,11 +147,10 @@ describe('Header', () => {
       const [navBackground] = useState(true);
       return (
         <nav
-          className={`px-4 fixed z-50 top-0 w-full flex items-center justify-between transition-all duration-300 ${
-            navBackground
-              ? 'bg-black/20 backdrop-blur-lg border-b border-white/10 shadow-lg'
-              : 'bg-transparent backdrop-blur-none'
-          }`}
+          className={`px-4 fixed z-50 top-0 w-full flex items-center justify-between transition-all duration-300 ${navBackground
+            ? 'bg-black/20 backdrop-blur-lg border-b border-white/10 shadow-lg'
+            : 'bg-transparent backdrop-blur-none'
+            }`}
         >
           <div>Test Nav</div>
         </nav>

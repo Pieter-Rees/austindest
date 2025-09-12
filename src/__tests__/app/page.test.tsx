@@ -6,10 +6,17 @@ jest.mock('@/components/layout/header', () => ({
   default: () => <div data-testid='header'>Header</div>,
 }));
 
+interface SectionProps {
+  children: React.ReactNode;
+  id?: string;
+  bg?: boolean;
+  fullVh?: boolean;
+}
+
 jest.mock('@/components/layout/section', () => ({
-  Section: ({ children, id, bg, fullVh }: any) => (
+  Section: ({ children, id, bg, fullVh }: SectionProps) => (
     <div
-      data-testid={`section-${id || 'no-id'}`}
+      data-testid={`section-${id ?? 'no-id'}`}
       data-bg={bg}
       data-full-vh={fullVh}
     >

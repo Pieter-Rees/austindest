@@ -1,8 +1,24 @@
 import { render, screen } from '@testing-library/react';
 import Watch from '@/components/features/watch';
 
+interface SectionHeaderProps {
+  subTitle?: string;
+  left?: boolean;
+}
+
+interface ComponentProps {
+  children: React.ReactNode;
+}
+
+interface ReactPlayerProps {
+  width?: string | number;
+  height?: string | number;
+  light?: boolean;
+  src?: string;
+}
+
 jest.mock('@/components/ui/SectionHeader', () => ({
-  SectionHeader: ({ subTitle, left }: any) => (
+  SectionHeader: ({ subTitle, left }: SectionHeaderProps) => (
     <div data-testid='section-header'>
       <h2>{subTitle}</h2>
       <span data-testid='section-header-props'>
@@ -13,26 +29,26 @@ jest.mock('@/components/ui/SectionHeader', () => ({
 }));
 
 jest.mock('@/components/ui/EmbedContainer', () => ({
-  EmbedContainer: ({ children }: any) => (
+  EmbedContainer: ({ children }: ComponentProps) => (
     <div data-testid='embed-container'>{children}</div>
   ),
 }));
 
 jest.mock('@/components/ui/LoadingWrapper', () => ({
-  LoadingWrapper: ({ children }: any) => (
+  LoadingWrapper: ({ children }: ComponentProps) => (
     <div data-testid='loading-wrapper'>{children}</div>
   ),
 }));
 
 jest.mock('@/components/ui/ErrorBoundary', () => ({
-  ErrorBoundary: ({ children }: any) => (
+  ErrorBoundary: ({ children }: ComponentProps) => (
     <div data-testid='error-boundary'>{children}</div>
   ),
 }));
 
 jest.mock('react-player', () => ({
   __esModule: true,
-  default: ({ width, height, light, src }: any) => (
+  default: ({ width, height, light, src }: ReactPlayerProps) => (
     <div
       data-testid='react-player'
       data-width={width}

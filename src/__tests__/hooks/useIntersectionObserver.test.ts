@@ -14,7 +14,11 @@ beforeAll(() => {
     disconnect: mockDisconnect,
   }));
 
-  (global as any).IntersectionObserver = mockIntersectionObserver;
+  (
+    global as unknown as {
+      IntersectionObserver: typeof IntersectionObserver;
+    }
+  ).IntersectionObserver = mockIntersectionObserver;
 });
 
 beforeEach(() => {
@@ -134,6 +138,7 @@ describe('useIntersectionObserver', () => {
     // Simulate intersection observer callback
     if (capturedCallback) {
       act(() => {
+         
         capturedCallback!([
           { isIntersecting: true } as IntersectionObserverEntry,
         ]);
@@ -174,6 +179,7 @@ describe('useIntersectionObserver', () => {
     if (capturedCallback) {
       // First intersection
       act(() => {
+         
         capturedCallback!([
           { isIntersecting: true } as IntersectionObserverEntry,
         ]);
@@ -183,6 +189,7 @@ describe('useIntersectionObserver', () => {
 
       // Second intersection - should not change hasIntersected
       act(() => {
+         
         capturedCallback!([
           { isIntersecting: true } as IntersectionObserverEntry,
         ]);

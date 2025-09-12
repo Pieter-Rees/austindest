@@ -52,13 +52,12 @@ export const OptimizedImage = ({
         alt={alt}
         width={width}
         height={height}
-        className={`object-cover w-full h-full rounded-3xl transition-opacity duration-300 ${
-          isLoading ? 'opacity-0' : 'opacity-100'
-        }`}
+        className={`object-cover w-full h-full rounded-3xl transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'
+          }`}
         priority={priority}
         quality={quality}
         placeholder={placeholder}
-        blurDataURL={blurDataURL}
+        {...(blurDataURL && { blurDataURL })}
         onLoad={() => setIsLoading(false)}
         onError={() => {
           setIsLoading(false);

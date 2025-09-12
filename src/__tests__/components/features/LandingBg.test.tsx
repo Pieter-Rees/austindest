@@ -1,6 +1,19 @@
 import { render, screen } from '@testing-library/react';
 import LandingBg from '@/components/features/landingBg';
 
+interface ReactPlayerProps {
+  width?: string | number;
+  height?: string | number;
+  src?: string;
+  playing?: boolean;
+  loop?: boolean;
+  playbackRate?: number;
+  muted?: boolean;
+  controls?: boolean;
+  className?: string;
+  style?: React.CSSProperties;
+}
+
 jest.mock('react-player', () => ({
   __esModule: true,
   default: ({
@@ -14,7 +27,7 @@ jest.mock('react-player', () => ({
     controls,
     className,
     style,
-  }: any) => (
+  }: ReactPlayerProps) => (
     <div
       data-testid='react-player'
       data-width={width}
@@ -33,14 +46,18 @@ jest.mock('react-player', () => ({
   ),
 }));
 
+interface ComponentProps {
+  children: React.ReactNode;
+}
+
 jest.mock('@/components/ui/LoadingWrapper', () => ({
-  LoadingWrapper: ({ children }: any) => (
+  LoadingWrapper: ({ children }: ComponentProps) => (
     <div data-testid='loading-wrapper'>{children}</div>
   ),
 }));
 
 jest.mock('@/components/ui/ErrorBoundary', () => ({
-  ErrorBoundary: ({ children }: any) => (
+  ErrorBoundary: ({ children }: ComponentProps) => (
     <div data-testid='error-boundary'>{children}</div>
   ),
 }));

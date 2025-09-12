@@ -23,15 +23,23 @@ jest.mock('@/lib/constants', () => ({
   ],
 }));
 
+interface Gig {
+  date: string;
+  name: string;
+  location: string;
+  info?: string;
+  link?: string;
+}
+
 jest.mock('@/lib/utils', () => ({
-  sortGigsByDate: (gigs: any[], ascending = true) => {
+  sortGigsByDate: (gigs: Gig[], ascending = true) => {
     return [...gigs].sort((a, b) => {
       const dateA = new Date(a.date.split('•').reverse().join('-')).getTime();
       const dateB = new Date(b.date.split('•').reverse().join('-')).getTime();
       return ascending ? dateA - dateB : dateB - dateA;
     });
   },
-  filterUpcomingGigs: (gigs: any[]) => {
+  filterUpcomingGigs: (gigs: Gig[]) => {
     const today = new Date();
     const tomorrow = new Date();
     tomorrow.setDate(today.getDate() - 1);
@@ -40,7 +48,7 @@ jest.mock('@/lib/utils', () => ({
       return gigDate > tomorrow;
     });
   },
-  filterPassedGigs: (gigs: any[]) => {
+  filterPassedGigs: (gigs: Gig[]) => {
     const today = new Date();
     const tomorrow = new Date();
     tomorrow.setDate(today.getDate() - 1);

@@ -24,15 +24,15 @@ export class ErrorBoundary extends Component<
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
+
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
   }
 
-  render() {
+  override render() {
     if (this.state.hasError) {
       return (
         this.props.fallback ?? (

@@ -1,8 +1,21 @@
 import { render, screen } from '@testing-library/react';
 import Contact from '@/components/features/contact';
 
+interface SectionHeaderProps {
+  subTitle?: string;
+  right?: boolean;
+  center?: boolean;
+}
+
+interface SocialLinkProps {
+  href: string;
+  children: React.ReactNode;
+  className?: string;
+  ariaLabel?: string;
+}
+
 jest.mock('@/components/ui/SectionHeader', () => ({
-  SectionHeader: ({ subTitle, right, center }: any) => (
+  SectionHeader: ({ subTitle, right, center }: SectionHeaderProps) => (
     <div data-testid='section-header'>
       <h2>{subTitle}</h2>
       <span data-testid='props'>
@@ -13,7 +26,7 @@ jest.mock('@/components/ui/SectionHeader', () => ({
 }));
 
 jest.mock('@/components/ui/SocialLink', () => ({
-  SocialLink: ({ href, children, className, ariaLabel }: any) => (
+  SocialLink: ({ href, children, className, ariaLabel }: SocialLinkProps) => (
     <a
       href={href}
       className={className}

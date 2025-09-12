@@ -1,8 +1,16 @@
 import { render, screen } from '@testing-library/react';
 import Landing from '@/components/features/landing';
 
+interface TitleProps {
+  title?: string;
+  subTitle?: string;
+  margin?: boolean;
+  left?: boolean;
+  center?: boolean;
+}
+
 jest.mock('@/components/ui/title', () => ({
-  Title: ({ title, subTitle, margin, left, center }: any) => (
+  Title: ({ title, subTitle, margin, left, center }: TitleProps) => (
     <div data-testid='title'>
       {title && <h1>{title}</h1>}
       {subTitle && <h2>{subTitle}</h2>}

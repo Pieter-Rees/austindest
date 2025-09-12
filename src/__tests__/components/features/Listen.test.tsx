@@ -5,9 +5,26 @@ import Listen from '@/components/features/listen';
 // Mock the CSS import
 jest.mock('@/styles/border.css', () => ({}));
 
+interface LazyIframeProps {
+  src: string;
+  title: string;
+  width?: string | number;
+  height?: string | number;
+}
+
+interface SectionHeaderProps {
+  right?: boolean;
+  subTitle?: string;
+}
+
+interface EmbedContainerProps {
+  children: React.ReactNode;
+  height?: string | number;
+}
+
 // Mock LazyIframe to avoid intersection observer issues
 jest.mock('@/components/ui/LazyIframe', () => ({
-  LazyIframe: ({ src, title, width, height }: any) => (
+  LazyIframe: ({ src, title, width, height }: LazyIframeProps) => (
     <iframe
       src={src}
       title={title}
@@ -20,7 +37,7 @@ jest.mock('@/components/ui/LazyIframe', () => ({
 
 // Mock SectionHeader
 jest.mock('@/components/ui/SectionHeader', () => ({
-  SectionHeader: ({ right, subTitle }: any) => (
+  SectionHeader: ({ right, subTitle }: SectionHeaderProps) => (
     <div data-testid='section-header'>
       <h1 data-testid='title'>{subTitle}</h1>
       <p data-testid='props'>right:{String(right)} center:false</p>
@@ -30,7 +47,7 @@ jest.mock('@/components/ui/SectionHeader', () => ({
 
 // Mock EmbedContainer
 jest.mock('@/components/ui/EmbedContainer', () => ({
-  EmbedContainer: ({ children, height }: any) => (
+  EmbedContainer: ({ children, height }: EmbedContainerProps) => (
     <div data-testid='embed-container' style={{ height }}>
       {children}
     </div>

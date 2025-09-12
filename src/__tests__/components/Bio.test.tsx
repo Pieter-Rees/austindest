@@ -1,8 +1,23 @@
 import { render, screen } from '@testing-library/react';
 import Bio from '@/components/features/bio';
 
+interface SectionHeaderProps {
+  subTitle?: string;
+  right?: boolean;
+  center?: boolean;
+}
+
+interface Image {
+  src: string;
+  alt: string;
+}
+
+interface ImageGridProps {
+  images: Image[];
+}
+
 jest.mock('@/components/ui/SectionHeader', () => ({
-  SectionHeader: ({ subTitle, right, center }: any) => (
+  SectionHeader: ({ subTitle, right, center }: SectionHeaderProps) => (
     <div data-testid='section-header'>
       <h2>{subTitle}</h2>
       <span data-testid='props'>
@@ -13,10 +28,12 @@ jest.mock('@/components/ui/SectionHeader', () => ({
 }));
 
 jest.mock('@/components/ui/ImageGrid', () => ({
-  ImageGrid: ({ images }: any) => (
+  ImageGrid: ({ images }: ImageGridProps) => (
     <div data-testid='image-grid'>
-      {images.map((image: any, index: number) => (
-        <img key={index} src={image.src} alt={image.alt} />
+      {images.map((image: Image, index: number) => (
+        <div key={index} data-src={image.src} data-alt={image.alt}>
+          {image.alt}
+        </div>
       ))}
     </div>
   ),
@@ -45,10 +62,10 @@ describe('Bio', () => {
     render(<Bio />);
 
     expect(screen.getAllByTestId('image-grid')).toHaveLength(2);
-    expect(screen.getByAltText('Austin Dest performing')).toBeInTheDocument();
-    expect(screen.getByAltText('Austin Dest in studio')).toBeInTheDocument();
-    expect(screen.getByAltText('Austin Dest DJ set')).toBeInTheDocument();
-    expect(screen.getByAltText('Austin Dest at event')).toBeInTheDocument();
+    expect(screen.getByText('Austin Dest performing')).toBeInTheDocument();
+    expect(screen.getByText('Austin Dest in studio')).toBeInTheDocument();
+    expect(screen.getByText('Austin Dest DJ set')).toBeInTheDocument();
+    expect(screen.getByText('Austin Dest at event')).toBeInTheDocument();
   });
 
   it('has proper container structure', () => {
