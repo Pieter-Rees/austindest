@@ -25,9 +25,7 @@ export class ErrorBoundary extends Component<
   }
 
   override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
-
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
   }

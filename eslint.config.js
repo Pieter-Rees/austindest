@@ -10,8 +10,21 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends('next/core-web-vitals', 'next/typescript'),
   {
+    ignores: [
+      'node_modules/**',
+      '.next/**',
+      'out/**',
+      'build/**',
+      'next-env.d.ts',
+      'coverage/**',
+      'public/sw.js',
+    ],
+  },
+  ...compat.extends('next/core-web-vitals'),
+  ...compat.extends('next/typescript'),
+  {
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
       parserOptions: {
         project: './tsconfig.json',
@@ -19,13 +32,11 @@ const eslintConfig = [
       },
     },
     rules: {
-      // Modern React rules (relaxed for existing codebase)
       'react/jsx-no-useless-fragment': 'warn',
       'react/jsx-curly-brace-presence': 'off',
       'react/self-closing-comp': 'warn',
       'react/jsx-sort-props': 'off',
 
-      // TypeScript rules
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
@@ -47,7 +58,6 @@ const eslintConfig = [
       ],
       '@typescript-eslint/consistent-type-exports': 'error',
 
-      // General rules (relaxed for existing codebase)
       'prefer-const': 'error',
       'no-var': 'error',
       'no-console': ['warn', { allow: ['warn', 'error'] }],
@@ -60,13 +70,11 @@ const eslintConfig = [
       'object-shorthand': 'warn',
       'prefer-destructuring': 'off',
 
-      // Next.js specific
       '@next/next/no-img-element': 'error',
       '@next/next/no-html-link-for-pages': 'error',
       '@next/next/no-sync-scripts': 'error',
       '@next/next/no-title-in-document-head': 'error',
 
-      // Accessibility
       'jsx-a11y/alt-text': 'error',
       'jsx-a11y/anchor-has-content': 'error',
       'jsx-a11y/anchor-is-valid': 'error',
@@ -75,6 +83,22 @@ const eslintConfig = [
       'jsx-a11y/aria-unsupported-elements': 'error',
       'jsx-a11y/role-has-required-aria-props': 'error',
       'jsx-a11y/role-supports-aria-props': 'error',
+    },
+  },
+  {
+    files: ['**/*.{js,jsx}'],
+    rules: {
+      'prefer-const': 'error',
+      'no-var': 'error',
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'no-debugger': 'error',
+      'no-duplicate-imports': 'error',
+      'no-unused-expressions': 'error',
+      'prefer-template': 'warn',
+      'prefer-arrow-callback': 'warn',
+      'arrow-spacing': 'warn',
+      'object-shorthand': 'warn',
+      'prefer-destructuring': 'off',
     },
   },
   {

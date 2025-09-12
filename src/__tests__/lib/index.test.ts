@@ -22,7 +22,6 @@ describe('Lib Index', () => {
   });
 
   it('exports types', () => {
-    // Types are not exported at runtime, so we can't test them directly
     expect(true).toBe(true);
   });
 

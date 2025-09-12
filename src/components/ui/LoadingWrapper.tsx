@@ -17,8 +17,8 @@ export const LoadingWrapper = ({
   }, []);
 
   if (!isLoaded) {
-    return <>{fallback}</>;
+    return fallback;
   }
 
-  return <>{children}</>;
+  return children;
 };

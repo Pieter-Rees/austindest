@@ -1,55 +1,45 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
   distDir: 'build',
   trailingSlash: true,
 
-  // Modern image optimization
   images: {
     unoptimized: true,
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    qualities: [75, 85, 100],
   },
 
-  // Experimental features for performance
   experimental: {
     optimizePackageImports: ['react-player', 'react-scroll', 'react-dom'],
     webVitalsAttribution: ['CLS', 'LCP'],
     scrollRestoration: true,
   },
 
-  // Modern compiler optimizations
   compiler: {
     removeConsole:
       process.env.NODE_ENV === 'production'
-        ? {
-            exclude: ['error', 'warn'],
-          }
+        ? { exclude: ['error', 'warn'] }
         : false,
     styledComponents: false,
-    emotion: false,
+    emotion: true,
   },
 
-  // Performance optimizations
   poweredByHeader: false,
   generateEtags: false,
   compress: true,
   reactStrictMode: true,
 
-  // Note: Security headers are handled by the hosting provider or nginx config
-
-  // Build optimizations
   eslint: {
     ignoreDuringBuilds: false,
   },
+
   typescript: {
     ignoreBuildErrors: false,
   },
 
-  // Webpack optimizations
   webpack: (config, { dev, isServer }) => {
-    // Optimize bundle splitting
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
         chunks: 'all',
@@ -69,7 +59,6 @@ const nextConfig = {
       };
     }
 
-    // SVG handling
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
@@ -78,10 +67,10 @@ const nextConfig = {
     return config;
   },
 
-  // Bundle analyzer
   ...(process.env.ANALYZE === 'true' && {
     webpack: config => {
       config.plugins.push(
+        // eslint-disable-next-line @typescript-eslint/no-require-imports
         new (require('@next/bundle-analyzer'))({
           enabled: true,
           openAnalyzer: true,
@@ -90,6 +79,15 @@ const nextConfig = {
       return config;
     },
   }),
+
+  turbopack: {
+    rules: {
+      '*.svg': {
+        loaders: ['@svgr/webpack'],
+        as: '*.js',
+      },
+    },
+  },
 };
 
 export default nextConfig;
