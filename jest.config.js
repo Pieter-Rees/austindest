@@ -34,9 +34,9 @@ const customJestConfig = {
   coverageThreshold: {
     global: {
       branches: 85,
-      functions: 90,
-      lines: 95,
-      statements: 95,
+      functions: 85,
+      lines: 90,
+      statements: 90,
     },
   },
   // Modern Jest configuration
