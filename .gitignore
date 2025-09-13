@@ -110,3 +110,6 @@ lighthouse-report.html
 
 # Bundle analyzer
 .next/analyze/
+
+# TypeScript build info
+*.tsbuildinfo
