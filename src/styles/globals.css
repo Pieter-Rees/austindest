@@ -53,7 +53,7 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-a {
+a:not(.no-underline) {
   background:
     linear-gradient(to right, rgba(100, 200, 200, 0), rgba(100, 200, 200, 0)),
     linear-gradient(to right, rgba(0, 100, 200, 1), #ff77e9);
@@ -68,7 +68,7 @@ a {
 }
 
 @media only screen and (min-width: 768px) {
-  a:hover {
+  a:not(.no-underline):hover {
     background-size:
       0 3px,
       100% 1px;

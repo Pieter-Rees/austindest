@@ -10,8 +10,8 @@ export default function Bio() {
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8'>
         <div className='flex flex-wrap flex-col justify-center'>
           <ImageGrid images={BIO_IMAGES.slice(0, 3)} />
-          <div className='w-full max-h-64'>
-            <ImageGrid images={[BIO_IMAGES[3]]} className='grid-cols-1' />
+          <div className='w-full mt-4'>
+            <ImageGrid images={[BIO_IMAGES[3]]} />
           </div>
         </div>
         <div className='flex flex-col justify-center text-lg lg:text-lg 2xl:text-xl'>
