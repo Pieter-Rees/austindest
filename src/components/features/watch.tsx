@@ -14,10 +14,10 @@ export default function Watch() {
       <SectionHeader subTitle='Watch' left={true} />
       <ErrorBoundary>
         <LoadingWrapper>
-          <EmbedContainer>
+          <EmbedContainer responsive={true} aspectRatio='16/9' maxHeight='70vh'>
             <ReactPlayer
               width='100%'
-              height='500px'
+              height='100%'
               light={true}
               src={YOUTUBE_VIDEO}
             />

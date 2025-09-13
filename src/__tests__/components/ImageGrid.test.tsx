@@ -21,7 +21,14 @@ jest.mock('@/components/ui/EmbedContainer', () => ({
 }));
 
 jest.mock('@/components/ui/OptimizedImage', () => ({
-  OptimizedImage: ({ src, alt, width, height, priority, quality }: OptimizedImageProps) => (
+  OptimizedImage: ({
+    src,
+    alt,
+    width,
+    height,
+    priority,
+    quality,
+  }: OptimizedImageProps) => (
     <div
       data-testid='optimized-image'
       data-src={src}

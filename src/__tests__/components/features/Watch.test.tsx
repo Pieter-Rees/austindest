@@ -80,7 +80,7 @@ describe('Watch', () => {
 
     const player = screen.getByTestId('react-player');
     expect(player).toHaveAttribute('data-width', '100%');
-    expect(player).toHaveAttribute('data-height', '500px');
+    expect(player).toHaveAttribute('data-height', '100%');
     expect(player).toHaveAttribute('data-light', 'true');
     expect(player).toHaveAttribute(
       'data-src',

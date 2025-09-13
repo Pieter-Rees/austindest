@@ -56,4 +56,45 @@ describe('EmbedContainer', () => {
     const containers = screen.getAllByRole('generic');
     expect(containers[0]).toBeInTheDocument();
   });
+
+  it('applies custom height when provided', () => {
+    render(
+      <EmbedContainer height='500px'>
+        <div>Test Content</div>
+      </EmbedContainer>
+    );
+
+    const container = screen.getByText('Test Content').parentElement;
+    expect(container).toHaveStyle('height: 500px');
+  });
+
+  it('applies responsive styling when responsive is true', () => {
+    render(
+      <EmbedContainer responsive={true} aspectRatio='16/9' maxHeight='80vh'>
+        <div>Test Content</div>
+      </EmbedContainer>
+    );
+
+    const container = screen.getByText('Test Content').parentElement;
+    expect(container).toHaveStyle({
+      aspectRatio: '16/9',
+      maxHeight: '80vh',
+      height: 'auto',
+    });
+  });
+
+  it('applies default responsive values', () => {
+    render(
+      <EmbedContainer responsive={true}>
+        <div>Test Content</div>
+      </EmbedContainer>
+    );
+
+    const container = screen.getByText('Test Content').parentElement;
+    expect(container).toHaveStyle({
+      aspectRatio: '16/9',
+      maxHeight: '80vh',
+      height: 'auto',
+    });
+  });
 });

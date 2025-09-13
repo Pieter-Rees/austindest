@@ -43,6 +43,9 @@ export interface EmbedContainerProps {
   children: React.ReactNode;
   className?: string;
   height?: string;
+  responsive?: boolean;
+  aspectRatio?: string;
+  maxHeight?: string;
 }
 
 export interface LoadingWrapperProps {
