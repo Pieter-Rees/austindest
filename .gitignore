@@ -112,5 +112,6 @@ lighthouse-report.html
 .next/analyze/
 
 # TypeScript build info
-*.tsbuildinfonext-env.d.ts
+*.tsbuildinfo
+next-env.d.ts
 tsconfig.tsbuildinfo
