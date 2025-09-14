@@ -5,11 +5,11 @@ A modern, high-performance press kit website built with Next.js 15, TypeScript, 
 ## 🚀 Features
 
 - **Modern Stack**: Next.js 15 with App Router, TypeScript, and Tailwind CSS
-- **Performance Optimized**: Turbopack for fast development, SWC for compilation
+- **Performance Optimized**: SWC compilation, optimized builds, code splitting
 - **Type Safe**: Full TypeScript support with strict configuration
 - **Testing**: Comprehensive test suite with Jest and React Testing Library
 - **Code Quality**: ESLint, Prettier, and Husky for code quality
-- **Modern Tooling**: Vite, Turbo, and modern development tools
+- **Production Ready**: Optimized for production deployment
 - **CI/CD**: GitHub Actions for automated testing and deployment
 - **Security**: Security headers and audit tools
 
@@ -21,7 +21,7 @@ A modern, high-performance press kit website built with Next.js 15, TypeScript, 
 - **Testing**: Jest 30, React Testing Library
 - **Linting**: ESLint 9, Prettier 3
 - **Package Manager**: pnpm 9
-- **Build Tools**: Turbopack, SWC, Vite
+- **Build Tools**: SWC, CSS Nano, PostCSS
 - **CI/CD**: GitHub Actions
 
 ## 📦 Prerequisites
@@ -48,11 +48,8 @@ cp env.example .env.local
 ### Development
 
 ```bash
-# Start development server with Turbopack
+# Start development server
 pnpm dev
-
-# Start development server with Vite (alternative)
-pnpm dev:vite
 
 # Run tests in watch mode
 pnpm test:watch
@@ -70,14 +67,14 @@ pnpm typecheck
 # Build for production
 pnpm build
 
+# Build with optimizations
+pnpm build:prod
+
 # Build with bundle analysis
 pnpm build:analyze
 
-# Build with profiling
-pnpm build:profile
-
-# Preview production build
-pnpm preview
+# Check build size
+pnpm build:size
 ```
 
 ### Testing
@@ -118,11 +115,11 @@ pnpm audit:fix
 ### Performance
 
 ```bash
-# Analyze bundle size
-pnpm size
+# Check build size
+pnpm build:size
 
-# Run Lighthouse performance test
-pnpm perf
+# Compress build files
+pnpm build:compress
 
 # Clean build artifacts
 pnpm clean
@@ -225,21 +222,21 @@ pnpm test:debug
 
 The project is optimized for performance:
 
-- **Turbopack**: Fast development builds
 - **SWC**: Fast production builds
 - **Bundle Splitting**: Optimized code splitting
-- **Image Optimization**: Next.js Image component
+- **Image Optimization**: Next.js Image component with WebP/AVIF
 - **Tree Shaking**: Dead code elimination
+- **CSS Optimization**: CSS Nano minification
 - **Compression**: Gzip compression enabled
 
 ### Performance Monitoring
 
 ```bash
-# Analyze bundle size
-pnpm size
+# Check build size
+pnpm build:size
 
-# Run Lighthouse audit
-pnpm perf
+# Compress build files
+pnpm build:compress
 ```
 
 ## 🔒 Security

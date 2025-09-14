@@ -4,5 +4,18 @@ const config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
+  experimental: {
+    optimizeUniversalDefaults: true,
+  },
+  corePlugins: {
+    preflight: true,
+  },
+  theme: {
+    extend: {},
+  },
+  plugins: [],
 };
 export default config;
