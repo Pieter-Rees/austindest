@@ -1,9 +1,9 @@
 'use client';
-import { useState, useEffect } from 'react';
+import '@/styles/neon.css';
+import { useEffect, useState } from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import Logo from '../ui/logo';
 import Sidenav from './sidenav';
-import '@/styles/neon.css';
 
 export default function Header() {
   const [showSideNav, setShowSideNav] = useState(false);
@@ -25,7 +25,7 @@ export default function Header() {
       <nav
         className={`px-4 fixed z-50 top-0 w-full flex items-center justify-between transition-all duration-300 ${
           navBackground
-            ? 'bg-black/20 backdrop-blur-lg border-b border-white/10 shadow-lg'
+            ? 'bg-black/20 backdrop-blur-lg border-b border-white/10'
             : 'bg-transparent backdrop-blur-none'
         }`}
       >
