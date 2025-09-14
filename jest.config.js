@@ -43,7 +43,7 @@ const customJestConfig = {
   cache: true,
   clearMocks: true,
   restoreMocks: true,
-  testTimeout: 10000,
+  testTimeout: 5000,
   verbose: true,
   coverageReporters: ['text', 'lcov', 'html', 'json-summary'],
   coverageDirectory: 'coverage',

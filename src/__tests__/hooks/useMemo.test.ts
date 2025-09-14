@@ -44,7 +44,9 @@ describe('useStableMemo', () => {
 
   it('handles undefined dependencies', () => {
     const factory = jest.fn(() => 'test');
-    const { result } = renderHook(() => useStableMemo(factory, [undefined, null]));
+    const { result } = renderHook(() =>
+      useStableMemo(factory, [undefined, null])
+    );
 
     expect(result.current).toBe('test');
     expect(factory).toHaveBeenCalledTimes(1);
@@ -53,7 +55,7 @@ describe('useStableMemo', () => {
   it('handles object dependencies with same reference', () => {
     const obj = { a: 1, b: 2 };
     const factory = jest.fn(() => 'test');
-    const { result, rerender } = renderHook(
+    const { rerender } = renderHook(
       ({ deps }) => useStableMemo(factory, deps),
       { initialProps: { deps: [obj] } }
     );
@@ -67,7 +69,7 @@ describe('useStableMemo', () => {
 
   it('handles object dependencies with different reference but same content', () => {
     const factory = jest.fn(() => 'test');
-    const { result, rerender } = renderHook(
+    const { rerender } = renderHook(
       ({ deps }) => useStableMemo(factory, deps),
       { initialProps: { deps: [{ a: 1, b: 2 }] } }
     );
@@ -83,26 +85,26 @@ describe('useStableMemo', () => {
 describe('useStableCallback', () => {
   it('returns a stable callback reference', () => {
     const callback = jest.fn();
-    const { result, rerender } = renderHook(() => useStableCallback(callback));
+    const { result, rerender } = renderHook(({ cb }) => useStableCallback(cb), {
+      initialProps: { cb: callback },
+    });
 
     const firstCallback = result.current;
     expect(typeof firstCallback).toBe('function');
 
     // Re-render with different callback
     const newCallback = jest.fn();
-    rerender();
-    const { result: newResult } = renderHook(() => useStableCallback(newCallback));
+    rerender({ cb: newCallback });
 
     // Should return the same function reference
-    expect(newResult.current).toBe(firstCallback);
+    expect(result.current).toBe(firstCallback);
   });
 
   it('calls the latest callback function', () => {
     let callback = jest.fn();
-    const { result, rerender } = renderHook(
-      ({ cb }) => useStableCallback(cb),
-      { initialProps: { cb: callback } }
-    );
+    const { result, rerender } = renderHook(({ cb }) => useStableCallback(cb), {
+      initialProps: { cb: callback },
+    });
 
     act(() => {
       result.current('test');
@@ -176,10 +178,9 @@ describe('useDeepMemo', () => {
 
   it('handles nested objects', () => {
     const factory = jest.fn(() => 'test');
-    const { result, rerender } = renderHook(
-      ({ deps }) => useDeepMemo(factory, deps),
-      { initialProps: { deps: [{ a: { b: { c: 1 } } }] } }
-    );
+    const { rerender } = renderHook(({ deps }) => useDeepMemo(factory, deps), {
+      initialProps: { deps: [{ a: { b: { c: 1 } } }] },
+    });
 
     expect(factory).toHaveBeenCalledTimes(1);
 
@@ -194,10 +195,9 @@ describe('useDeepMemo', () => {
 
   it('handles arrays', () => {
     const factory = jest.fn(() => 'test');
-    const { result, rerender } = renderHook(
-      ({ deps }) => useDeepMemo(factory, deps),
-      { initialProps: { deps: [[1, 2, 3]] } }
-    );
+    const { rerender } = renderHook(({ deps }) => useDeepMemo(factory, deps), {
+      initialProps: { deps: [[1, 2, 3]] },
+    });
 
     expect(factory).toHaveBeenCalledTimes(1);
 
@@ -212,10 +212,9 @@ describe('useDeepMemo', () => {
 
   it('handles mixed types in dependencies', () => {
     const factory = jest.fn(() => 'test');
-    const { result, rerender } = renderHook(
-      ({ deps }) => useDeepMemo(factory, deps),
-      { initialProps: { deps: [1, 'string', { a: 1 }, [1, 2]] } }
-    );
+    const { rerender } = renderHook(({ deps }) => useDeepMemo(factory, deps), {
+      initialProps: { deps: [1, 'string', { a: 1 }, [1, 2]] },
+    });
 
     expect(factory).toHaveBeenCalledTimes(1);
 
@@ -230,10 +229,9 @@ describe('useDeepMemo', () => {
 
   it('handles null and undefined values', () => {
     const factory = jest.fn(() => 'test');
-    const { result, rerender } = renderHook(
-      ({ deps }) => useDeepMemo(factory, deps),
-      { initialProps: { deps: [null, undefined] } }
-    );
+    const { rerender } = renderHook(({ deps }) => useDeepMemo(factory, deps), {
+      initialProps: { deps: [null, undefined] },
+    });
 
     expect(factory).toHaveBeenCalledTimes(1);
 
@@ -248,10 +246,9 @@ describe('useDeepMemo', () => {
 
   it('handles primitive values', () => {
     const factory = jest.fn(() => 'test');
-    const { result, rerender } = renderHook(
-      ({ deps }) => useDeepMemo(factory, deps),
-      { initialProps: { deps: [1, 'string', true] } }
-    );
+    const { rerender } = renderHook(({ deps }) => useDeepMemo(factory, deps), {
+      initialProps: { deps: [1, 'string', true] },
+    });
 
     expect(factory).toHaveBeenCalledTimes(1);
 
@@ -266,10 +263,9 @@ describe('useDeepMemo', () => {
 
   it('handles empty objects and arrays', () => {
     const factory = jest.fn(() => 'test');
-    const { result, rerender } = renderHook(
-      ({ deps }) => useDeepMemo(factory, deps),
-      { initialProps: { deps: [{}, []] } }
-    );
+    const { rerender } = renderHook(({ deps }) => useDeepMemo(factory, deps), {
+      initialProps: { deps: [{}, []] },
+    });
 
     expect(factory).toHaveBeenCalledTimes(1);
 

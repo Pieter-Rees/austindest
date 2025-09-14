@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState, useCallback } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
   lcp?: number; // Largest Contentful Paint
@@ -185,12 +185,8 @@ export const usePerformance = () => {
       window.removeEventListener('load', handleLoad);
       cleanup?.();
     };
-  }, [
-    state.isSupported,
-    updateMetrics,
-    measureCoreWebVitals,
-    logPerformanceMetrics,
-  ]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state.isSupported]);
 
   return {
     ...state,

@@ -1,5 +1,5 @@
 'use client';
-import { useMemo, useRef, useCallback } from 'react';
+import { useCallback, useMemo, useRef } from 'react';
 
 export function useStableMemo<T>(
   factory: () => T,
@@ -23,7 +23,7 @@ export function useStableCallback<T extends (...args: unknown[]) => unknown>(
   const ref = useRef<T>(callback);
   ref.current = callback;
 
-  return useCallback(((...args: any[]) => ref.current(...args)) as T, []);
+  return useCallback(((...args: unknown[]) => ref.current(...args)) as T, []);
 }
 
 export function useDeepMemo<T>(

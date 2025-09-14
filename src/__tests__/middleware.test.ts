@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 
 // Mock NextRequest and NextResponse
 jest.mock('next/server', () => ({
-  NextRequest: jest.fn().mockImplementation((url) => ({
+  NextRequest: jest.fn().mockImplementation(url => ({
     url,
     headers: {
       get: jest.fn(),
@@ -16,7 +16,7 @@ jest.mock('next/server', () => ({
   NextResponse: Object.assign(
     jest.fn().mockImplementation((body, init) => ({
       body,
-      status: init?.status || 200,
+      status: init?.status ?? 200,
       headers: {
         set: jest.fn(),
       },
@@ -62,38 +62,65 @@ describe('middleware', () => {
   });
 
   it('should set security headers for all requests', () => {
-    mockRequest.headers.get.mockReturnValue('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36');
+    mockRequest.headers.get.mockReturnValue(
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+    );
     mockRequest.nextUrl.pathname = '/';
 
     middleware(mockRequest);
 
-    expect(mockHeaders.set).toHaveBeenCalledWith('X-Robots-Tag', 'index, follow');
-    expect(mockHeaders.set).toHaveBeenCalledWith('Cache-Control', 'public, max-age=31536000, immutable');
+    expect(mockHeaders.set).toHaveBeenCalledWith(
+      'X-Robots-Tag',
+      'index, follow'
+    );
+    expect(mockHeaders.set).toHaveBeenCalledWith(
+      'Cache-Control',
+      'public, max-age=31536000, immutable'
+    );
     expect(mockHeaders.set).toHaveBeenCalledWith('X-RateLimit-Limit', '100');
     expect(mockHeaders.set).toHaveBeenCalledWith('X-RateLimit-Remaining', '99');
-    expect(mockHeaders.set).toHaveBeenCalledWith('X-RateLimit-Reset', expect.any(String));
+    expect(mockHeaders.set).toHaveBeenCalledWith(
+      'X-RateLimit-Reset',
+      expect.any(String)
+    );
   });
 
   it('should set additional security headers for API routes', () => {
-    mockRequest.headers.get.mockReturnValue('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36');
+    mockRequest.headers.get.mockReturnValue(
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+    );
     mockRequest.nextUrl.pathname = '/api/test';
 
     middleware(mockRequest);
 
-    expect(mockHeaders.set).toHaveBeenCalledWith('X-Content-Type-Options', 'nosniff');
+    expect(mockHeaders.set).toHaveBeenCalledWith(
+      'X-Content-Type-Options',
+      'nosniff'
+    );
     expect(mockHeaders.set).toHaveBeenCalledWith('X-Frame-Options', 'DENY');
-    expect(mockHeaders.set).toHaveBeenCalledWith('X-XSS-Protection', '1; mode=block');
+    expect(mockHeaders.set).toHaveBeenCalledWith(
+      'X-XSS-Protection',
+      '1; mode=block'
+    );
   });
 
   it('should not set API security headers for non-API routes', () => {
-    mockRequest.headers.get.mockReturnValue('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36');
+    mockRequest.headers.get.mockReturnValue(
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+    );
     mockRequest.nextUrl.pathname = '/';
 
     middleware(mockRequest);
 
-    expect(mockHeaders.set).not.toHaveBeenCalledWith('X-Content-Type-Options', 'nosniff');
+    expect(mockHeaders.set).not.toHaveBeenCalledWith(
+      'X-Content-Type-Options',
+      'nosniff'
+    );
     expect(mockHeaders.set).not.toHaveBeenCalledWith('X-Frame-Options', 'DENY');
-    expect(mockHeaders.set).not.toHaveBeenCalledWith('X-XSS-Protection', '1; mode=block');
+    expect(mockHeaders.set).not.toHaveBeenCalledWith(
+      'X-XSS-Protection',
+      '1; mode=block'
+    );
   });
 
   it('should allow legitimate bots', () => {
@@ -160,16 +187,25 @@ describe('middleware', () => {
   });
 
   it('should set rate limit reset time correctly', () => {
-    mockRequest.headers.get.mockReturnValue('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36');
+    mockRequest.headers.get.mockReturnValue(
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+    );
     mockRequest.nextUrl.pathname = '/';
 
     const beforeTime = Date.now();
     middleware(mockRequest);
     const afterTime = Date.now();
 
-    expect(mockHeaders.set).toHaveBeenCalledWith('X-RateLimit-Reset', expect.any(String));
+    expect(mockHeaders.set).toHaveBeenCalledWith(
+      'X-RateLimit-Reset',
+      expect.any(String)
+    );
 
-    const resetTime = new Date(mockHeaders.set.mock.calls.find(call => call[0] === 'X-RateLimit-Reset')[1]).getTime();
+    const resetTime = new Date(
+      mockHeaders.set.mock.calls.find(
+        (call: any) => call[0] === 'X-RateLimit-Reset'
+      )[1]
+    ).getTime();
     const expectedMinTime = beforeTime + 15 * 60 * 1000;
     const expectedMaxTime = afterTime + 15 * 60 * 1000;
 
@@ -187,7 +223,9 @@ describe('middleware', () => {
   });
 
   it('should handle user agents with legitimate bots in the middle', () => {
-    mockRequest.headers.get.mockReturnValue('Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)');
+    mockRequest.headers.get.mockReturnValue(
+      'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
+    );
     mockRequest.nextUrl.pathname = '/';
 
     const result = middleware(mockRequest);

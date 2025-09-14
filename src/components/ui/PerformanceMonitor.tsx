@@ -125,7 +125,10 @@ const PerformanceMonitor = memo<PerformanceMonitorProps>(
             <div>
               <span className='text-gray-400'>Connection:</span>{' '}
               <span className='text-blue-400'>
-                {(performance.connection as any).effectiveType ?? 'unknown'}
+                {String(
+                  (performance.connection as Record<string, unknown>)
+                    .effectiveType ?? 'unknown'
+                )}
               </span>
             </div>
           )}

@@ -52,7 +52,7 @@ export class ErrorBoundary extends Component<
     }
   }
 
-  private logErrorToMonitoring(errorDetails: any) {
+  private logErrorToMonitoring(errorDetails: Record<string, unknown>) {
     // In a real application, this would send to your monitoring service
     // For now, we'll just log to console in production
     console.error('Production Error:', errorDetails);

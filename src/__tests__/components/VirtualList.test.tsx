@@ -45,7 +45,7 @@ describe('VirtualList', () => {
     render(<VirtualList {...defaultProps} />);
 
     const visibleItems = screen.getAllByTestId(/^item-/);
-    visibleItems.forEach((item, index) => {
+    visibleItems.forEach((item, _index) => {
       const dataIndex = item.getAttribute('data-index');
       expect(dataIndex).toBeDefined();
       expect(Number(dataIndex)).toBeGreaterThanOrEqual(0);
@@ -53,10 +53,12 @@ describe('VirtualList', () => {
   });
 
   it('applies custom className', () => {
-    render(<VirtualList {...defaultProps} className='custom-class' />);
+    const { container } = render(
+      <VirtualList {...defaultProps} className='custom-class' />
+    );
 
-    const container = screen.getByRole('generic');
-    expect(container).toHaveClass('custom-class');
+    const virtualListContainer = container.firstChild as HTMLElement;
+    expect(virtualListContainer).toHaveClass('custom-class');
   });
 
   it('handles empty items array', () => {
@@ -67,7 +69,7 @@ describe('VirtualList', () => {
   });
 
   it('handles single item', () => {
-    const singleItem = [mockItems[0]];
+    const singleItem = [mockItems[0]!];
     render(<VirtualList {...defaultProps} items={singleItem} />);
 
     const visibleItems = screen.getAllByTestId(/^item-/);
@@ -87,7 +89,8 @@ describe('VirtualList', () => {
 
     const visibleItems = screen.getAllByTestId(/^item-/);
     visibleItems.forEach(item => {
-      expect(item).toHaveStyle({ height: '100px' });
+      const container = item.parentElement;
+      expect(container).toHaveStyle({ height: '100px' });
     });
   });
 

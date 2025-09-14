@@ -10,8 +10,11 @@ jest.mock('@/hooks/useScroll', () => ({
   useScroll: jest.fn(),
 }));
 
-const mockUsePerformance = require('@/hooks/usePerformance').usePerformance;
-const mockUseScroll = require('@/hooks/useScroll').useScroll;
+import { usePerformance } from '@/hooks/usePerformance';
+import { useScroll } from '@/hooks/useScroll';
+
+const mockUsePerformance = jest.mocked(usePerformance);
+const mockUseScroll = jest.mocked(useScroll);
 
 describe('PerformanceMonitor', () => {
   const mockPerformanceData = {
@@ -25,12 +28,19 @@ describe('PerformanceMonitor', () => {
     connection: {
       effectiveType: '4g',
     },
-    getPerformanceScore: jest.fn(() => 'good'),
+    isSupported: true,
+    getPerformanceScore: jest.fn(() => 'good' as const),
+    logPerformanceMetrics: jest.fn(),
+    updateMetrics: jest.fn(),
   };
 
   const mockScrollData = {
     scrollY: 150,
     velocity: 2.5,
+    isScrolled: true,
+    direction: 'down' as const,
+    isAtTop: false,
+    isAtBottom: false,
   };
 
   beforeEach(() => {
@@ -201,13 +211,7 @@ describe('PerformanceMonitor', () => {
   it('shows N/A for missing metrics', () => {
     mockUsePerformance.mockReturnValue({
       ...mockPerformanceData,
-      metrics: {
-        lcp: null,
-        fid: null,
-        cls: null,
-        fcp: null,
-        ttfb: null,
-      },
+      metrics: {},
     });
 
     render(<PerformanceMonitor />);
@@ -225,7 +229,9 @@ describe('PerformanceMonitor', () => {
     scores.forEach(({ score, color }) => {
       mockUsePerformance.mockReturnValue({
         ...mockPerformanceData,
-        getPerformanceScore: jest.fn(() => score),
+        getPerformanceScore: jest.fn(
+          () => score as 'good' | 'needs-improvement' | 'poor'
+        ),
       });
 
       const { unmount } = render(<PerformanceMonitor />);
@@ -238,10 +244,9 @@ describe('PerformanceMonitor', () => {
   });
 
   it('handles missing connection data', () => {
-    mockUsePerformance.mockReturnValue({
-      ...mockPerformanceData,
-      connection: null,
-    });
+    const { connection: _connection, ...dataWithoutConnection } =
+      mockPerformanceData;
+    mockUsePerformance.mockReturnValue(dataWithoutConnection);
 
     render(<PerformanceMonitor />);
 
@@ -251,7 +256,7 @@ describe('PerformanceMonitor', () => {
   it('handles connection without effectiveType', () => {
     mockUsePerformance.mockReturnValue({
       ...mockPerformanceData,
-      connection: {},
+      connection: {} as Record<string, unknown>,
     });
 
     render(<PerformanceMonitor />);
