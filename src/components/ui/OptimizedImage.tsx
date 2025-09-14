@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 
 interface OptimizedImageProps {
   src: string;
@@ -12,6 +12,11 @@ interface OptimizedImageProps {
   quality?: number;
   placeholder?: 'blur' | 'empty';
   blurDataURL?: string;
+  sizes?: string;
+  loading?: 'lazy' | 'eager';
+  fetchPriority?: 'high' | 'low' | 'auto';
+  onLoad?: () => void;
+  onError?: () => void;
 }
 
 export const OptimizedImage = ({
@@ -24,9 +29,56 @@ export const OptimizedImage = ({
   quality = 75,
   placeholder = 'empty',
   blurDataURL,
+  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
+  loading = 'lazy',
+  fetchPriority = 'auto',
+  onLoad,
+  onError,
 }: OptimizedImageProps) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
+
+  // Memoize optimized image props
+  const imageProps = useMemo(
+    () => ({
+      src,
+      alt,
+      width,
+      height,
+      priority,
+      quality,
+      placeholder,
+      sizes,
+      loading: priority ? 'eager' : loading,
+      fetchPriority: priority ? 'high' : fetchPriority,
+      ...(blurDataURL && { blurDataURL }),
+    }),
+    [
+      src,
+      alt,
+      width,
+      height,
+      priority,
+      quality,
+      placeholder,
+      sizes,
+      loading,
+      fetchPriority,
+      blurDataURL,
+    ]
+  );
+
+  // Optimized event handlers
+  const handleLoad = useCallback(() => {
+    setIsLoading(false);
+    onLoad?.();
+  }, [onLoad]);
+
+  const handleError = useCallback(() => {
+    setIsLoading(false);
+    setHasError(true);
+    onError?.();
+  }, [onError]);
 
   if (hasError) {
     return (
@@ -48,23 +100,13 @@ export const OptimizedImage = ({
         />
       )}
       <Image
-        src={src}
+        {...imageProps}
         alt={alt}
-        width={width}
-        height={height}
         className={`object-cover w-full h-full rounded-3xl transition-opacity duration-300 ${
           isLoading ? 'opacity-0' : 'opacity-100'
         }`}
-        priority={priority}
-        quality={quality}
-        placeholder={placeholder}
-        {...(blurDataURL && { blurDataURL })}
-        onLoad={() => setIsLoading(false)}
-        onError={() => {
-          setIsLoading(false);
-          setHasError(true);
-        }}
-        sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+        onLoad={handleLoad}
+        onError={handleError}
       />
     </div>
   );

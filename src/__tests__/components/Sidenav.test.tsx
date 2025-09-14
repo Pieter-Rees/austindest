@@ -5,12 +5,39 @@ interface ScrollLinkProps {
   children: React.ReactNode;
   to: string;
   onClick?: () => void;
+  activeClass?: string;
+  spy?: boolean;
+  smooth?: boolean;
+  offset?: number;
+  duration?: number;
+  className?: string;
   [key: string]: unknown;
 }
 
 jest.mock('react-scroll', () => ({
-  Link: ({ children, to, onClick, ...props }: ScrollLinkProps) => (
-    <a href={`#${to}`} onClick={onClick} {...props}>
+  Link: ({
+    children,
+    to,
+    onClick,
+    activeClass,
+    spy,
+    smooth,
+    offset,
+    duration,
+    className,
+    ...props
+  }: ScrollLinkProps) => (
+    <a
+      href={`#${to}`}
+      onClick={onClick}
+      className={className}
+      data-active-class={activeClass}
+      data-spy={spy}
+      data-smooth={smooth}
+      data-offset={offset}
+      data-duration={duration}
+      {...props}
+    >
       {children}
     </a>
   ),

@@ -1,15 +1,27 @@
 {
   "recommendations": [
     "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
     "bradlc.vscode-tailwindcss",
     "ms-vscode.vscode-typescript-next",
-    "ms-vscode.vscode-eslint",
-    "ms-vscode.vscode-json",
-    "ms-vscode.vscode-jest",
-    "ms-vscode.vscode-npm-scripts",
     "ms-vscode.vscode-json",
     "formulahendry.auto-rename-tag",
     "christian-kohler.path-intellisense",
-    "ms-vscode.vscode-typescript-next"
+    "ms-vscode.vscode-css-peek",
+    "ms-vscode.vscode-html-css-support",
+    "ms-vscode.vscode-css-languageservice",
+    "ms-vscode.vscode-html-languageservice",
+    "ms-vscode.vscode-typescript-languageservice",
+    "ms-vscode.vscode-json-languageservice",
+    "ms-vscode.vscode-markdown-languageservice",
+    "ms-vscode.vscode-yaml-languageservice",
+    "ms-vscode.vscode-xml-languageservice",
+    "ms-vscode.vscode-css-languageservice",
+    "ms-vscode.vscode-html-languageservice",
+    "ms-vscode.vscode-typescript-languageservice",
+    "ms-vscode.vscode-json-languageservice",
+    "ms-vscode.vscode-markdown-languageservice",
+    "ms-vscode.vscode-yaml-languageservice",
+    "ms-vscode.vscode-xml-languageservice"
   ]
 }

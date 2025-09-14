@@ -14,11 +14,8 @@
   --color-red: rgba(255, 0, 0, 1);
   --color-blue: rgba(0, 100, 200, 1);
 
-  --brightness-40: 0.4;
-  --brightness-175: 1.75;
-
-  --font-family-sans: var(--font-myFont);
-  --font-family-mono: var(--font-roboto-mono);
+  --font-family-sans: var(--font-inter), system-ui, sans-serif;
+  --font-family-mono: var(--font-roboto-mono), monospace;
 
   --animate-spin-slow: spin 3s linear infinite;
 

@@ -1,9 +1,14 @@
 'use client';
 import React from 'react';
-import ReactPlayer from 'react-player';
+import dynamic from 'next/dynamic';
 import { LoadingWrapper } from '../ui/LoadingWrapper';
 import { ErrorBoundary } from '../ui/ErrorBoundary';
 import { BACKGROUND_VIDEO } from '@/lib';
+
+const ReactPlayer = dynamic(() => import('react-player'), {
+  ssr: false,
+  loading: () => <div className='w-full h-full bg-gray-900 animate-pulse' />,
+});
 
 export default function LandingBg() {
   return (

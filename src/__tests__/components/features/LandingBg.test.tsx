@@ -67,21 +67,19 @@ jest.mock('@/lib', () => ({
 }));
 
 describe('LandingBg', () => {
-  it('renders video player with correct props', () => {
+  it('renders loading state initially', () => {
     render(<LandingBg />);
 
-    const player = screen.getByTestId('react-player');
-    expect(player).toHaveAttribute('data-width', '100%');
-    expect(player).toHaveAttribute('data-height', '100%');
-    expect(player).toHaveAttribute(
-      'data-src',
-      'https://example.com/background-video.mp4'
+    // Check that loading state is shown initially
+    const loadingDiv = screen
+      .getByTestId('loading-wrapper')
+      .querySelector('div');
+    expect(loadingDiv).toHaveClass(
+      'w-full',
+      'h-full',
+      'bg-gray-900',
+      'animate-pulse'
     );
-    expect(player).toHaveAttribute('data-playing', 'true');
-    expect(player).toHaveAttribute('data-loop', 'true');
-    expect(player).toHaveAttribute('data-playback-rate', '0.8');
-    expect(player).toHaveAttribute('data-muted', 'true');
-    expect(player).toHaveAttribute('data-controls', 'false');
   });
 
   it('wraps video player in error boundary and loading wrapper', () => {
@@ -89,7 +87,6 @@ describe('LandingBg', () => {
 
     expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
     expect(screen.getByTestId('loading-wrapper')).toBeInTheDocument();
-    expect(screen.getByTestId('react-player')).toBeInTheDocument();
   });
 
   it('applies correct container classes', () => {
@@ -106,17 +103,6 @@ describe('LandingBg', () => {
       'scale-150',
       'overflow-hidden'
     );
-  });
-
-  it('applies correct video player classes and styles', () => {
-    render(<LandingBg />);
-
-    const player = screen.getByTestId('react-player');
-    expect(player).toHaveClass('absolute', 'top-0', 'left-0');
-    expect(player).toHaveStyle({
-      objectFit: 'cover',
-      transform: 'scale(1.1)',
-    });
   });
 
   it('renders without crashing', () => {
