@@ -12,7 +12,7 @@
     "build:size": "du -sh .next/ && find .next -name '*.js' -exec wc -c {} + | sort -n | tail -10",
     "build:clean": "rm -rf .next build coverage node_modules/.cache",
     "start": "next start",
-    "start:prod": "NODE_ENV=production next start -p 3000",
+    "start:prod": "NODE_ENV=production next start -p 3001",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "format": "prettier --write .",
