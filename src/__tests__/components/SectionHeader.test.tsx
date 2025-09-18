@@ -1,11 +1,11 @@
-import { render, screen } from '@testing-library/react';
 import { SectionHeader } from '@/components/ui/SectionHeader';
+import { render, screen } from '@testing-library/react';
 
 describe('SectionHeader', () => {
   it('renders with title only', () => {
     render(<SectionHeader title='Test Title' subTitle='Test Subtitle' />);
 
-    expect(screen.getAllByText('Test Title')).toHaveLength(2);
+    expect(screen.getByText('Test Title')).toBeInTheDocument();
   });
 
   it('renders with subTitle only', () => {
@@ -17,7 +17,7 @@ describe('SectionHeader', () => {
   it('renders with both title and subTitle', () => {
     render(<SectionHeader title='Test Title' subTitle='Test Subtitle' />);
 
-    expect(screen.getAllByText('Test Title')).toHaveLength(2);
+    expect(screen.getByText('Test Title')).toBeInTheDocument();
     expect(screen.getByText('Test Subtitle')).toBeInTheDocument();
   });
 
@@ -39,12 +39,12 @@ describe('SectionHeader', () => {
       <SectionHeader title='Test Title' subTitle='Test Subtitle' right={true} />
     );
 
-    const title = screen.getAllByText('Test Title')[0];
+    const title = screen.getByText('Test Title');
     expect(title).toHaveClass(
       'text-7xl',
       'sm:text-8xl',
       'lg:text-9xl',
-      'text-shine',
+      'text-disco-ball',
       'text-neon-title'
     );
   });
@@ -54,12 +54,12 @@ describe('SectionHeader', () => {
       <SectionHeader title='Test Title' subTitle='Test Subtitle' left={true} />
     );
 
-    const title = screen.getAllByText('Test Title')[0];
+    const title = screen.getByText('Test Title');
     expect(title).toHaveClass(
       'text-7xl',
       'sm:text-8xl',
       'lg:text-9xl',
-      'text-shine',
+      'text-disco-ball',
       'text-neon-title'
     );
   });

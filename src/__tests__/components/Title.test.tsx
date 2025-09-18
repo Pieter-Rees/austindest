@@ -1,11 +1,11 @@
-import { render, screen } from '@testing-library/react';
 import { Title } from '@/components/ui/title';
+import { render, screen } from '@testing-library/react';
 
 describe('Title', () => {
   it('renders title only', () => {
     render(<Title title='Test Title' />);
 
-    expect(screen.getAllByText('Test Title')).toHaveLength(2);
+    expect(screen.getByText('Test Title')).toBeInTheDocument();
   });
 
   it('renders subTitle only', () => {
@@ -17,7 +17,7 @@ describe('Title', () => {
   it('renders both title and subTitle', () => {
     render(<Title title='Test Title' subTitle='Test Subtitle' />);
 
-    expect(screen.getAllByText('Test Title')).toHaveLength(2);
+    expect(screen.getByText('Test Title')).toBeInTheDocument();
     expect(screen.getByText('Test Subtitle')).toBeInTheDocument();
   });
 
@@ -30,13 +30,15 @@ describe('Title', () => {
   it('applies center alignment when center prop is true', () => {
     render(<Title title='Test Title' center={true} />);
 
-    const titles = screen.getAllByText('Test Title');
-    expect(titles[0]).toHaveClass(
+    const title = screen.getByText('Test Title');
+    expect(title).toHaveClass(
       'text-7xl',
       'sm:text-8xl',
       'lg:text-9xl',
-      'text-shine',
-      'text-neon-title'
+      'text-disco-ball',
+      'text-neon-title',
+      'text-center',
+      'lg:text-left'
     );
   });
 
@@ -70,19 +72,20 @@ describe('Title', () => {
       'sm:text-5xl',
       'lg:text-6xl',
       'text-white',
-      'text-neon'
+      'text-neon-disco',
+      'text-center'
     );
   });
 
   it('has proper title styling', () => {
     render(<Title title='Test Title' />);
 
-    const titles = screen.getAllByText('Test Title');
-    expect(titles[0]).toHaveClass(
+    const title = screen.getByText('Test Title');
+    expect(title).toHaveClass(
       'text-7xl',
       'sm:text-8xl',
       'lg:text-9xl',
-      'text-shine',
+      'text-disco-ball',
       'text-neon-title'
     );
   });
@@ -96,7 +99,7 @@ describe('Title', () => {
       'sm:text-5xl',
       'lg:text-6xl',
       'text-white',
-      'text-neon'
+      'text-neon-disco'
     );
   });
 
