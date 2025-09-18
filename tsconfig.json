@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2024",
+    "target": "ES2022",
     "lib": ["dom", "dom.iterable", "esnext", "webworker"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -20,10 +20,12 @@
     "exactOptionalPropertyTypes": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
+    "assumeChangesOnlyAffectDirectDependencies": true,
+    "disableSourceOfProjectReferenceRedirect": true,
+    "disableReferencedProjectLoad": true,
     "plugins": [
       {
         "name": "next"
@@ -48,5 +50,8 @@
     "build/types/**/*.ts",
     "src/types/**/*.d.ts"
   ],
-  "exclude": ["node_modules", ".next", "build", "dist"]
+  "exclude": ["node_modules", ".next", "build", "dist"],
+  "ts-node": {
+    "esm": true
+  }
 }

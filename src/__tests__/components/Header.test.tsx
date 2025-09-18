@@ -5,12 +5,37 @@ import Header from '@/components/layout/header';
 interface ScrollLinkProps {
   children: React.ReactNode;
   to: string;
+  activeClass?: string;
+  spy?: boolean;
+  smooth?: boolean;
+  className?: string;
+  duration?: number;
+  onSetActive?: (to: string) => void;
   [key: string]: unknown;
 }
 
 jest.mock('react-scroll', () => ({
-  Link: ({ children, to, ...props }: ScrollLinkProps) => (
-    <a href={`#${to}`} {...props}>
+  Link: ({
+    children,
+    to,
+    activeClass,
+    spy,
+    smooth,
+    className,
+    duration,
+    onSetActive,
+    ...props
+  }: ScrollLinkProps) => (
+    <a
+      href={`#${to}`}
+      className={className}
+      data-active-class={activeClass}
+      data-spy={spy}
+      data-smooth={smooth}
+      data-duration={duration}
+      onClick={() => onSetActive?.(to)}
+      {...props}
+    >
       {children}
     </a>
   ),

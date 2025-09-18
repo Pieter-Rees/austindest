@@ -1,7 +1,8 @@
-import '../styles/globals.css';
+import NightclubLights from '@/components/ui/NightclubLights';
+import { SITE_CONFIG } from '@/lib';
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
-import { SITE_CONFIG } from '@/lib';
+import '../styles/globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -45,7 +46,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <NightclubLights />
+        {children}
+      </body>
     </html>
   );
 }

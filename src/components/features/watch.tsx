@@ -4,9 +4,14 @@ import { SectionHeader } from '../ui/SectionHeader';
 import { EmbedContainer } from '../ui/EmbedContainer';
 import { LoadingWrapper } from '../ui/LoadingWrapper';
 import { ErrorBoundary } from '../ui/ErrorBoundary';
-import ReactPlayer from 'react-player';
+import dynamic from 'next/dynamic';
 import { YOUTUBE_VIDEO } from '@/lib';
 import '@/styles/border.css';
+
+const ReactPlayer = dynamic(() => import('react-player'), {
+  ssr: false,
+  loading: () => <div className='w-full h-full bg-gray-900 animate-pulse' />,
+});
 
 export default function Watch() {
   return (

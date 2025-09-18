@@ -1,20 +1,48 @@
 .text-neon {
   color: #fff;
   text-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff;
+    0 0 3px #ff0080,
+    0 0 6px #00bfff,
+    0 0 9px #8b5cf6;
 }
 
 .text-neon-title {
   text-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff;
+    0 0 3px #ff0080,
+    0 0 6px #00bfff,
+    0 0 9px #8b5cf6;
+}
+
+.text-neon-disco {
+  background: linear-gradient(
+    45deg,
+    #ff0080,
+    #00bfff,
+    #8b5cf6,
+    #ec4899,
+    #06b6d4,
+    #fbbf24,
+    #ff0080,
+    #00bfff
+  );
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 3s ease-in-out infinite;
+  text-shadow: none;
+}
+
+.text-neon-cyber {
+  color: #00bfff;
+  text-shadow:
+    0 0 3px #00bfff,
+    0 0 6px #00bfff,
+    0 0 9px #00bfff;
 }
 
 .svg-neon {
-  filter: drop-shadow(0px 0px 3px #fff);
+  filter: drop-shadow(0px 0px 3px #ff0080) drop-shadow(0px 0px 6px #00bfff);
 }
 
 @keyframes shine {
@@ -34,11 +62,80 @@
 .text-shine {
   background: linear-gradient(
     90deg,
-    rgba(255, 0, 180, 1),
-    rgba(0, 100, 200, 1),
-    rgba(255, 0, 180, 1)
+    #ff0080,
+    #00bfff,
+    #8b5cf6,
+    #ec4899,
+    #06b6d4,
+    #fbbf24,
+    #ff0080,
+    #00bfff
   );
-  background-size: 200% auto;
+  background-size: 400% auto;
+
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shine 3s ease infinite;
+  animation-fill-mode: both;
+}
+
+.text-shine-disco {
+  background: linear-gradient(
+    45deg,
+    #ff0080,
+    #00bfff,
+    #8b5cf6,
+    #ec4899,
+    #06b6d4,
+    #fbbf24,
+    #ff0080,
+    #00bfff,
+    #8b5cf6,
+    #ec4899,
+    #06b6d4,
+    #fbbf24,
+    #ff0080
+  );
+  background-size: 600% auto;
+
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shine 4s ease infinite;
+  animation-fill-mode: both;
+}
+
+.text-shine-holographic {
+  background: linear-gradient(
+    90deg,
+    #ff0080,
+    #00bfff,
+    #8b5cf6,
+    #ec4899,
+    #06b6d4,
+    #fbbf24,
+    #ff0080,
+    #00bfff,
+    #8b5cf6,
+    #ec4899,
+    #06b6d4,
+    #fbbf24,
+    #ff0080,
+    #00bfff,
+    #8b5cf6,
+    #ec4899,
+    #06b6d4,
+    #fbbf24,
+    #ff0080
+  );
+  background-size: 800% auto;
 
   color: #000;
   background-clip: text;
@@ -50,15 +147,100 @@
   animation-fill-mode: both;
 }
 
+.text-disco-ball {
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.7) 10%,
+    rgba(255, 0, 128, 0.8) 20%,
+    rgba(0, 191, 255, 0.8) 30%,
+    rgba(139, 92, 246, 0.8) 40%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(236, 72, 153, 0.8) 60%,
+    rgba(6, 182, 212, 0.8) 70%,
+    rgba(251, 191, 36, 0.8) 80%,
+    rgba(255, 255, 255, 0.4) 90%,
+    transparent 100%
+  );
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: disco-ball-colors 8s ease-in-out infinite;
+  position: relative;
+  text-shadow:
+    0 0 10px rgba(255, 0, 128, 0.5),
+    0 0 20px rgba(0, 191, 255, 0.3),
+    0 0 30px rgba(139, 92, 246, 0.2);
+}
+
+.text-disco-ball::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    ellipse at 20% 20%,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0.4) 30%,
+    transparent 60%
+  );
+  background-size: 150% 150%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: disco-sparkle 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.text-disco-ball::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.6) 25%,
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(255, 255, 255, 0.6) 75%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: disco-shine 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
 ::-webkit-scrollbar {
   width: 12px;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(10, 10, 10, 0.9);
+  border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 0, 180, 0.75);
+  background: linear-gradient(45deg, #ff0080, #00bfff, #8b5cf6, #ec4899);
+  background-size: 400% 400%;
+  border-radius: 6px;
+  animation: rainbow 3s ease infinite;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #ff0080, #00bfff, #8b5cf6, #ec4899);
+  animation: rainbow 1s ease infinite;
 }
 
 ::-webkit-scrollbar-corner {
-  background: #000;
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(26, 26, 46, 0.5);
+  border-radius: 6px;
 }

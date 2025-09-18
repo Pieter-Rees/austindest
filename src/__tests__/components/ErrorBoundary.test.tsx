@@ -59,7 +59,14 @@ describe('ErrorBoundary', () => {
     expect(screen.getByText('Something went wrong')).toBeInTheDocument();
   });
 
-  it('logs error to console', () => {
+  it('logs error to console in development', () => {
+    const originalEnv = process.env.NODE_ENV;
+    Object.defineProperty(process.env, 'NODE_ENV', {
+      value: 'development',
+      writable: true,
+      configurable: true,
+    });
+
     const consoleSpy = jest.spyOn(console, 'error');
 
     render(
@@ -68,7 +75,47 @@ describe('ErrorBoundary', () => {
       </ErrorBoundary>
     );
 
-    expect(consoleSpy).toHaveBeenCalled();
+    expect(consoleSpy).toHaveBeenCalledWith(
+      'ErrorBoundary caught an error:',
+      expect.any(Error),
+      expect.any(Object)
+    );
+
+    Object.defineProperty(process.env, 'NODE_ENV', {
+      value: originalEnv,
+      writable: true,
+      configurable: true,
+    });
+  });
+
+  it('does not log error to console in production', () => {
+    const originalEnv = process.env.NODE_ENV;
+    Object.defineProperty(process.env, 'NODE_ENV', {
+      value: 'production',
+      writable: true,
+      configurable: true,
+    });
+
+    const consoleSpy = jest.spyOn(console, 'error');
+
+    render(
+      <ErrorBoundary>
+        <ThrowError shouldThrow={true} />
+      </ErrorBoundary>
+    );
+
+    // In production, our custom error logging should not be called
+    // (React's error boundary still logs, but our custom logging should not)
+    const customErrorCalls = consoleSpy.mock.calls.filter(
+      call => call[0] === 'ErrorBoundary caught an error:'
+    );
+    expect(customErrorCalls).toHaveLength(0);
+
+    Object.defineProperty(process.env, 'NODE_ENV', {
+      value: originalEnv,
+      writable: true,
+      configurable: true,
+    });
   });
 
   it('renders without children', () => {

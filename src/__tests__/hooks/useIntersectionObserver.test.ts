@@ -112,6 +112,17 @@ describe('useIntersectionObserver', () => {
     expect(true).toBe(true);
   });
 
+  it('handles null element gracefully', () => {
+    const { result } = renderHook(() => useIntersectionObserver());
+
+    // Set elementRef to null
+    result.current.elementRef.current = null;
+
+    // Should not create observer when element is null
+    expect(mockIntersectionObserver).not.toHaveBeenCalled();
+    expect(mockObserve).not.toHaveBeenCalled();
+  });
+
   it('updates state when intersection observer callback is triggered', () => {
     let capturedCallback:
       | ((entries: IntersectionObserverEntry[]) => void)

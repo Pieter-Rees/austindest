@@ -1,5 +1,5 @@
-import localFont from 'next/font/local';
 import '@/styles/neon.css';
+import localFont from 'next/font/local';
 
 const myFont = localFont({
   src: '../../../public/fonts/Monoton-Regular.woff2',
@@ -25,21 +25,14 @@ export const Title = ({
   margin = false,
 }: TitleProps) => {
   const titleClasses = [
-    'text-7xl sm:text-8xl lg:text-9xl text-shine text-neon-title',
+    'text-7xl sm:text-8xl lg:text-9xl text-disco-ball text-neon-title',
     center && 'text-center lg:text-left',
   ]
     .filter(Boolean)
     .join(' ');
 
-  const titleSpanClasses = [
-    'absolute top-0 text-7xl sm:text-8xl lg:text-9xl text-shine',
-    center && 'text-center lg:text-left left-0 right-0',
-  ]
-    .filter(Boolean)
-    .join(' ');
-
   const subTitleClasses = [
-    'text-4xl sm:text-5xl lg:text-6xl text-white text-neon',
+    'text-4xl sm:text-5xl lg:text-6xl text-white text-neon-disco',
     margin && 'mt-8',
     left && 'text-center lg:text-left',
     right && 'text-center lg:text-right',
@@ -51,12 +44,7 @@ export const Title = ({
   return (
     <div className='w-full'>
       <div className={myFont.className}>
-        {title && (
-          <div className='relative'>
-            <h1 className={titleClasses}>{title}</h1>
-            <span className={titleSpanClasses}>{title}</span>
-          </div>
-        )}
+        {title && <h1 className={titleClasses}>{title}</h1>}
         {subTitle && <h2 className={subTitleClasses}>{subTitle}</h2>}
         {smallTitle && (
           <h3 className='text-lg lg:text-3xl text-white'>{smallTitle}</h3>
