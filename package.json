@@ -25,7 +25,7 @@
     "clean": "rm -rf .next node_modules/.cache",
     "prepare": "husky",
     "pre-commit": "lint-staged",
-    "pre-push": "pnpm test:coverage && pnpm build",
+    "pre-push": "echo 'Tests and build already run on commit, skipping on push'",
     "validate": "pnpm typecheck && pnpm lint && pnpm test && pnpm build",
     "audit": "pnpm audit --audit-level moderate",
     "audit:fix": "pnpm audit --fix",

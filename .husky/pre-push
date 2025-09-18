@@ -1,5 +1,1 @@
-# Run full test suite with coverage
-pnpm test:coverage
-
-# Run build to ensure production build works
-pnpm build
+# Tests and build already run on commit, skipping on push
