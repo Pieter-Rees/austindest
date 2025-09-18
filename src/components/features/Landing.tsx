@@ -1,5 +1,5 @@
-import { Title } from '../ui/title';
-import Socials from './socials';
+import { Title } from '../ui/Title';
+import Socials from './Socials';
 
 export default function Landing() {
   return (

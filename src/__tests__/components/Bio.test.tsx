@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Bio from '@/components/features/bio';
+import Bio from '@/components/features/Bio';
 
 interface SectionHeaderProps {
   subTitle?: string;

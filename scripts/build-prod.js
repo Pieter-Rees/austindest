@@ -9,7 +9,6 @@ const buildDir = 'build';
 const nextDir = '.next';
 
 function log(message) {
-  // eslint-disable-next-line no-console
   console.log(`[BUILD] ${message}`);
 }
 

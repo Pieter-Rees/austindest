@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import Copyright from '@/components/layout/copyright';
+import Copyright from '@/components/layout/Copyright';
 
 jest.mock('react-scroll', () => ({
   animateScroll: {
@@ -7,12 +7,12 @@ jest.mock('react-scroll', () => ({
   },
 }));
 
-jest.mock('@/components/ui/logo', () => ({
+jest.mock('@/components/ui/Logo', () => ({
   __esModule: true,
   default: () => <div data-testid='logo'>Logo</div>,
 }));
 
-jest.mock('@/components/features/socials', () => ({
+jest.mock('@/components/features/Socials', () => ({
   __esModule: true,
   default: () => <div data-testid='socials'>Socials</div>,
 }));

@@ -1,5 +1,5 @@
 import { Link } from 'react-scroll';
-import Socials from '../features/socials';
+import Socials from '../features/Socials';
 
 interface SidenavProps {
   handleToggle: () => void;
@@ -14,9 +14,8 @@ export default function Sidenav({ handleToggle, showSideNav }: SidenavProps) {
       )}
 
       <nav
-        className={`block lg:hidden transition-all fixed left-0 top-0 h-full w-full overflow-hidden bg-black/80 backdrop-blur-xl border-r border-white/10 transform-gpu z-50 ${
-          showSideNav ? '' : '-translate-x-full'
-        }`}
+        className={`block lg:hidden transition-all fixed left-0 top-0 h-full w-full overflow-hidden bg-black/80 backdrop-blur-xl border-r border-white/10 transform-gpu z-50 ${showSideNav ? '' : '-translate-x-full'
+          }`}
       >
         <div className='flex flex-col justify-center items-center h-full'>
           <div className='flex flex-col justify-center items-center uppercase gap-8'>

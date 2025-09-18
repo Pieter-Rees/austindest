@@ -1,4 +1,4 @@
-import { Title } from '@/components/ui/title';
+import { Title } from '@/components/ui/Title';
 import { render, screen } from '@testing-library/react';
 
 describe('Title', () => {

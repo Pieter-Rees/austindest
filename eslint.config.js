@@ -115,6 +115,13 @@ const eslintConfig = [
       'import/no-default-export': 'off',
     },
   },
+  {
+    files: ['scripts/**/*.{js,ts}'],
+    rules: {
+      'no-console': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
+    },
+  },
 ];
 
 export default eslintConfig;

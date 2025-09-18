@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Gigs from '@/components/features/gigs';
+import Gigs from '@/components/features/Gigs';
 
 jest.mock('@/lib/constants', () => ({
   GIGS: [

@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Watch from '@/components/features/watch';
+import Watch from '@/components/features/Watch';
 
 interface SectionHeaderProps {
   subTitle?: string;

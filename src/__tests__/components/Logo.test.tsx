@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Logo from '@/components/ui/logo';
+import Logo from '@/components/ui/Logo';
 
 describe('Logo', () => {
   it('renders logo component', () => {

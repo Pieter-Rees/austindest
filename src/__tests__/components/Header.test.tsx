@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { useState } from 'react';
-import Header from '@/components/layout/header';
+import Header from '@/components/layout/Header';
 
 interface ScrollLinkProps {
   children: React.ReactNode;

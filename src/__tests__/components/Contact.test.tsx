@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Contact from '@/components/features/contact';
+import Contact from '@/components/features/Contact';
 
 interface SectionHeaderProps {
   subTitle?: string;

@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import Home from '@/app/page';
 
-jest.mock('@/components/layout/header', () => ({
+jest.mock('@/components/layout/Header', () => ({
   __esModule: true,
   default: () => <div data-testid='header'>Header</div>,
 }));
@@ -13,7 +13,7 @@ interface SectionProps {
   fullVh?: boolean;
 }
 
-jest.mock('@/components/layout/section', () => ({
+jest.mock('@/components/layout/Section', () => ({
   Section: ({ children, id, bg, fullVh }: SectionProps) => (
     <div
       data-testid={`section-${id ?? 'no-id'}`}
@@ -25,42 +25,42 @@ jest.mock('@/components/layout/section', () => ({
   ),
 }));
 
-jest.mock('@/components/features/landing', () => ({
+jest.mock('@/components/features/Landing', () => ({
   __esModule: true,
   default: () => <div data-testid='landing'>Landing</div>,
 }));
 
-jest.mock('@/components/features/landingBg', () => ({
+jest.mock('@/components/features/LandingBg', () => ({
   __esModule: true,
   default: () => <div data-testid='landing-bg'>Landing Background</div>,
 }));
 
-jest.mock('@/components/features/watch', () => ({
+jest.mock('@/components/features/Watch', () => ({
   __esModule: true,
   default: () => <div data-testid='watch'>Watch</div>,
 }));
 
-jest.mock('@/components/features/gigs', () => ({
+jest.mock('@/components/features/Gigs', () => ({
   __esModule: true,
   default: () => <div data-testid='gigs'>Gigs</div>,
 }));
 
-jest.mock('@/components/features/bio', () => ({
+jest.mock('@/components/features/Bio', () => ({
   __esModule: true,
   default: () => <div data-testid='bio'>Bio</div>,
 }));
 
-jest.mock('@/components/features/listen', () => ({
+jest.mock('@/components/features/Listen', () => ({
   __esModule: true,
   default: () => <div data-testid='listen'>Listen</div>,
 }));
 
-jest.mock('@/components/features/contact', () => ({
+jest.mock('@/components/features/Contact', () => ({
   __esModule: true,
   default: () => <div data-testid='contact'>Contact</div>,
 }));
 
-jest.mock('@/components/layout/copyright', () => ({
+jest.mock('@/components/layout/Copyright', () => ({
   __esModule: true,
   default: () => <div data-testid='copyright'>Copyright</div>,
 }));

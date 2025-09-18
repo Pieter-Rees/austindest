@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import Sidenav from '@/components/layout/sidenav';
+import Sidenav from '@/components/layout/Sidenav';
 
 interface ScrollLinkProps {
   children: React.ReactNode;
@@ -43,7 +43,7 @@ jest.mock('react-scroll', () => ({
   ),
 }));
 
-jest.mock('@/components/features/socials', () => ({
+jest.mock('@/components/features/Socials', () => ({
   __esModule: true,
   default: () => <div data-testid='socials'>Socials</div>,
 }));

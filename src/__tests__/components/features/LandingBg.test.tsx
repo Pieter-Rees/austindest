@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import LandingBg from '@/components/features/landingBg';
+import LandingBg from '@/components/features/LandingBg';
 
 interface ReactPlayerProps {
   width?: string | number;

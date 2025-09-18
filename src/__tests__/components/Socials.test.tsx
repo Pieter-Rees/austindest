@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Socials from '@/components/features/socials';
+import Socials from '@/components/features/Socials';
 
 jest.mock('@/lib/constants', () => ({
   SOCIAL_LINKS: {

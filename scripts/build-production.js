@@ -93,7 +93,7 @@ function checkEnvironment() {
   try {
     const pnpmVersion = execSync('pnpm --version', { encoding: 'utf8' }).trim();
     logSuccess(`pnpm version: ${pnpmVersion}`);
-  } catch (error) {
+  } catch {
     logError('pnpm is not installed or not in PATH');
     process.exit(1);
   }

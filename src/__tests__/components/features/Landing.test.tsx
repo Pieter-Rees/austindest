@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Landing from '@/components/features/landing';
+import Landing from '@/components/features/Landing';
 
 interface TitleProps {
   title?: string;
@@ -9,7 +9,7 @@ interface TitleProps {
   center?: boolean;
 }
 
-jest.mock('@/components/ui/title', () => ({
+jest.mock('@/components/ui/Title', () => ({
   Title: ({ margin, left, center, title, subTitle }: TitleProps) => (
     <div data-testid='title'>
       <h1>{title}</h1>
@@ -22,7 +22,7 @@ jest.mock('@/components/ui/title', () => ({
   ),
 }));
 
-jest.mock('@/components/features/socials', () => ({
+jest.mock('@/components/features/Socials', () => ({
   __esModule: true,
   default: () => <div data-testid='socials'>Socials</div>,
 }));

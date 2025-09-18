@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { Section } from '@/components/layout/section';
+import { Section } from '@/components/layout/Section';
 
 describe('Section', () => {
   it('renders children correctly', () => {

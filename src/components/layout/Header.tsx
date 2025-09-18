@@ -2,8 +2,8 @@
 import '@/styles/neon.css';
 import { useEffect, useState } from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
-import Logo from '../ui/logo';
-import Sidenav from './sidenav';
+import Logo from '../ui/Logo';
+import Sidenav from './Sidenav';
 
 export default function Header() {
   const [showSideNav, setShowSideNav] = useState(false);
@@ -23,11 +23,10 @@ export default function Header() {
   return (
     <>
       <nav
-        className={`px-4 fixed z-50 top-0 w-full flex items-center justify-between transition-all duration-300 ${
-          navBackground
+        className={`px-4 fixed z-50 top-0 w-full flex items-center justify-between transition-all duration-300 ${navBackground
             ? 'bg-black/20 backdrop-blur-lg border-b border-white/10'
             : 'bg-transparent backdrop-blur-none'
-        }`}
+          }`}
       >
         <div className='flex items-center flex-shrink-0 text-white mr-6'>
           <div
@@ -41,9 +40,8 @@ export default function Header() {
           <button
             title='Menu'
             onClick={handleToggle}
-            className={`flex items-center px-3 py-2 transition-all ${
-              showSideNav ? 'rotate-90' : ''
-            }`}
+            className={`flex items-center px-3 py-2 transition-all ${showSideNav ? 'rotate-90' : ''
+              }`}
           >
             <svg
               version='1.1'

@@ -1,7 +1,7 @@
 'use client';
 import { animateScroll as scroll } from 'react-scroll';
-import Logo from '../ui/logo';
-import Socials from '../features/socials';
+import Socials from '../features/Socials';
+import Logo from '../ui/Logo';
 export default function Copyright() {
   const scrollToTop = () => {
     scroll.scrollToTop();
