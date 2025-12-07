@@ -26,15 +26,15 @@
     "prepare": "husky",
     "pre-commit": "lint-staged",
     "pre-push": "echo 'Tests and build already run on commit, skipping on push'",
-    "validate": "pnpm typecheck && pnpm lint && pnpm test && pnpm build",
-    "audit": "pnpm audit --audit-level moderate",
-    "audit:fix": "pnpm audit --fix",
-    "security:check": "pnpm audit --audit-level moderate && pnpm test -- --testPathPatterns=security",
-    "security:test": "pnpm test --testPathPatterns=security --coverage",
+    "validate": "npm run typecheck && npm run lint && npm test && npm run build",
+    "audit": "npm audit --audit-level moderate",
+    "audit:fix": "npm audit --fix",
+    "security:check": "npm audit --audit-level moderate && npm test -- --testPathPatterns=security",
+    "security:test": "npm test --testPathPatterns=security --coverage",
     "security:headers": "node scripts/check-security-headers.js",
-    "security:validate": "pnpm security:check && pnpm security:headers",
-    "production": "pnpm build:prod",
-    "deploy": "pnpm build:prod && pnpm start:prod"
+    "security:validate": "npm run security:check && npm run security:headers",
+    "production": "npm run build:prod",
+    "deploy": "npm run build:prod && npm run start:prod"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -90,7 +90,6 @@
   },
   "engines": {
     "node": ">=20.0.0",
-    "pnpm": ">=9.0.0"
-  },
-  "packageManager": "pnpm@9.15.0"
+    "npm": ">=10.0.0"
+  }
 }

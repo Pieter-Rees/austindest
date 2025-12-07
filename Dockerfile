@@ -3,21 +3,16 @@ FROM node:20-alpine AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-# Install pnpm
-RUN corepack enable && corepack prepare pnpm@9.15.0 --activate
-
 # Copy package files
-COPY package.json pnpm-lock.yaml* ./
+COPY package.json package-lock.json* ./
 
 # Install dependencies
-RUN pnpm install --frozen-lockfile
+# Use npm ci if package-lock.json exists, otherwise use npm install
+RUN if [ -f package-lock.json ]; then npm ci; else npm install; fi
 
 # Stage 2: Builder
 FROM node:20-alpine AS builder
 WORKDIR /app
-
-# Install pnpm
-RUN corepack enable && corepack prepare pnpm@9.15.0 --activate
 
 # Copy dependencies from deps stage
 COPY --from=deps /app/node_modules ./node_modules
@@ -30,7 +25,7 @@ ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 
 # Build the application
-RUN pnpm build
+RUN npm run build
 
 # Stage 3: Runner
 FROM node:20-alpine AS runner

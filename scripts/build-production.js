@@ -89,12 +89,12 @@ function checkEnvironment() {
 
   logSuccess(`Node.js version: ${nodeVersion}`);
 
-  // Check pnpm version
+  // Check npm version
   try {
-    const pnpmVersion = execSync('pnpm --version', { encoding: 'utf8' }).trim();
-    logSuccess(`pnpm version: ${pnpmVersion}`);
+    const npmVersion = execSync('npm --version', { encoding: 'utf8' }).trim();
+    logSuccess(`npm version: ${npmVersion}`);
   } catch {
-    logError('pnpm is not installed or not in PATH');
+    logError('npm is not installed or not in PATH');
     process.exit(1);
   }
 }
@@ -102,9 +102,7 @@ function checkEnvironment() {
 function installDependencies() {
   logStep('DEPENDENCIES', 'Installing dependencies');
 
-  if (
-    !runCommand('pnpm install --frozen-lockfile', 'Installing dependencies')
-  ) {
+  if (!runCommand('npm ci', 'Installing dependencies')) {
     process.exit(1);
   }
 }
@@ -113,17 +111,17 @@ function runQualityChecks() {
   logStep('QUALITY', 'Running code quality checks');
 
   // Type checking
-  if (!runCommand('pnpm typecheck', 'Type checking')) {
+  if (!runCommand('npm run typecheck', 'Type checking')) {
     process.exit(1);
   }
 
   // Linting
-  if (!runCommand('pnpm lint', 'Linting')) {
+  if (!runCommand('npm run lint', 'Linting')) {
     logWarning('Linting completed with warnings (continuing...)');
   }
 
   // Format checking
-  if (!runCommand('pnpm format --check', 'Format checking')) {
+  if (!runCommand('npm run format:check', 'Format checking')) {
     logWarning('Code formatting issues found (continuing...)');
   }
 }
@@ -131,12 +129,12 @@ function runQualityChecks() {
 function runSecurityAudit() {
   logStep('SECURITY', 'Running security audit');
 
-  if (!runCommand('pnpm audit --audit-level moderate', 'Security audit')) {
+  if (!runCommand('npm audit --audit-level moderate', 'Security audit')) {
     logWarning('Security vulnerabilities found (continuing...)');
   }
 
   // Check security headers
-  if (!runCommand('pnpm security:headers', 'Security headers validation')) {
+  if (!runCommand('npm run security:headers', 'Security headers validation')) {
     logWarning('Security headers validation failed (continuing...)');
   }
 }
@@ -144,7 +142,7 @@ function runSecurityAudit() {
 function runTests() {
   logStep('TESTING', 'Running tests');
 
-  if (!runCommand('pnpm test:ci', 'Running tests')) {
+  if (!runCommand('npm run test:ci', 'Running tests')) {
     logError('Tests failed - aborting build');
     process.exit(1);
   }
@@ -156,7 +154,7 @@ function buildProduction() {
   // Set production environment
   process.env.NODE_ENV = 'production';
 
-  if (!runCommand('pnpm build', 'Production build')) {
+  if (!runCommand('npm run build', 'Production build')) {
     process.exit(1);
   }
 }
@@ -165,12 +163,12 @@ function optimizeBuild() {
   logStep('OPTIMIZATION', 'Optimizing build');
 
   // Compress static assets
-  if (runCommand('pnpm build:compress', 'Compressing static assets')) {
+  if (runCommand('npm run build:compress', 'Compressing static assets')) {
     logSuccess('Static assets compressed');
   }
 
   // Show build size
-  if (runCommand('pnpm build:size', 'Build size analysis')) {
+  if (runCommand('npm run build:size', 'Build size analysis')) {
     logSuccess('Build size analyzed');
   }
 }
@@ -222,7 +220,7 @@ function generateBuildReport() {
 
   logSuccess('Production build completed successfully!');
   log('\nNext steps:', 'yellow');
-  log('1. Test the production build locally: pnpm start', 'white');
+  log('1. Test the production build locally: npm start', 'white');
   log('2. Deploy to your hosting platform', 'white');
   log('3. Monitor performance and errors in production', 'white');
 }

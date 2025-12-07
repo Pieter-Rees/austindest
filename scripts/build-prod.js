@@ -39,10 +39,10 @@ function cleanBuild() {
 
 function buildProject() {
   log('Building project...');
-  runCommand('pnpm typecheck');
-  runCommand('pnpm lint');
-  runCommand('pnpm test:ci');
-  runCommand('pnpm build');
+  runCommand('npm run typecheck');
+  runCommand('npm run lint');
+  runCommand('npm run test:ci');
+  runCommand('npm run build');
 }
 
 function optimizeBuild() {

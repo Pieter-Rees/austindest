@@ -31,10 +31,9 @@ print_error() {
     echo -e "${RED}[ERROR]${NC} $1"
 }
 
-# Check if pnpm is installed
-if ! command -v pnpm &> /dev/null; then
-    print_error "pnpm is not installed. Please install pnpm first:"
-    echo "npm install -g pnpm"
+# Check if npm is installed
+if ! command -v npm &> /dev/null; then
+    print_error "npm is not installed. Please install npm first."
     exit 1
 fi
 
@@ -51,7 +50,7 @@ print_success "Node.js version $NODE_VERSION is supported"
 
 # Install dependencies
 print_status "Installing dependencies..."
-pnpm install
+npm install
 
 # Set up environment
 print_status "Setting up environment variables..."
@@ -64,57 +63,56 @@ fi
 
 # Set up Git hooks
 print_status "Setting up Git hooks..."
-pnpm prepare
+npm run prepare
 
 # Run initial checks
 print_status "Running initial quality checks..."
 
 # Type check
 print_status "Running TypeScript check..."
-pnpm typecheck
+npm run typecheck
 
 # Lint check
 print_status "Running ESLint check..."
-pnpm lint
+npm run lint
 
 # Format check
 print_status "Running Prettier format check..."
-pnpm format:check
+npm run format:check
 
 # Test check
 print_status "Running tests..."
-pnpm test --passWithNoTests
+npm test -- --passWithNoTests
 
 print_success "All checks passed!"
 
 # Build check
 print_status "Running build check..."
-pnpm build
+npm run build
 
 print_success "Build successful!"
 
 # Clean up
 print_status "Cleaning up build artifacts..."
-pnpm clean
+npm run clean
 
 print_success "Development environment setup complete! 🎉"
 
 echo ""
 echo "📋 Next steps:"
-echo "1. Start development server: pnpm dev"
-echo "2. Run tests: pnpm test"
-echo "3. Check code quality: pnpm validate"
-echo "4. Build for production: pnpm build"
+echo "1. Start development server: npm run dev"
+echo "2. Run tests: npm test"
+echo "3. Check code quality: npm run validate"
+echo "4. Build for production: npm run build"
 echo ""
 echo "🔧 Available commands:"
-echo "- pnpm dev          # Start development server with Turbopack"
-echo "- pnpm test         # Run tests"
-echo "- pnpm lint         # Run ESLint"
-echo "- pnpm format       # Format code with Prettier"
-echo "- pnpm typecheck    # Run TypeScript check"
-echo "- pnpm validate     # Run all quality checks"
-echo "- pnpm build        # Build for production"
-echo "- pnpm size         # Analyze bundle size"
-echo "- pnpm perf         # Run performance audit"
+echo "- npm run dev          # Start development server"
+echo "- npm test             # Run tests"
+echo "- npm run lint         # Run ESLint"
+echo "- npm run format       # Format code with Prettier"
+echo "- npm run typecheck    # Run TypeScript check"
+echo "- npm run validate     # Run all quality checks"
+echo "- npm run build        # Build for production"
+echo "- npm run build:size   # Analyze bundle size"
 echo ""
 echo "Happy coding! 🚀"
