@@ -1,6 +1,7 @@
 const nextConfig = {
   // Removed static export to enable server-side features
   // output: 'export',
+  output: 'standalone', // Enable standalone output for Docker deployments
   distDir: '.next', // Use default Next.js build directory
   // trailingSlash: true, // Not needed for server-side rendering
 
